@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>VÉA Medical | Innovación y Rentabilidad para Clínicas Estéticas</title>
+    <meta name="description" content="Sistemas de alto rendimiento y tecnología médico-estética premium para escalar tus ingresos, atraer pacientes premium y dominar tu mercado. No vendemos equipos, vendemos crecimiento.">
+    <meta name="keywords" content="equipos médico-estéticos premium, rentabilidad clínica estética, tecnología estética innovación, aparatología médica b2b, VÉA medical diagnósticos, escalar clínica estética">
+    <meta name="author" content="VÉA Medical">
+    <link rel="canonical" href="https://tusitio.com">
+    
+    <meta property="og:title" content="VÉA Medical | Ecosistema de Crecimiento Estético">
+    <meta property="og:description" content="Descubre cómo transformar tu clínica estética con tecnología rentable y posicionamiento premium. Agenda tu diagnóstico gratuito.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- VARIABLES DE MARCA --- */
+        :root {
+            --negro: #010101;
+            --carbon: #34302f;
+            --gris-claro: #d7d6d2;
+            --beige: #D2C6BA;
+            --blanco: #ffffff;
+            --font-head: 'Raleway', sans-serif;
+            --font-body: 'Lato', sans-serif;
+            --transition-fast: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            
+            /* Glassmorphism Preset */
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-blur: blur(16px);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+            --glass-shadow: 0 40px 80px rgba(0,0,0,0.2);
+        }
+
+        /* --- RESET & SETUP --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            color: var(--negro);
+            background-color: var(--gris-claro);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            padding-top: 80px; /* Espacio para el header sticky */
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: var(--font-head); 
+            font-weight: 800; 
+            line-height: 1.1; 
+            margin-bottom: 1rem; 
+            letter-spacing: -0.02em; 
+        }
+        
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 300; color: var(--carbon); }
+        strong { font-weight: 700; color: var(--negro); }
+
+        /* --- UTILIDADES --- */
+        .text-white { color: var(--gris-claro); }
+        .text-center { text-align: center; }
+        .bg-white { background-color: var(--blanco); }
+        .bg-beige { background-color: var(--beige); }
+
+        /* Fondo dinámico oscuro premium */
+        .bg-dark-dynamic {
+            background: linear-gradient(135deg, var(--negro) 0%, var(--carbon) 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 10s ease infinite;
+            color: var(--gris-claro);
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-dark-dynamic p { color: #a5a4a1; }
+        .bg-dark-dynamic strong { color: var(--blanco); }
+
+        /* --- BOTONES PREMIUM --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 2.5rem;
+            font-family: var(--font-head);
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            z-index: 1;
+            transition: var(--transition-fast);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: rgba(255,255,255,0.15);
+            transition: var(--transition-slow);
+            z-index: -1;
+        }
+
+        .btn:hover::before { left: 0; }
+        .btn:hover { transform: translateY(-4px); }
+
+        .btn-primary { background-color: var(--negro); color: var(--gris-claro); }
+        .btn-primary:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+        .btn-beige { background-color: var(--beige); color: var(--negro); }
+        .btn-beige:hover { box-shadow: 0 20px 40px rgba(210, 198, 186, 0.4); background-color: #dfd4c9; }
+        
+        .btn-sm { padding: 0.75rem 1.5rem; font-size: 0.75rem; }
+
+        .link-secondary {
+            display: inline-block;
+            margin-left: 2rem;
+            color: var(--negro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        
+        .link-secondary::after {
+            content: '';
+            position: absolute;
+            width: 100%; transform: scaleX(0); height: 2px;
+            bottom: -4px; left: 0;
+            background-color: var(--beige);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .link-secondary:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+        /* --- HEADER (CABECERA) STICKY MODERN --- */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            z-index: 1000;
+            /* Glassmorphism sutil para el header */
+            background: rgba(215, 214, 210, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(1, 1, 1, 0.05);
+            transition: var(--transition-fast);
+        }
+        
+        #header.scrolled {
+            height: 70px;
+            background: rgba(215, 214, 210, 0.95);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO PLACEHOLDER TYPOGRÁFICO PREMIUM (Usa Raleway) */
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            color: var(--negro);
+            line-height: 1;
+        }
+
+        .logo-vea {
+            font-weight: 900; /* ExtraBold/Black */
+            font-size: 2rem;
+            letter-spacing: -2px;
+            margin-right: 0.3rem;
+            position: relative;
+        }
+        
+        .logo-vea::after {
+            content: '';
+            position: absolute;
+            width: 8px; height: 8px;
+            background-color: var(--beige);
+            border-radius: 50%;
+            bottom: 5px; right: -8px;
+        }
+
+        .logo-medical {
+            font-weight: 300; /* Light */
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-top: 0.5rem;
+        }
+
+        /* NAVEGACIÓN MINIMALISTA header */
+        .nav-header ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-header a:not(.btn) {
+            text-decoration: none;
+            font-family: var(--font-head);
+            color: var(--carbon);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+        
+        .nav-header a:not(.btn)::after {
+            content: ''; position: absolute;
+            width: 100%; transform: scaleX(0); height: 2px;
+            bottom: -4px; left: 0;
+            background-color: var(--beige);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-header a:not(.btn):hover { color: var(--negro); }
+        .nav-header a:not(.btn):hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        
+        .header-cta { margin-left: 2rem; }
+
+        /* --- LAYOUT GENERAL SECCIONES --- */
+        section { padding: 8rem 5%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .container { max-width: 1250px; width: 100%; margin: 0 auto; position: relative; z-index: 2; }
+
+        /* --- IMÁGENES MODERNAS --- */
+        .img-wrapper {
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+        .img-wrapper::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.2), transparent); 
+            pointer-events: none;
+        }
+        .img-fluid {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-wrapper:hover .img-fluid { transform: scale(1.04); }
+
+        /* --- ANIMACIONES DE ENTRADA --- */
+        .reveal { opacity: 0; transform: translateY(50px); transition: var(--transition-slow); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- 1. HERO (Ajuste padding superior para header sticky) --- */
+        #hero { min-height: 100vh; padding-top: 10rem; }
+        #hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-text h1 { font-size: 4.5rem; letter-spacing: -2px; margin-bottom: 1.5rem; }
+        .hero-text p { font-size: 1.25rem; margin-bottom: 3rem; max-width: 500px; }
+        .hero-image { height: 70vh; border-radius: 8px 8px 8px 80px; }
+
+        /* --- 3. PARADIGMA --- */
+        #paradigma .container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: center; }
+        .paradigma-image { height: 600px; border-radius: 8px 80px 8px 8px; }
+        #paradigma h2 { font-size: 3.5rem; margin-bottom: 2rem; }
+
+        /* --- 5. TECNOLOGÍAS (TRUE BENTO GRID UI con Glassmorfismo) --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .bento-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 3rem;
+            border-radius: 12px;
+            transition: var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--beige);
+            transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .bento-card:hover::before { transform: scaleX(1); }
+
+        .bento-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .bento-card p { font-size: 1rem; margin-bottom: 0.5rem; }
+        
+        .card-large { grid-column: span 2; }
+        .card-tall { grid-row: span 2; display: flex; flex-direction: column; justify-content: center; }
+
+        /* --- 6. RENTABILIDAD (Dashboard Glass UI) --- */
+        .glass-dashboard {
+            width: 100%; max-width: 900px; margin: 4rem auto 0;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: var(--glass-border);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .data-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .data-label { font-size: 1.2rem; color: #a5a4a1; }
+        .data-value { font-size: 1.5rem; font-weight: 800; font-family: var(--font-head); color: var(--blanco); }
+        
+        .data-row.highlight { 
+            border-bottom: none; padding-top: 2.5rem; margin-top: 1rem;
+            border-top: 1px dashed rgba(210, 198, 186, 0.3);
+        }
+        .data-row.highlight .data-label { color: var(--gris-claro); font-size: 1.4rem; }
+        .data-row.highlight .data-value { color: var(--beige); font-size: 2.5rem; }
+
+        /* --- 8. PERFIL --- */
+        .perfil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; }
+        .perfil-col { padding: 4rem; border-radius: 8px; }
+        .col-si { background-color: var(--blanco); box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
+        .col-no { background-color: transparent; border: 1px solid rgba(0,0,0,0.1); }
+        .perfil-col ul { list-style: none; }
+        .perfil-col li { font-size: 1.15rem; margin-bottom: 1.5rem; padding-left: 2.5rem; position: relative; }
+        .col-si li::before { content: '✓'; position: absolute; left: 0; color: var(--beige); font-weight: 900; font-size: 1.3rem; }
+        .col-no li::before { content: '✕'; position: absolute; left: 0; color: #aaa; font-weight: 700; font-size: 1.2rem; }
+
+        /* --- 10. CTA FINAL --- */
+        #cta-final h2 { font-size: 4rem; margin-bottom: 2rem; }
+        #cta-final p { max-width: 600px; margin: 0 auto 3.5rem; font-size: 1.2rem; }
+
+        /* --- WHATSAPP FLOTANTE CON INDICADOR LIVE --- */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--carbon); color: var(--gris-claro);
+            border-radius: 50px; padding: 12px 24px 12px 20px; z-index: 999;
+            display: flex; align-items: center; gap: 12px;
+            text-decoration: none; font-family: var(--font-head); font-weight: 700;
+            font-size: 0.85rem; text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition-fast);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .whatsapp-float:hover { background-color: var(--negro); transform: translateY(-5px) scale(1.02); }
+        .whatsapp-icon { width: 20px; height: 20px; fill: var(--gris-claro); }
+        
+        .status-dot {
+            width: 8px; height: 8px; background-color: var(--beige);
+            border-radius: 50%; box-shadow: 0 0 10px var(--beige);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(210, 198, 186, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(210, 198, 186, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(210, 198, 186, 0); }
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVE (Optimizaciones Finales)
+           ========================================= */
+        @media (max-width: 1024px) {
+            #header { height: 70px; }
+            .header-cta { margin-left: 1rem; }
+            .nav-header { display: none; /* Ocultar nav links en tablet/móvil para evitar ruido visual */ }
+            
+            .bento-grid { grid-template-columns: 1fr 1fr; }
+            .card-large, .card-tall { grid-column: span 1; grid-row: span 1; }
+            #hero { padding-top: 8rem; }
+            #hero .container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 2rem; }
+            .link-secondary { display: block; margin: 1.5rem auto 0; width: max-content; }
+            .hero-image { display: none; /* Foco en copy en móvil hero */ }
+        }
+
+        @media (max-width: 768px) {
+            body { padding-top: 70px; }
+            .logo-vea { font-size: 1.5rem; }
+            .logo-medical { font-size: 0.9rem; letter-spacing: 2px; }
+            
+            section { padding: 5rem 5%; }
+            #paradigma .container { grid-template-columns: 1fr; }
+            .paradigma-image { height: 400px; }
+            
+            .bento-grid, .perfil-grid { grid-template-columns: 1fr; }
+            .bento-card { padding: 2rem; }
+            
+            h2 { font-size: 2.2rem !important; }
+            .glass-dashboard { padding: 2rem; }
+            .data-row.highlight .data-value { font-size: 2rem; }
+            .perfil-col { padding: 2rem; }
+            .whatsapp-float span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-container reveal active">
+            <a href="#" class="logo" aria-label="Volver a Inicio">
+                <span class="logo-vea">VÉA</span>
+                <span class="logo-medical">MEDICAL</span>
+            </a>
+            
+            <nav class="nav-header">
+                <ul>
+                    <li><a href="#tecnologias">Tecnologías</a></li>
+                    <li><a href="#rentabilidad">Rentabilidad</a></li>
+                    <li><a href="#perfil">Alianza</a></li>
+                    <li><a href="#cta-final" class="btn btn-beige btn-sm header-cta">Agendar Cita</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-text reveal">
+                    <h1>Eleva el Estatus y la Rentabilidad de tu Clínica.</h1>
+                    <p>No distribuimos equipos. Implementamos sistemas de alto rendimiento comprobados para escalar tus ingresos y dominar tu mercado local.</p>
+                    <div class="cta-group">
+                        <a href="#cta-final" class="btn btn-primary">Agendar Diagnóstico</a>
+                        <a href="#asesoria" class="link-secondary">Asesoría Estratégica</a>
+                    </div>
+                </div>
+                <div class="hero-image img-wrapper reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" alt="Clínica Estética Premium VÉA Medical" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section id="problema" class="bg-dark-dynamic">
+            <div class="container text-center reveal">
+                <h2 class="text-white">El mercado está saturado. Jugar a bajar los precios es un camino al cierre.</h2>
+                <p style="max-width: 800px; margin: 0 auto;">Atraer pacientes cuesta más que nunca. Si ofreces los mismos tratamientos básicos que la clínica de la esquina, tus márgenes de ganancia seguirán desapareciendo. Trabajar más horas ya no es la solución.</p>
+                <p><strong>La falta de diferenciación estanca tu crecimiento.</strong></p>
+            </div>
+        </section>
+
+        <section id="paradigma" class="bg-white">
+            <div class="container">
+                <div class="paradigma-image img-wrapper reveal">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Profesional utilizando tecnología VÉA Medical sofisticada" class="img-fluid">
+                </div>
+                <div class="paradigma-text reveal" style="transition-delay: 0.2s;">
+                    <h2>El crecimiento no viene de una agenda llena.</h2>
+                    <p>Viene de implementar protocolos premium que justifiquen tickets altos, generen resultados irrefutables y fidelicen a los pacientes exigentes. Haz que cada hora operativa sea drásticamente más rentable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias">
+            <div class="container">
+                <h2 class="text-center reveal">Vehículos de Alta Conversión</h2>
+                <div class="bento-grid">
+                    
+                    <article class="bento-card card-large reveal">
+                        <h3>Diagnóstico Visual (IA)</h3>
+                        <p><strong>Qué hace:</strong> Muestra el daño invisible de la piel, cerrando ventas al instante.</p>
+                        <p><strong>Resultado Financiero:</strong> Multiplica la venta cruzada y creación de paquetes anuales.</p>
+                    </article>
+                    
+                    <article class="bento-card card-tall reveal" style="transition-delay: 0.1s;">
+                        <h3>Motor de Alta Frecuencia</h3>
+                        <p><strong>Qué hace:</strong> Protocolo de higiene profunda con resultados inmediatos.</p>
+                        <p><strong>Resultado Financiero:</strong> Ingreso recurrente mensual garantizado y fidelización masiva.</p>
+                    </article>
+
+                    <article class="bento-card reveal" style="transition-delay: 0.2s;">
+                        <h3>Plataforma Láser</h3>
+                        <p><strong>Resultado Financiero:</strong> Máxima facturación en el menor tiempo operativo posible. Altísima demanda.</p>
+                    </article>
+
+                    <article class="bento-card reveal" style="transition-delay: 0.3s;">
+                        <h3>Optimizador Basal</h3>
+                        <p><strong>Resultado Financiero:</strong> Prepara la piel y facilita un up-sell del 30% adicional por paciente en tus servicios base.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="rentabilidad" class="bg-dark-dynamic">
+            <div class="container reveal">
+                <h2 class="text-center text-white">La matemática del modelo premium.</h2>
+                <p class="text-center">Proyección financiera base (1 cabina operativa con sistema VÉA Medical).</p>
+                
+                <div class="glass-dashboard">
+                    <div class="data-row">
+                        <span class="data-label">Precio Promedio Sugerido</span>
+                        <span class="data-value">$120 USD</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Pacientes Diarios</span>
+                        <span class="data-value">5</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Ingreso Diario</span>
+                        <span class="data-value">$600 USD</span>
+                    </div>
+                    <div class="data-row highlight">
+                        <span class="data-label">Ingreso Mensual (20 días)</span>
+                        <span class="data-value">$12,000 USD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfil" class="bg-gris-claro">
+            <div class="container reveal">
+                <h2 class="text-center">Nuestra alianza no es para todos.</h2>
+                <div class="perfil-grid">
+                    <div class="perfil-col col-si">
+                        <h3>Construimos junto a:</h3>
+                        <ul>
+                            <li>Clínicas buscando escalar a 6 y 7 cifras.</li>
+                            <li>Médicos con mentalidad empresarial.</li>
+                            <li>Líderes que priorizan la calidad clínica y el lujo.</li>
+                        </ul>
+                    </div>
+                    <div class="perfil-col col-no">
+                        <h3>No compatibles con:</h3>
+                        <ul>
+                            <li>Buscadores de la tecnología más barata.</li>
+                            <li>Clínicas que compiten bajando precios básicos.</li>
+                            <li>Negocios sin visión de crecimiento a largo plazo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="bg-white text-center">
+            <div class="container reveal">
+                <h2>Tu competencia ya está evolucionando.<br>¿Cuál es tu próximo paso?</h2>
+                <p>El mercado premia a quienes actúan con innovación. Agenda una sesión de diagnóstico gratuita de 20 minutos con nuestros estrategas y descubre el plan exacto para escalar tu clínica estética.</p>
+                <a href="https://calendly.com/tu-enlace" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Solicitar Mi Diagnóstico Gratuito</a>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/tunumerodetelefono" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsAppPrivado">
+        <div class="status-dot"></div>
+        <svg class="whatsapp-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3.2 496.8l162.5-42.6C198.4 472.3 234.3 480 223.9 480c122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65-115.1zM223.9 445.3c-33.2 0-65.7-8.9-94-25.7l-6.7-4-96.1 25.2 25.7-93.6-4.4-7.1c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.5-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54.1 130.5 0 101.7-82.8 184.5-184.5 184.5zm102.2-140.3c-5.6-2.8-33.1-16.3-38.2-18.2-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12.1 1.4-5.6-2.8-23.6-8.7-44.9-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.6-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.6-9.3 1.9-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 33.1-13.5 37.8-26.6 4.6-13.1 4.6-24.4 3.2-26.7-1.5-2.3-5.3-3.6-10.9-6.4z"/></svg>
+        <span>Asesoría Privada</span>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Animaciones Reveal AOS custom
+            const reveals = document.querySelectorAll(".reveal");
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+            
+            // 2. Efecto Header scrolled (encoger al bajar)
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
