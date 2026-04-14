@@ -36,7 +36,7 @@
             padding-top: 90px;
         }
 
-        /* TÍTULOS (Sentence case, no uppercase) */
+        /* TÍTULOS */
         h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.02em; }
         p { font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 300; color: var(--carbon); }
         strong { font-weight: 700; color: inherit; }
@@ -47,19 +47,19 @@
         .container { max-width: 1250px; width: 100%; margin: 0 auto; padding: 0 5%; }
         section { padding: 8rem 0; position: relative; }
 
-        /* --- BOTONES (Bloque Sólido) --- */
+        /* --- BOTONES (Bordes Redondeados Modernos) --- */
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
             padding: 1.2rem 2.5rem; font-family: var(--font-head); font-weight: 800;
             text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px;
             font-size: 0.85rem; cursor: pointer; border: none;
-            border-radius: 0; 
+            border-radius: 8px; /* BORDES REDONDEADOS */
             transition: var(--transition-fast);
         }
         .btn-black { background-color: var(--negro); color: var(--gris-claro); }
-        .btn-black:hover { background-color: var(--carbon); color: var(--blanco); }
+        .btn-black:hover { background-color: var(--carbon); color: var(--blanco); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15);}
         .btn-beige { background-color: var(--beige); color: var(--negro); }
-        .btn-beige:hover { background-color: #dfd4c9; }
+        .btn-beige:hover { background-color: #dfd4c9; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(210, 198, 186, 0.3);}
 
         /* --- HEADER --- */
         #header {
@@ -79,10 +79,10 @@
             font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease;
         }
         .nav-header a:not(.btn):hover { color: var(--negro); }
-        .header-cta { padding: 1rem 2rem; margin-left: 1rem; }
+        .header-cta { padding: 1rem 2rem; margin-left: 1rem; border-radius: 8px; }
 
         .mobile-menu-toggle { display: none; background: transparent; border: none; cursor: pointer; z-index: 1001; }
-        .mobile-menu-toggle .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--negro); transition: all 0.3s ease; }
+        .mobile-menu-toggle .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--negro); transition: all 0.3s ease; border-radius: 2px;}
 
         /* --- HERO PRODUCT --- */
         .hero-product { min-height: 85vh; display: flex; align-items: center; background-color: var(--negro); color: var(--blanco); overflow: hidden; padding-top: 5rem;}
@@ -90,27 +90,28 @@
         .hero-content h1 { font-size: 4.5rem; margin-bottom: 1.5rem; letter-spacing: -2px; line-height: 1.05; color: var(--blanco); }
         .hero-content p { font-size: 1.25rem; color: var(--gris-claro); margin-bottom: 2.5rem; max-width: 550px; font-weight: 300; }
         .hero-image { text-align: center; }
-        .hero-image img { width: 100%; max-width: 550px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); transform: scale(1.05); }
+        .hero-image img { width: 100%; max-width: 550px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); transform: scale(1.05); border-radius: 16px;}
 
-        /* --- BENTO GRID ALINEADO Y PERFECTO --- */
+        /* --- BENTO GRID ALINEADO (Bordes Redondeados) --- */
         .bento-section { background-color: var(--gris-claro); }
         .bento-grid { 
             display: grid; 
-            grid-template-columns: repeat(3, 1fr); /* 3 Columnas exactas */
+            grid-template-columns: repeat(3, 1fr); 
             grid-auto-rows: minmax(220px, auto); 
             gap: 1.5rem; 
         }
         .bento-card { 
             background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(0,0,0,0.03); 
             padding: 3rem 2.5rem; display: flex; flex-direction: column; 
-            transition: var(--transition-fast); border-radius: 0; /* Bloques rectos premium */
+            transition: var(--transition-fast); 
+            border-radius: 16px; /* BORDES REDONDEADOS PREMIUM */
         }
         .bento-card:hover { transform: translateY(-5px); background: var(--blanco); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .bento-card h3 { font-size: 1.6rem; margin-bottom: 1rem; color: var(--negro); text-transform: uppercase; }
         .bento-card p { font-size: 1.05rem; color: var(--carbon); margin: 0; }
         .card-circle { width: 22px; height: 22px; border: 1px solid var(--carbon); border-radius: 50%; margin-bottom: 1.5rem; opacity: 0.3; }
 
-        /* Posicionamiento exacto para evitar desalineación */
+        /* Posicionamiento del Bento */
         .card-pigmentacion { grid-column: 1 / 3; grid-row: 1; background-color: var(--negro); color: var(--gris-claro); }
         .card-pigmentacion h3 { color: var(--blanco); }
         .card-pigmentacion p { color: var(--gris-claro); }
@@ -123,11 +124,10 @@
         
         .card-arrugas { grid-column: 1; grid-row: 2; }
         .card-humedad { grid-column: 2; grid-row: 2; }
-        
         .card-textura { grid-column: 1; grid-row: 3; }
         .card-simulador { grid-column: 2 / 4; grid-row: 3; }
 
-        /* --- DASHBOARD EVOLUCIÓN FINANCIERA B2B ROBUSTO --- */
+        /* --- DASHBOARD EVOLUCIÓN FINANCIERA (Bordes Redondeados) --- */
         .roi-section { background-color: var(--carbon); color: var(--gris-claro); }
         .roi-container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
         
@@ -144,6 +144,7 @@
         .metric-card {
             background: rgba(1, 1, 1, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); 
             padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: space-between;
+            border-radius: 16px; /* BORDES REDONDEADOS */
         }
         .metric-label { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: #a5a4a1; margin-bottom: 1rem; display: block;}
         .metric-value { font-weight: 800; font-family: var(--font-head); color: var(--blanco); font-size: 3rem; line-height: 1;}
@@ -324,7 +325,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Animaciones Reveal
             const reveals = document.querySelectorAll(".reveal");
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -335,14 +335,12 @@
             }, { threshold: 0.1 });
             reveals.forEach(el => observer.observe(el));
 
-            // Header Scroll
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) header.classList.add('scrolled');
                 else header.classList.remove('scrolled');
             });
 
-            // Menú Móvil
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const navHeader = document.querySelector('.nav-header');
             const navLinks = document.querySelectorAll('.nav-header a');
@@ -364,3 +362,4 @@
     </script>
 </body>
 </html>
+
