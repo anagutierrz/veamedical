@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* --- VARIABLES DE MARCA (MANUAL VÉA) --- */
+        /* --- COLORES DEL MANUAL DE MARCA --- */
         :root {
             --negro: #010101;
             --carbon: #343021;
@@ -19,10 +19,11 @@
             --blanco: #ffffff;
             --font-head: 'Raleway', sans-serif;
             --font-body: 'Lato', sans-serif;
-            --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            --transition-fast: 0.3s ease;
+            --transition-slow: 0.5s ease;
         }
 
-        /* --- SETUP --- */
+        /* --- RESET & SETUP --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -31,61 +32,97 @@
             background-color: var(--gris-claro);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
             padding-top: 90px;
         }
 
-        h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; text-transform: uppercase; }
+        /* TÍTULOS CORREGIDOS (Sin uppercase forzado) */
+        h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; font-weight: 300; color: var(--carbon); }
+        strong { font-weight: 700; color: inherit; }
 
-        /* --- HEADER --- */
-        #header {
-            position: fixed; top: 0; width: 100%; height: 90px; z-index: 1000;
-            background-color: var(--gris-claro); border-bottom: 1px solid rgba(0,0,0,0.05);
-            display: flex; align-items: center; transition: var(--transition);
+        /* --- UTILIDADES --- */
+        .text-center { text-align: center; }
+        .bg-white { background-color: var(--blanco); }
+        .bg-carbon { background-color: var(--carbon); color: var(--gris-claro); }
+        .container { max-width: 1250px; width: 100%; margin: 0 auto; padding: 0 5%; }
+        section { padding: 8rem 0; position: relative; }
+
+        /* --- BOTONES (Estilo Bloque Sólido) --- */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 1.2rem 2.5rem; font-family: var(--font-head); font-weight: 800;
+            text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px;
+            font-size: 0.85rem; cursor: pointer; border: none;
+            border-radius: 0; /* BORDES RECTOS PARA MANTENER ESTILO */
+            transition: var(--transition-fast);
         }
-        .header-container { width: 100%; max-width: 1250px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; }
-        .logo-img { height: 45px; }
+        .btn-black { background-color: var(--negro); color: var(--gris-claro); }
+        .btn-black:hover { background-color: var(--carbon); color: var(--blanco); }
+        .btn-beige { background-color: var(--beige); color: var(--negro); }
+        .btn-beige:hover { background-color: #dfd4c9; }
+
+        /* --- HEADER EXACTO A LA PÁGINA DE INICIO --- */
+        #header {
+            position: fixed; top: 0; left: 0; width: 100%; height: 90px;
+            z-index: 1000; background-color: var(--gris-claro);
+            transition: var(--transition-fast);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        #header.scrolled { height: 75px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .header-container { height: 100%; display: flex; justify-content: space-between; align-items: center; max-width: 1250px; margin: 0 auto; padding: 0 5%;}
+        .logo-img { height: 40px; transition: var(--transition-fast); }
+        #header.scrolled .logo-img { height: 32px; }
+
         .nav-header ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
-        .nav-header a { text-decoration: none; font-family: var(--font-head); color: var(--carbon); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-contacto { background: var(--negro); color: var(--gris-claro); padding: 12px 25px; font-weight: 800; text-decoration: none; transition: var(--transition); }
-        .btn-contacto:hover { background: var(--carbon); }
+        .nav-header a:not(.btn) { 
+            text-decoration: none; font-family: var(--font-head); color: var(--carbon); 
+            font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease;
+        }
+        .nav-header a:not(.btn):hover { color: var(--negro); }
+        .header-cta { padding: 1rem 2rem; margin-left: 1rem; }
 
-        /* --- HERO --- */
-        .hero-product { min-height: 85vh; display: flex; align-items: center; background-color: var(--negro); color: var(--blanco); overflow: hidden; position: relative; }
-        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; z-index: 2; }
-        .hero-content h1 { font-size: 4.5rem; margin-bottom: 1.5rem; }
+        .mobile-menu-toggle { display: none; background: transparent; border: none; cursor: pointer; z-index: 1001; }
+        .mobile-menu-toggle .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--negro); transition: all 0.3s ease; }
+
+        /* --- HERO PRODUCT (Fondo oscuro) --- */
+        .hero-product { min-height: 85vh; display: flex; align-items: center; background-color: var(--negro); color: var(--blanco); overflow: hidden; padding-top: 5rem;}
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-content h1 { font-size: 4.5rem; margin-bottom: 1.5rem; letter-spacing: -2px; line-height: 1.05; color: var(--blanco); }
         .hero-content p { font-size: 1.25rem; color: var(--gris-claro); margin-bottom: 2.5rem; max-width: 550px; font-weight: 300; }
-        .hero-image img { width: 100%; max-width: 550px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); transform: scale(1.1); }
-        
-        /* Botones Rectos Premium */
-        .btn { display: inline-flex; align-items: center; padding: 1.2rem 2.5rem; font-family: var(--font-head); font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; transition: var(--transition); }
-        .btn-beige { background: var(--beige); color: var(--negro); }
-        .btn-beige:hover { background: var(--blanco); transform: translateY(-3px); }
+        .hero-image { text-align: center; }
+        .hero-image img { width: 100%; max-width: 550px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); transform: scale(1.05); }
 
-        /* --- BENTO GRID FUNCIONAL (RÉPLICA DE CAPTURA) --- */
-        .bento-section { padding: 8rem 5%; background-color: var(--gris-claro); }
-        .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(200px, auto); gap: 1.5rem; max-width: 1250px; margin: 0 auto; }
-        .bento-card { background: rgba(255, 255, 255, 0.4); border: 1px solid rgba(0,0,0,0.05); padding: 2.5rem; border-radius: 12px; display: flex; flex-direction: column; transition: var(--transition); }
+        /* --- BENTO GRID FUNCIONAL --- */
+        .bento-section { background-color: var(--gris-claro); }
+        .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(200px, auto); gap: 1.5rem; }
+        .bento-card { background: rgba(255, 255, 255, 0.4); border: 1px solid rgba(0,0,0,0.05); padding: 2.5rem; display: flex; flex-direction: column; transition: var(--transition-fast); border-radius: 8px;}
         .bento-card:hover { transform: translateY(-5px); background: var(--blanco); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .bento-card h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--negro); }
-        .bento-card p { font-size: 0.95rem; color: var(--carbon); margin: 0; }
+        .bento-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--negro); }
+        .bento-card p { font-size: 1.05rem; color: var(--carbon); margin: 0; }
         .card-circle { width: 22px; height: 22px; border: 1px solid var(--carbon); border-radius: 50%; margin-bottom: 1.5rem; opacity: 0.3; }
 
-        /* Estilos específicos de la captura */
+        /* Tarjetas Destacadas */
         .span-2-col { grid-column: span 2; }
         .span-2-row { grid-row: span 2; }
         .card-dark { background-color: var(--negro); color: var(--gris-claro); }
         .card-dark h3 { color: var(--blanco); }
         .card-dark p { color: var(--gris-claro); }
+        .card-dark:hover { background-color: var(--carbon); }
+        .card-dark .card-circle { border-color: var(--gris-claro); }
+
+        /* Tarjeta Venta Cruzada (Beige) */
         .card-highlight { background-color: var(--beige); color: var(--negro); border: none; }
         .card-highlight .card-circle { background-color: var(--negro); opacity: 1; border: none; }
         .card-highlight h3 { font-size: 1.8rem; }
         .card-highlight p { font-weight: 700; color: var(--carbon); }
+        .card-highlight:hover { background-color: #dfd4c9; }
 
-        /* --- ROI DASHBOARD (ALINEACIÓN PERFECTA) --- */
-        .roi-section { padding: 8rem 5%; background-color: var(--carbon); color: var(--gris-claro); }
-        .roi-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+        /* --- ROI DASHBOARD --- */
+        .roi-section { background-color: var(--carbon); color: var(--gris-claro); }
+        .roi-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
         .roi-text h2 { font-size: 3.5rem; color: var(--blanco); margin-bottom: 2rem; }
-        .dashboard-box { background: rgba(1, 1, 1, 0.4); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 3.5rem; }
+        .dashboard-box { background: rgba(1, 1, 1, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); padding: 3.5rem; }
         .data-row { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(215, 214, 210, 0.1); }
         .data-label { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: #a5a4a1; }
         .data-value { font-weight: 800; font-family: var(--font-head); color: var(--blanco); font-size: 1.6rem; }
@@ -93,21 +130,37 @@
         .highlight-row .data-value { font-size: 2.8rem; color: var(--beige); }
 
         /* --- ANIMACIONES --- */
-        .reveal { opacity: 0; transform: translateY(30px); transition: var(--transition); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: var(--transition-slow); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- MOBILE --- */
+        /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 1024px) {
-            .hero-grid, .roi-container { grid-template-columns: 1fr; text-align: center; }
-            .hero-content h1 { font-size: 3.2rem; }
+            h1 { font-size: 3.5rem !important; }
+            h2 { font-size: 2.8rem !important; }
+            .mobile-menu-toggle { display: block; }
+            .nav-header { 
+                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; 
+                background-color: var(--gris-claro); display: flex; flex-direction: column; 
+                justify-content: center; align-items: center; transition: right 0.4s ease; z-index: 1001; 
+            }
+            .nav-header.active { right: 0; }
+            .nav-header ul { flex-direction: column; gap: 2.5rem; text-align: center; }
+            .nav-header a:not(.btn) { font-size: 1.5rem; }
+            .header-cta { margin-left: 0; margin-top: 2rem; }
+            .mobile-menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .mobile-menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+            .hero-grid, .roi-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .hero-product { padding-top: 8rem; }
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
             .span-2-col, .span-2-row { grid-column: span 1; grid-row: span 1; }
             .hero-image { order: -1; }
-            .nav-header { display: none; }
         }
         @media (max-width: 768px) {
+            .logo-img { height: 32px; } 
+            h1 { font-size: 2.8rem !important; }
             .bento-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.6rem; }
         }
     </style>
 </head>
@@ -118,15 +171,22 @@
             <a href="index.html">
                 <img src="logovea.png" alt="VEA Medical" class="logo-img">
             </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Abrir Menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <nav class="nav-header">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#productos">Productos</a></li>
                     <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto" class="btn btn-black header-cta">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#contacto" class="btn-contacto">CONTACTO</a>
         </div>
     </header>
 
@@ -146,13 +206,15 @@
 
         <section class="bento-section">
             <div class="container">
-                <h2 class="text-center reveal" style="margin-bottom: 4rem;">Capacidades de Análisis Inteligente</h2>
+                <div class="text-center reveal" style="margin-bottom: 4rem;">
+                    <h2>Capacidades de Análisis Inteligente</h2>
+                </div>
                 <div class="bento-grid">
                     
                     <div class="bento-card span-2-col card-dark reveal">
                         <div class="card-circle"></div>
                         <h3>Mapeo de Pigmentación y Acné</h3>
-                        <p>Análisis bajo luz UV para detectar melasma y bacterias inflamatorias antes de que sean visibles en la superficie. Evidencia irrefutable para protocolos despigmentantes.</p>
+                        <p>Análisis bajo luz UV para detectar melasma y bacterias inflamatorias antes de que sean visibles en la superficie. Evidencia irrefutable para protocolos preventivos.</p>
                     </div>
                     
                     <div class="bento-card reveal" style="transition-delay: 0.1s;">
@@ -166,7 +228,7 @@
                         <h3>Motor de Prescripción Automática (Skincare Up-Sell)</h3>
                         <p>El mayor generador de ingresos. La IA cruza el diagnóstico con tu inventario, generando una receta automatizada que el paciente compra en recepción sin fricción.</p>
                         <br>
-                        <p>Automatiza tu farmacia interna y asegura que cada paciente salga con su rutina completa de mantenimiento domiciliario.</p>
+                        <p>Convierte la recomendación de productos domiciliarios en un proceso científico, cerrando ventas sin esfuerzo adicional por parte del médico.</p>
                     </div>
 
                     <div class="bento-card reveal" style="transition-delay: 0.3s;">
@@ -192,10 +254,10 @@
         </section>
 
         <section id="roi" class="roi-section">
-            <div class="roi-container reveal">
+            <div class="container roi-container reveal">
                 <div class="roi-text">
                     <h2>Evolución Financiera con IA</h2>
-                    <p>Integrar la IA de VÉA Medical en tu consulta inicial no solo eleva el estatus de la clínica [cite: 14], sino que optimiza cada minuto de cabina al asegurar la venta cruzada[cite: 13].</p>
+                    <p>Integrar la IA de VÉA Medical en tu consulta inicial no solo eleva el estatus de la clínica, sino que optimiza cada minuto de cabina al asegurar la venta cruzada.</p>
                 </div>
                 
                 <div class="dashboard-box">
@@ -219,9 +281,9 @@
             </div>
         </section>
 
-        <section style="padding: 10rem 5%; text-align: center; background: var(--blanco);">
-            <div class="container reveal">
-                <h2 style="font-size: 4rem; margin-bottom: 2rem;">¿Listo para automatizar tus ventas?</h2>
+        <section id="contacto" style="background: var(--blanco);">
+            <div class="container text-center reveal">
+                <h2>¿Listo para automatizar tus ventas?</h2>
                 <p style="max-width: 700px; margin: 0 auto 3.5rem;">Deja que la tecnología de VÉA Medical sea tu mejor cerrador de ventas. Solicita una demostración virtual personalizada.</p>
                 <a href="https://wa.me/tunumerodetelefono" class="btn btn-black">Solicitar Demostración y Precios</a>
             </div>
@@ -230,6 +292,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animaciones Reveal
             const reveals = document.querySelectorAll(".reveal");
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -240,10 +303,30 @@
             }, { threshold: 0.1 });
             reveals.forEach(el => observer.observe(el));
 
+            // Header Scroll
+            const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
-                const header = document.getElementById('header');
-                if (window.scrollY > 50) header.style.height = '75px';
-                else header.style.height = '90px';
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+
+            // Menú Móvil
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navHeader = document.querySelector('.nav-header');
+            const navLinks = document.querySelectorAll('.nav-header a');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                navHeader.classList.toggle('active');
+                document.body.style.overflow = navHeader.classList.contains('active') ? 'hidden' : '';
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navHeader.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
             });
         });
     </script>
