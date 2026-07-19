@@ -1,0 +1,12 @@
+VÉA MEDICAL — ARCHIVOS LISTOS PARA SUBIR
+
+1. Haz una copia de seguridad de la web actual.
+2. Sube TODO el contenido de esta carpeta dentro de public_html.
+3. Mantén la carpeta assets/images junto a los archivos HTML.
+4. Verifica Inicio, Nosotros, Por qué VÉA, Tecnologías y Contacto.
+
+IMPORTANTE ANTES DE PUBLICAR:
+- El WhatsApp configurado en la web es +1 809 000 0000, el mismo número provisional que aparece en la página publicada. Reemplázalo en todos los HTML por el número real.
+- El formulario abre el correo del visitante mediante mailto:info@veamedical.com. No guarda leads en una base de datos. Para recibir formularios automáticamente se debe conectar a un servicio de formularios, CRM o backend.
+- Revisa los nombres comerciales de las tecnologías antes de publicar: los archivos usan VÉA Intelligence, VÉA Skin y VÉA Pigment.
+- Si reemplazas la web actual, conserva una copia de los archivos anteriores.
