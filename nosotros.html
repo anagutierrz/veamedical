@@ -259,13 +259,19 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .tech-img{height:240px;}
 }
 
-.pg-hero{padding:calc(var(--nav-h)+140px) 0 110px;background:var(--ink);position:relative;overflow:hidden;min-height:82svh;display:flex;align-items:flex-end;}
-.pg-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 30%,rgba(255,255,255,.03) 0%,transparent 60%);}
-.pg-hero-inner{position:relative;z-index:1;}
+.pg-hero{padding:calc(var(--nav-h)+70px) 0 72px;background:var(--ink);position:relative;overflow:hidden;min-height:88svh;display:flex;align-items:center;}
+.pg-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 58% 82% at 72% 34%,rgba(255,255,255,.055) 0%,transparent 60%);}
+.pg-hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,7vw,100px);align-items:center;}
+.pg-hero-copy{max-width:720px;}
 .pg-label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:22px;}
-.pg-h1{font-family:var(--fh);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(2rem,4.4vw,4.6rem);line-height:1.02;color:var(--white);max-width:920px;}
+.pg-h1{font-family:var(--fh);font-weight:900;text-transform:uppercase;letter-spacing:-.045em;font-size:clamp(2.4rem,4.7vw,5.2rem);line-height:.96;color:var(--white);max-width:760px;}
 .pg-h1 em{font-style:normal;color:rgba(255,255,255,.3);}
-.pg-sub{font-size:.95rem;color:rgba(255,255,255,.45);max-width:500px;line-height:1.75;margin-top:24px;}
+.pg-sub{font-size:1rem;color:rgba(255,255,255,.5);max-width:540px;line-height:1.78;margin-top:26px;}
+.pg-hero-visual{position:relative;}
+.pg-hero-frame{padding:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);box-shadow:0 28px 90px rgba(0,0,0,.34);}
+.pg-hero-frame img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
+.pg-hero-cap{display:flex;justify-content:space-between;gap:20px;padding:14px 2px 0;color:rgba(255,255,255,.45);font-size:.74rem;line-height:1.5;}
+.pg-hero-cap strong{color:var(--white);font-family:var(--fh);text-transform:uppercase;font-size:.72rem;letter-spacing:.08em;}
 
 /* ABOUT SECTION */
 .about-sec{padding:120px 0;}
@@ -344,10 +350,15 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .eco-grid{grid-template-columns:1fr 1fr;}
   .academy-photos{grid-template-columns:1fr;}
   .aphoto.tall{grid-row:auto;}
-  .pg-hero{padding:calc(var(--nav-h)+88px) 0 78px;min-height:auto;}
+  .pg-hero{padding:calc(var(--nav-h)+70px) 0 68px;min-height:auto;}
+  .pg-hero-inner{grid-template-columns:1fr;gap:34px;}
+  .pg-hero-copy{max-width:none;}
+  .pg-hero-frame img{aspect-ratio:16/11;}
 }
 @media(max-width:640px){
   .eco-grid{grid-template-columns:1fr;}
+  .pg-h1{font-size:clamp(2.25rem,12vw,3.5rem);}
+  .pg-hero-cap{flex-direction:column;gap:4px;}
 }
 </style>
 </head>
@@ -357,6 +368,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
     <a href="index.html" class="brand light">VÉA <span>MEDICAL</span></a>
     <nav class="nav-links light">
       <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="por-que-vea.html">Por qué VÉA</a>
       <a href="tecnologia.html">Tecnologías</a>
       <a href="academy.html">Academy</a>
       <a href="contacto.html">Contacto</a>
@@ -371,6 +383,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <div class="mmenu" id="mmenu">
   <a href="index.html" class="ml">Inicio</a>
   <a href="nosotros.html" class="ml">Nosotros</a>
+  <a href="por-que-vea.html" class="ml">Por qué VÉA</a>
   <a href="tecnologia.html" class="ml">Tecnologías</a>
   <a href="academy.html" class="ml">Academy</a>
   <a href="contacto.html" class="ml">Contacto</a>
@@ -379,9 +392,17 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 
 <section class="pg-hero">
   <div class="wrap pg-hero-inner">
-    <div class="pg-label sr">Quiénes somos</div>
-    <h1 class="pg-h1 sr d1">No somos un distribuidor.<br/><em>Somos tu socio</em><br/>estratégico.</h1>
-    <p class="pg-sub sr d2">VÉA Medical es el Clinical Technology Partner de clínicas que buscan transformar la tecnología en crecimiento real, sostenible y medible.</p>
+    <div class="pg-hero-copy">
+      <div class="pg-label sr">Quiénes somos</div>
+      <h1 class="pg-h1 sr d1">No somos un distribuidor.<br/><em>Somos tu socio</em><br/>estratégico.</h1>
+      <p class="pg-sub sr d2">VÉA Medical es el Clinical Technology Partner de clínicas que buscan transformar la tecnología en crecimiento real, sostenible y medible.</p>
+    </div>
+    <div class="pg-hero-visual sr-scale d2">
+      <figure class="pg-hero-frame">
+        <img src="nosotros-metodo-intro.jpg" alt="Profesional de VÉA Medical presentando el Método VÉA 360°" loading="eager" decoding="async"/>
+        <figcaption class="pg-hero-cap"><strong>Método VÉA 360°</strong><span>Estrategia, tecnología, capacitación y acompañamiento en un solo sistema.</span></figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 

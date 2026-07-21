@@ -15,3 +15,6 @@ Ajustes realizados:
 - Se creó una página/sección separada para **VÉA Academy**.
 - Se verificaron las rutas de imágenes en toda la web.
 - Se añadieron imágenes visibles en todas las páginas principales, incluyendo Contacto.
+
+- Promesa VÉA centrada visualmente.
+- Hero de Nosotros rediseñado con composición de dos columnas e imagen.
