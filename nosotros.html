@@ -360,6 +360,45 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .pg-h1{font-size:clamp(2.25rem,12vw,3.5rem);}
   .pg-hero-cap{flex-direction:column;gap:4px;}
 }
+
+/* MOBILE REFINEMENT */
+@media (max-width: 768px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden;}
+  *,*::before,*::after{min-width:0;}
+  .wrap,.wrap-md,.wrap-sm{width:calc(100% - 32px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
+  .nav{height:64px!important;}
+  .nav-inner{gap:10px!important;}
+  .brand{font-size:.98rem!important;line-height:1!important;}
+  .nav-right{display:none!important;}
+  .ham{display:grid!important;margin-left:auto!important;}
+  .mmenu{top:64px!important;padding:24px 18px 28px!important;}
+  .mmenu a{font-size:1.15rem!important;line-height:1.15!important;}
+  section{overflow:hidden;}
+  h1,h2,h3,.display,.hero-h1,.pg-h1,.hero-display{overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;}
+  h1,.hero-h1,.pg-h1,.hero-display{font-size:clamp(2.05rem,10.6vw,3.35rem)!important;line-height:.98!important;letter-spacing:-.045em!important;}
+  h2{font-size:clamp(1.75rem,8.6vw,2.65rem)!important;line-height:1.02!important;}
+  p{font-size:.94rem!important;line-height:1.72!important;}
+  .label,.hero-k,.hero-eyebrow,.pg-label{font-size:.62rem!important;letter-spacing:.18em!important;}
+  .btn{width:100%!important;justify-content:center!important;padding:14px 18px!important;}
+  .foot-grid{grid-template-columns:1fr!important;gap:24px!important;}
+  .foot-bottom{align-items:flex-start!important;flex-direction:column!important;}
+  img{max-width:100%!important;height:auto;}
+}
+
+
+@media (max-width: 768px){
+  .pg-hero{padding:calc(64px + 54px) 0 62px!important;min-height:auto!important;}
+  .pg-hero-grid{display:flex!important;flex-direction:column!important;gap:26px!important;}
+  .pg-hero-visual{width:100%!important;}
+  .pg-hero-visual img{width:100%!important;height:auto!important;object-fit:contain!important;}
+  .about-grid,.metodo-layout,.academy-grid{display:flex!important;flex-direction:column!important;gap:28px!important;}
+  .metodo-preview{position:relative!important;top:auto!important;}
+  .preview-wrap img{height:auto!important;object-fit:contain!important;}
+  .eco-grid{grid-template-columns:1fr!important;}
+  .academy-photos{grid-template-columns:1fr!important;}
+  .aphoto img{aspect-ratio:auto!important;object-fit:contain!important;background:#171717!important;}
+}
+
 </style>
 </head>
 <body>

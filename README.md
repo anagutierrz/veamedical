@@ -1,20 +1,12 @@
 # VÉA Medical
 
-Versión lista para GitHub Pages, con todos los archivos en la raíz.
+Versión con refinamiento móvil completo.
 
-Incluye:
-- index.html
-- nosotros.html
-- por-que-vea.html
-- tecnologia.html
-- academy.html
-- contacto.html
-- imágenes en la raíz
+Cambios principales:
+- Academy reconstruida para pantallas móviles.
+- Eliminación de desbordes horizontales y texto cortado.
+- Imágenes mostradas según su proporción real, sin recortes ni estiramiento.
+- Navegación móvil, botones, tipografías y espaciados ajustados.
+- Ajustes móviles también aplicados a Inicio, Nosotros, Por qué VÉA, Tecnologías y Contacto.
 
-Ajustes realizados:
-- Se creó una página/sección separada para **VÉA Academy**.
-- Se verificaron las rutas de imágenes en toda la web.
-- Se añadieron imágenes visibles en todas las páginas principales, incluyendo Contacto.
-
-- Promesa VÉA centrada visualmente.
-- Hero de Nosotros rediseñado con composición de dos columnas e imagen.
+Todos los archivos deben subirse directamente a la raíz del repositorio.

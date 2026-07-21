@@ -330,6 +330,31 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .form-card{padding:26px 22px;}
   .wa-inner{flex-direction:column;gap:20px;}
 }
+
+/* MOBILE REFINEMENT */
+@media (max-width: 768px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden;}
+  *,*::before,*::after{min-width:0;}
+  .wrap,.wrap-md,.wrap-sm{width:calc(100% - 32px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
+  .nav{height:64px!important;}
+  .nav-inner{gap:10px!important;}
+  .brand{font-size:.98rem!important;line-height:1!important;}
+  .nav-right{display:none!important;}
+  .ham{display:grid!important;margin-left:auto!important;}
+  .mmenu{top:64px!important;padding:24px 18px 28px!important;}
+  .mmenu a{font-size:1.15rem!important;line-height:1.15!important;}
+  section{overflow:hidden;}
+  h1,h2,h3,.display,.hero-h1,.pg-h1,.hero-display{overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;}
+  h1,.hero-h1,.pg-h1,.hero-display{font-size:clamp(2.05rem,10.6vw,3.35rem)!important;line-height:.98!important;letter-spacing:-.045em!important;}
+  h2{font-size:clamp(1.75rem,8.6vw,2.65rem)!important;line-height:1.02!important;}
+  p{font-size:.94rem!important;line-height:1.72!important;}
+  .label,.hero-k,.hero-eyebrow,.pg-label{font-size:.62rem!important;letter-spacing:.18em!important;}
+  .btn{width:100%!important;justify-content:center!important;padding:14px 18px!important;}
+  .foot-grid{grid-template-columns:1fr!important;gap:24px!important;}
+  .foot-bottom{align-items:flex-start!important;flex-direction:column!important;}
+  img{max-width:100%!important;height:auto;}
+}
+
 </style>
 <link href="https://veamedical.com/contacto.html" rel="canonical"/><meta content="Agenda una Experiencia VÉA y conversa con un Clinical Technology Partner para evaluar las necesidades de tu clínica." name="description"/></head>
 <body data-hero-dark="1">
