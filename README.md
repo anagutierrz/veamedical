@@ -40,3 +40,7 @@ Para usar `veamedical.com`, configúralo en **Settings → Pages → Custom doma
 ## Nota sobre formularios
 
 El proyecto es estático. Los formularios deben conectarse a un servicio externo, CRM, endpoint propio o plataforma de formularios para almacenar y procesar los leads automáticamente.
+
+
+## Actualización del inicio
+El archivo `index.html` incluye una página de inicio ampliada con Método VÉA 360°, Ecosistema, VÉA Academy, acompañamiento y CTA final.
