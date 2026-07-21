@@ -631,6 +631,31 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
  .academy-panel,.support-main{padding:34px 28px;}
  .support-list{padding:8px 24px;}
 }
+
+/* VISUALES EDITORIALES */
+.home-visual-story{background:var(--white);padding:0 0 110px;}
+.home-visual-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch;}
+.home-visual-main,.home-visual-side{position:relative;overflow:hidden;background:var(--pearl);min-height:520px;}
+.home-visual-side{display:grid;grid-template-rows:1fr 1fr;gap:16px;background:transparent;}
+.home-visual-card{position:relative;overflow:hidden;background:var(--pearl);min-height:250px;}
+.home-visual-grid img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease);}
+.home-visual-main:hover img,.home-visual-card:hover img{transform:scale(1.025);}
+.visual-caption{position:absolute;left:22px;right:22px;bottom:20px;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);color:#fff;padding:16px 18px;border:1px solid rgba(255,255,255,.1);}
+.visual-caption strong{display:block;color:#fff;font-family:var(--fh);font-size:.84rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
+.visual-caption span{font-size:.75rem;color:rgba(255,255,255,.58);}
+.method-media{margin-top:48px;display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch;}
+.method-media figure{overflow:hidden;position:relative;background:#151515;border:1px solid rgba(255,255,255,.08);}
+.method-media img{width:100%;height:100%;object-fit:cover;min-height:390px;}
+.method-media figcaption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(10,10,10,.8);color:rgba(255,255,255,.65);padding:12px 14px;font-size:.74rem;border:1px solid rgba(255,255,255,.08);}
+.academy-home .academy-grid{grid-template-columns:.8fr 1.2fr;}
+.academy-content-stack{display:grid;gap:28px;}
+.academy-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.academy-photo{position:relative;overflow:hidden;min-height:360px;background:var(--pearl);}
+.academy-photo img{width:100%;height:100%;object-fit:cover;}
+.academy-photo figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(10,10,10,.8);color:rgba(255,255,255,.62);padding:10px 12px;font-size:.72rem;}
+@media(max-width:980px){.home-visual-grid,.method-media,.academy-home .academy-grid{grid-template-columns:1fr}.home-visual-main{min-height:440px}.home-visual-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.method-media img{min-height:320px}}
+@media(max-width:640px){.home-visual-story{padding-bottom:72px}.home-visual-side,.academy-photo-grid{grid-template-columns:1fr}.home-visual-main{min-height:360px}.home-visual-card,.academy-photo{min-height:300px}}
+
 </style>
 <link href="https://veamedical.com/" rel="canonical"/></head>
 <body data-hero-dark="1">
@@ -761,6 +786,19 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   </div>
 </section>
 
+<section class="home-visual-story">
+  <div class="wrap home-visual-grid">
+    <figure class="home-visual-main sr-scale">
+      <img src="metodo-overview.jpg" alt="Método VÉA 360 grados aplicado a una clínica" loading="lazy" decoding="async"/>
+      <figcaption class="visual-caption"><strong>Una metodología completa</strong><span>Diagnóstico, selección, implementación, capacitación, lanzamiento y optimización.</span></figcaption>
+    </figure>
+    <div class="home-visual-side">
+      <figure class="home-visual-card sr d1"><img src="tech-intelligence.jpg" alt="Tecnología de diagnóstico facial VÉA Intelligence" loading="lazy"/><figcaption class="visual-caption"><strong>Tecnología con criterio</strong><span>Seleccionada según la realidad clínica y financiera.</span></figcaption></figure>
+      <figure class="home-visual-card sr d2"><img src="academy-jhoana-alumna-2.jpg" alt="Jhoana y alumna durante certificación VÉA Academy" loading="lazy"/><figcaption class="visual-caption"><strong>Equipo preparado</strong><span>Capacitación práctica y certificación oficial.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ SECCIÓN 4: MÉTODO VÉA 360 ═══ -->
 <section class="method-home" id="metodo">
   <div class="wrap">
@@ -776,6 +814,11 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
       <article class="method-step sr d1"><div class="ms-num">02 · ESTRATEGIA</div><h3>Diseñamos la integración</h3><p>Definimos cómo incorporar la tecnología, posicionarla, protocolizarla y conectarla con tu oferta actual.</p></article>
       <article class="method-step sr d2"><div class="ms-num">03 · CERTIFICACIÓN</div><h3>Preparamos a tu equipo</h3><p>Capacitación clínica y comercial para trabajar con seguridad, comunicar valor y generar confianza desde el primer día.</p></article>
       <article class="method-step sr d3"><div class="ms-num">04 · OPTIMIZACIÓN</div><h3>Acompañamos el crecimiento</h3><p>Seguimiento posterior, revisión de resultados y ajustes para mejorar adopción, productividad y retorno.</p></article>
+    </div>
+
+    <div class="method-media">
+      <figure class="sr"><img src="metodo-01-diagnostico.jpg" alt="Diagnóstico estratégico VÉA 360" loading="lazy"/><figcaption>Antes de recomendar, analizamos la clínica, el mercado, los pacientes y los objetivos.</figcaption></figure>
+      <figure class="sr d1"><img src="metodo-06-rentabilidad.jpg" alt="Rentabilidad medible en el Método VÉA 360" loading="lazy"/><figcaption>La implementación se acompaña con métricas, seguimiento y decisiones basadas en resultados.</figcaption></figure>
     </div>
     <div class="method-foot sr">
       <p>Cada implementación es distinta. Por eso el Método VÉA 360° se adapta al tamaño, especialidad y etapa de crecimiento de cada aliado.</p>
@@ -810,11 +853,17 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
       <h2>Tu equipo no recibe una demostración. Recibe preparación.</h2>
       <p>Convertimos conocimiento técnico en confianza clínica y capacidad comercial, para que cada integrante entienda qué hace la tecnología, cómo utilizarla y cómo comunicar su valor al paciente.</p>
     </div>
-    <div class="academy-points">
-      <div class="academy-point sr"><div class="ap-num">01</div><div><h3>Entrenamiento clínico</h3><p>Fundamentos, protocolos, indicaciones, experiencia del paciente y buenas prácticas.</p></div></div>
-      <div class="academy-point sr d1"><div class="ap-num">02</div><div><h3>Entrenamiento comercial</h3><p>Cómo explicar beneficios, presentar planes y transformar el diagnóstico en una conversación de valor.</p></div></div>
-      <div class="academy-point sr d2"><div class="ap-num">03</div><div><h3>Certificación y seguimiento</h3><p>Validamos la preparación del equipo y reforzamos la implementación después del entrenamiento inicial.</p></div></div>
-      <a class="btn btn-ol sr d3" href="nosotros.html#academy" style="justify-self:start;margin-top:12px;">Conocer VÉA Academy →</a>
+    <div class="academy-content-stack">
+      <div class="academy-photo-grid">
+        <figure class="academy-photo sr"><img src="academy-jhoana-alumna-1.jpg" alt="Jhoana junto a una alumna en VÉA Academy" loading="lazy"/><figcaption>Capacitación y acompañamiento práctico.</figcaption></figure>
+        <figure class="academy-photo sr d1"><img src="academy-jhoana-alumna-2.jpg" alt="Entrega de certificación VÉA Medical" loading="lazy"/><figcaption>Certificación oficial al completar la formación.</figcaption></figure>
+      </div>
+      <div class="academy-points">
+        <div class="academy-point sr"><div class="ap-num">01</div><div><h3>Entrenamiento clínico</h3><p>Fundamentos, protocolos, indicaciones, experiencia del paciente y buenas prácticas.</p></div></div>
+        <div class="academy-point sr d1"><div class="ap-num">02</div><div><h3>Entrenamiento comercial</h3><p>Cómo explicar beneficios, presentar planes y transformar el diagnóstico en una conversación de valor.</p></div></div>
+        <div class="academy-point sr d2"><div class="ap-num">03</div><div><h3>Certificación y seguimiento</h3><p>Validamos la preparación del equipo y reforzamos la implementación después del entrenamiento inicial.</p></div></div>
+        <a class="btn btn-ol sr d3" href="nosotros.html#academy" style="justify-self:start;margin-top:12px;">Conocer VÉA Academy →</a>
+      </div>
     </div>
   </div>
 </section>

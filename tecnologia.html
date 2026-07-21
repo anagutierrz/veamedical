@@ -304,6 +304,33 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .tech-stats{grid-template-columns:1fr 1fr;}
   .tech-sec{padding:72px 0;}
 }
+
+/* Sistema visual unificado */
+.pg-hero{padding:calc(var(--nav-h)+120px) 0 100px;min-height:78svh;display:flex;align-items:flex-end;background:var(--ink);}
+.pg-h1{font-size:clamp(2.8rem,6vw,6.4rem);line-height:.91;max-width:980px;}
+.tech-intro-gallery{background:var(--white);padding:90px 0 40px;}
+.tech-gallery-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;}
+.tech-gallery-main,.tech-gallery-side figure{position:relative;overflow:hidden;background:var(--pearl);}
+.tech-gallery-main{min-height:560px;}
+.tech-gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:14px;}
+.tech-gallery-side figure{min-height:270px;}
+.tech-gallery-grid img{width:100%;height:100%;object-fit:cover;}
+.tg-cap{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(10,10,10,.82);color:#fff;padding:13px 15px;border:1px solid rgba(255,255,255,.1);}
+.tg-cap strong{display:block;color:#fff;font-family:var(--fh);font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;}
+.tg-cap span{font-size:.7rem;color:rgba(255,255,255,.55);}
+.tech-sec{padding:110px 0;}
+.tech-grid{grid-template-columns:1.05fr .95fr;}
+.tech-img-frame{min-height:560px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#f7f7f7,#e9e9e9);padding:28px;}
+.tech-img-frame img{width:100%;height:100%;max-height:620px;object-fit:contain;filter:none;}
+.tech-copy h2{font-size:clamp(2rem,4vw,4rem);}
+.tech-copy .tagline{font-family:var(--fh);font-size:1.12rem;}
+.tech-stats{border:1px solid var(--fog);background:var(--white);padding:0;gap:0;}
+.tech-stats>div{padding:22px 18px;border-right:1px solid var(--fog);}
+.tech-stats>div:last-child{border-right:none;}
+.tech-sec.alt .tech-stats{background:var(--white);}
+@media(max-width:980px){.tech-gallery-grid,.tech-grid{grid-template-columns:1fr}.tech-gallery-main{min-height:440px}.tech-gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.tech-img-frame{min-height:420px}}
+@media(max-width:640px){.pg-hero{min-height:auto;padding:calc(var(--nav-h)+88px) 0 75px}.tech-gallery-side{grid-template-columns:1fr}.tech-gallery-main{min-height:360px}.tech-gallery-side figure{min-height:300px}.tech-img-frame{min-height:330px;padding:16px}.tech-stats>div{border-right:none;border-bottom:1px solid var(--fog)}.tech-stats>div:last-child{border-bottom:none}}
+
 </style>
 <link href="https://veamedical.com/tecnologia.html" rel="canonical"/></head>
 <body>
@@ -345,12 +372,23 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <div class="ti"><span>Diagnóstico · Tratamiento · Resultados</span><span class="dot"></span></div>
 </div>
 </div>
+
+<section class="tech-intro-gallery">
+  <div class="wrap tech-gallery-grid">
+    <figure class="tech-gallery-main sr-scale"><img src="tech-intelligence.jpg" alt="VÉA Intelligence, sistema de diagnóstico facial"/><figcaption class="tg-cap"><strong>VÉA Intelligence</strong><span>Diagnóstico visual y análisis con inteligencia artificial.</span></figcaption></figure>
+    <div class="tech-gallery-side">
+      <figure class="sr d1"><img src="tech-skin.jpg" alt="VÉA Skin, sistema de drug delivery" loading="lazy"/><figcaption class="tg-cap"><strong>VÉA Skin</strong><span>Infusión de activos, electroporación y fototerapia.</span></figcaption></figure>
+      <figure class="sr d2"><img src="tech-pigment.jpg" alt="VÉA Pigment, radiofrecuencia monopolar" loading="lazy"/><figcaption class="tg-cap"><strong>VÉA Pigment</strong><span>Radiofrecuencia monopolar facial y corporal.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- VÉA INTELLIGENCE -->
 <section class="tech-sec" id="intelligence">
 <div class="wrap-md">
 <div class="tech-grid">
 <div class="tech-img-frame sr-scale">
-<img alt="VÉA Intelligence – Scanner Facial con IA" decoding="async" src="assets/images/por-que-vea-01-64748cdff468.jpg"/>
+<img alt="VÉA Intelligence – Scanner Facial con IA" decoding="async" src="tech-intelligence.jpg"/>
 </div>
 <div class="tech-copy">
 <div class="sec-num sr">01 / 03</div>
@@ -383,7 +421,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <div class="wrap-md">
 <div class="tech-grid rev">
 <div class="tech-img-frame sr-scale">
-<img alt="VÉA Skin – Drug Delivery 2 en 1" decoding="async" loading="lazy" src="assets/images/tecnologia-01-29f65654126d.jpg"/>
+<img alt="VÉA Skin – Drug Delivery 2 en 1" decoding="async" loading="lazy" src="tech-skin.jpg"/>
 </div>
 <div class="tech-copy">
 <div class="sec-num sr">02 / 03</div>
@@ -416,7 +454,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <div class="wrap-md">
 <div class="tech-grid">
 <div class="tech-img-frame sr-scale">
-<img alt="VÉA Pigment – Radiofrecuencia Monopolar 6.78 MHz" decoding="async" loading="lazy" src="assets/images/tecnologia-02-9fb177eef2d9.jpg"/>
+<img alt="VÉA Pigment – Radiofrecuencia Monopolar 6.78 MHz" decoding="async" loading="lazy" src="tech-pigment.jpg"/>
 </div>
 <div class="tech-copy">
 <div class="sec-num sr">03 / 03</div>

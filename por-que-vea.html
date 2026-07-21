@@ -540,6 +540,32 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
   .ff-row{grid-template-columns:1fr;}
   .contrast{padding:72px 0;}
 }
+
+/* Ajuste de escala visual consistente con Inicio */
+.hero{min-height:88svh;padding-top:calc(var(--nav-h) + 46px);padding-bottom:70px;}
+.hero-display{font-size:clamp(3rem,6.1vw,6.6rem);line-height:.9;max-width:980px;}
+.ch{padding:110px 0;}
+.ch-layout{align-items:center;}
+.ch-visual img,.ch-photos img{background:var(--pearl);min-height:420px;object-fit:cover;}
+.roi-calc{background:var(--ink);padding:110px 0;color:var(--white);}
+.roi-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(40px,7vw,100px);align-items:start;}
+.roi-copy h2{color:var(--white);margin:16px 0 18px;}
+.roi-copy p{color:rgba(255,255,255,.48);max-width:520px;}
+.calc-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);padding:34px;}
+.calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.calc-field{display:grid;gap:7px;}
+.calc-field label{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.calc-field input{width:100%;padding:13px 14px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;border-radius:2px;}
+.calc-field input:focus{border-color:rgba(255,255,255,.45);}
+.calc-results{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.12);margin-top:22px;}
+.calc-result{padding:19px;border-right:1px solid rgba(255,255,255,.12);}
+.calc-result:last-child{border-right:none;}
+.calc-result strong{display:block;color:#fff;font-family:var(--fh);font-size:1.4rem;letter-spacing:-.04em;}
+.calc-result span{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.32);}
+.calc-note{font-size:.7rem;color:rgba(255,255,255,.28);margin-top:14px;line-height:1.55;}
+@media(max-width:980px){.roi-grid{grid-template-columns:1fr}.hero-display{font-size:clamp(2.8rem,10vw,5.4rem)}}
+@media(max-width:640px){.calc-fields,.calc-results{grid-template-columns:1fr}.calc-result{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}.calc-result:last-child{border-bottom:none}.ch-visual img,.ch-photos img{min-height:300px}}
+
 </style>
 <link href="https://veamedical.com/por-que-vea.html" rel="canonical"/></head>
 <body data-hero-dark="1">
@@ -653,7 +679,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <section class="ch dark" id="ch1">
 <div class="wrap ch-layout">
 <div class="ch-visual dark-frame sr-scale">
-<img alt="Diagnóstico Estratégico – Método VÉA 360°" decoding="async" src="assets/images/nosotros-01-fd5eff0838ac.jpg"/>
+<img alt="Diagnóstico Estratégico – Método VÉA 360°" decoding="async" src="porque-diagnostico.jpg"/>
 </div>
 <div>
 <div class="ch-kicker sr"><div class="ch-num light">01 / 06</div><div class="ch-tick light"></div></div>
@@ -701,7 +727,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <a class="cta-link sr d4" href="tecnologia.html" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);">Ver tecnologías en detalle →</a>
 </div>
 <div class="ch-visual sr-scale" style="display:grid;gap:8px;">
-<img alt="VÉA Intelligence" decoding="async" loading="lazy" src="assets/images/por-que-vea-01-64748cdff468.jpg" style="border-radius:2px;box-shadow:0 24px 72px rgba(0,0,0,.12);"/>
+<img alt="VÉA Intelligence" decoding="async" loading="lazy" src="porque-intelligence.jpg" style="border-radius:2px;box-shadow:0 24px 72px rgba(0,0,0,.12);"/>
 </div>
 </div>
 </section>
@@ -711,8 +737,8 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <section class="ch pearl" id="ch3">
 <div class="wrap ch-layout">
 <div class="ch-photos sr-scale">
-<img alt="Certificación VÉA Academy" class="tall" decoding="async" loading="lazy" src="assets/images/nosotros-02-bc70a79f4191.jpg"/>
-<img alt="Entrega de certificado VÉA Medical" decoding="async" loading="lazy" src="assets/images/nosotros-03-60fe4b9b9055.jpg"/>
+<img alt="Certificación VÉA Academy" class="tall" decoding="async" loading="lazy" src="academy-jhoana-alumna-1.jpg"/>
+<img alt="Entrega de certificado VÉA Medical" decoding="async" loading="lazy" src="academy-jhoana-alumna-2.jpg"/>
 </div>
 <div>
 <div class="ch-kicker sr"><div class="ch-num">03 / 06</div><div class="ch-tick"></div></div>
@@ -759,17 +785,41 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 </div>
 </div>
 <div class="ch-visual dark-frame sr-scale">
-<img alt="Rentabilidad Medible – Método VÉA 360°" decoding="async" loading="lazy" src="assets/images/por-que-vea-02-0678c80ae34b.jpg"/>
+<img alt="Rentabilidad Medible – Método VÉA 360°" decoding="async" loading="lazy" src="porque-rentabilidad.jpg"/>
 </div>
 </div>
 </section>
 <!-- ═══════════════════════════════════════════════
      05 / 06 — LANZAMIENTO ESTRATÉGICO
 ════════════════════════════════════════════════ -->
+
+<section class="roi-calc" id="calculadora-roi">
+  <div class="wrap roi-grid">
+    <div class="roi-copy sr">
+      <div class="label" style="color:rgba(255,255,255,.3);">Referencia interactiva</div>
+      <h2>Proyecta el retorno de una tecnología.</h2>
+      <p>Esta calculadora ofrece una referencia inicial para visualizar cómo el precio por tratamiento, el volumen mensual y los costos variables influyen en el tiempo estimado de recuperación de la inversión.</p>
+    </div>
+    <div class="calc-card sr d1">
+      <div class="calc-fields">
+        <div class="calc-field"><label for="inv">Inversión inicial</label><input id="inv" type="number" min="0" value="850000" inputmode="decimal"/></div>
+        <div class="calc-field"><label for="price">Precio por tratamiento</label><input id="price" type="number" min="0" value="12000" inputmode="decimal"/></div>
+        <div class="calc-field"><label for="qty">Tratamientos al mes</label><input id="qty" type="number" min="0" value="35" inputmode="numeric"/></div>
+        <div class="calc-field"><label for="cost">Costo variable por tratamiento</label><input id="cost" type="number" min="0" value="2500" inputmode="decimal"/></div>
+      </div>
+      <div class="calc-results">
+        <div class="calc-result"><strong id="gross">RD$0</strong><span>Ingresos mensuales</span></div>
+        <div class="calc-result"><strong id="net">RD$0</strong><span>Margen estimado</span></div>
+        <div class="calc-result"><strong id="months">0 meses</strong><span>Recuperación estimada</span></div>
+      </div>
+      <div class="calc-note">Referencia orientativa, no constituye una garantía financiera. El resultado real depende de demanda, gastos fijos, financiamiento, impuestos, capacidad operativa y ejecución comercial.</div>
+    </div>
+  </div>
+</section>
 <section class="ch white" id="ch5">
 <div class="wrap ch-layout">
 <div class="ch-visual sr-scale">
-<img alt="Lanzamiento Estratégico – Método VÉA 360°" decoding="async" loading="lazy" src="assets/images/por-que-vea-03-4d83c80f6c81.jpg"/>
+<img alt="Lanzamiento Estratégico – Método VÉA 360°" decoding="async" loading="lazy" src="porque-lanzamiento.jpg"/>
 </div>
 <div>
 <div class="ch-kicker sr"><div class="ch-num">05 / 06</div><div class="ch-tick"></div></div>
@@ -816,7 +866,7 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 </div>
 </div>
 <div class="ch-visual sr-scale">
-<img alt="Optimización Continua – Método VÉA 360°" decoding="async" loading="lazy" src="assets/images/por-que-vea-04-1ccbbb79a7ca.jpg"/>
+<img alt="Optimización Continua – Método VÉA 360°" decoding="async" loading="lazy" src="porque-optimizacion.jpg"/>
 </div>
 </div>
 </section>
@@ -992,6 +1042,23 @@ function showSuccess(){
   document.getElementById('pq-form').style.display='none';
   document.getElementById('pq-success').style.display='block';
 }
+
+const calcIds=['inv','price','qty','cost'];
+function moneyRD(v){return new Intl.NumberFormat('es-DO',{style:'currency',currency:'DOP',maximumFractionDigits:0}).format(Math.max(0,v||0));}
+function updateROI(){
+  const inv=Number(document.getElementById('inv')?.value)||0;
+  const price=Number(document.getElementById('price')?.value)||0;
+  const qty=Number(document.getElementById('qty')?.value)||0;
+  const cost=Number(document.getElementById('cost')?.value)||0;
+  const gross=price*qty;
+  const net=Math.max(0,(price-cost)*qty);
+  const months=net>0?inv/net:0;
+  const g=document.getElementById('gross'),n=document.getElementById('net'),m=document.getElementById('months');
+  if(g)g.textContent=moneyRD(gross); if(n)n.textContent=moneyRD(net); if(m)m.textContent=net>0?`${months.toFixed(1)} meses`:'—';
+}
+calcIds.forEach(id=>document.getElementById(id)?.addEventListener('input',updateROI));
+updateROI();
+
 </script>
 </body>
 </html>
