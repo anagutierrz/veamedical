@@ -568,16 +568,35 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 .home-copy p{font-size:.98rem;margin-bottom:16px;}
 .home-copy .mini-link{display:inline-flex;margin-top:12px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px;}
 
-.method-home{background:var(--ink);padding:110px 0;color:var(--white);}
-.method-head{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:end;margin-bottom:64px;}
-.method-head h2{color:var(--white);}
-.method-head p{color:rgba(255,255,255,.45);}
-.method-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1);border-left:1px solid rgba(255,255,255,.1);}
-.method-step{padding:34px 28px 38px;border-right:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);min-height:245px;}
-.method-step .ms-num{font-size:.62rem;font-weight:700;letter-spacing:.17em;color:rgba(255,255,255,.25);margin-bottom:32px;}
-.method-step h3{font-family:var(--fh);font-size:1.08rem;text-transform:uppercase;color:var(--white);line-height:1.12;margin-bottom:12px;}
-.method-step p{font-size:.84rem;color:rgba(255,255,255,.4);line-height:1.65;}
-.method-foot{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:38px;}
+.method-home{background:var(--ink);padding:120px 0;color:var(--white);overflow:hidden;}
+.method-head{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:end;margin-bottom:70px;}
+.method-head h2{color:var(--white);font-family:'Cormorant Garamond',serif;font-weight:500;text-transform:none;letter-spacing:-.035em;font-size:clamp(3rem,6vw,6rem);}
+.method-head p{color:rgba(255,255,255,.45);max-width:560px;}
+.method-experience{display:grid;grid-template-columns:320px minmax(0,1fr);gap:56px;align-items:start;}
+.method-tabs{display:grid;border-top:1px solid rgba(255,255,255,.12);position:sticky;top:110px;}
+.method-tab{appearance:none;width:100%;text-align:left;color:rgba(255,255,255,.42);padding:19px 0;border-bottom:1px solid rgba(255,255,255,.1);cursor:pointer;display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:center;transition:color .25s ease,padding-left .25s ease;}
+.method-tab:hover{color:rgba(255,255,255,.78);padding-left:6px;}
+.method-tab.active{color:#fff;}
+.method-tab .tab-num{font-size:.63rem;letter-spacing:.16em;color:rgba(255,255,255,.28);}
+.method-tab .tab-title{font-family:var(--fh);font-size:.83rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;}
+.method-stage{min-height:650px;position:relative;padding:8px 0 0;}
+.method-stage::before{content:'';position:absolute;inset:0 auto auto 0;width:100%;height:1px;background:rgba(255,255,255,.1);}
+.method-counter{font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,14vw,13rem);font-weight:400;line-height:.75;color:rgba(255,255,255,.08);letter-spacing:-.08em;margin-top:40px;}
+.method-content{max-width:820px;margin-left:auto;margin-top:-34px;transition:opacity .22s ease,transform .22s ease;}
+.method-content.is-changing{opacity:0;transform:translateY(10px);}
+.method-kicker{font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:20px;}
+.method-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,6.2rem);font-weight:500;line-height:.93;color:#fff;letter-spacing:-.04em;margin-bottom:26px;text-transform:none;}
+.method-lead{font-family:var(--fh);font-size:clamp(1.05rem,1.7vw,1.35rem);line-height:1.55;color:rgba(255,255,255,.72);max-width:720px;margin-bottom:34px;}
+.method-points{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid rgba(255,255,255,.1);}
+.method-point{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.88rem;color:rgba(255,255,255,.52);line-height:1.55;}
+.method-point::before{content:'✓';width:20px;height:20px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;font-size:.65rem;color:rgba(255,255,255,.68);margin-top:1px;}
+.method-progress{display:flex;align-items:center;gap:8px;margin-top:34px;}
+.method-dot{width:28px;height:2px;background:rgba(255,255,255,.13);transition:width .25s ease,background .25s ease;}
+.method-dot.active{width:64px;background:#fff;}
+.method-nav{display:flex;gap:10px;margin-top:32px;}
+.method-arrow{width:46px;height:46px;border:1px solid rgba(255,255,255,.15);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s ease,border-color .2s ease;}
+.method-arrow:hover{background:#fff;color:#111;border-color:#fff;}
+.method-foot{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:62px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);}
 .method-foot p{font-size:.82rem;color:rgba(255,255,255,.35);max-width:620px;}
 
 .ecosystem-home{background:var(--snow);padding:110px 0;}
@@ -657,32 +676,51 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 @media(max-width:640px){.home-visual-story{padding-bottom:72px}.home-visual-side,.academy-photo-grid{grid-template-columns:1fr}.home-visual-main{min-height:360px}.home-visual-card,.academy-photo{min-height:300px}}
 
 
-/* MOBILE REFINEMENT */
-@media (max-width: 768px){
-  html,body{width:100%;max-width:100%;overflow-x:hidden;}
-  *,*::before,*::after{min-width:0;}
-  .wrap,.wrap-md,.wrap-sm{width:calc(100% - 32px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
-  .nav{height:64px!important;}
-  .nav-inner{gap:10px!important;}
-  .brand{font-size:.98rem!important;line-height:1!important;}
-  .nav-right{display:none!important;}
-  .ham{display:grid!important;margin-left:auto!important;}
-  .mmenu{top:64px!important;padding:24px 18px 28px!important;}
-  .mmenu a{font-size:1.15rem!important;line-height:1.15!important;}
-  section{overflow:hidden;}
-  h1,h2,h3,.display,.hero-h1,.pg-h1,.hero-display{overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;}
-  h1,.hero-h1,.pg-h1,.hero-display{font-size:clamp(2.05rem,10.6vw,3.35rem)!important;line-height:.98!important;letter-spacing:-.045em!important;}
-  h2{font-size:clamp(1.75rem,8.6vw,2.65rem)!important;line-height:1.02!important;}
-  p{font-size:.94rem!important;line-height:1.72!important;}
-  .label,.hero-k,.hero-eyebrow,.pg-label{font-size:.62rem!important;letter-spacing:.18em!important;}
-  .btn{width:100%!important;justify-content:center!important;padding:14px 18px!important;}
-  .foot-grid{grid-template-columns:1fr!important;gap:24px!important;}
-  .foot-bottom{align-items:flex-start!important;flex-direction:column!important;}
-  img{max-width:100%!important;height:auto;}
+@media(max-width:980px){
+  .method-experience{grid-template-columns:1fr;gap:34px;}
+  .method-tabs{position:relative;top:auto;display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid rgba(255,255,255,.1);}
+  .method-tabs::-webkit-scrollbar{display:none;}
+  .method-tab{min-width:190px;padding:16px 12px 16px 0;border-bottom:none;border-right:1px solid rgba(255,255,255,.08);}
+  .method-stage{min-height:auto;}
+  .method-counter{font-size:7rem;margin-top:24px;}
+  .method-content{margin-top:-18px;}
+}
+@media(max-width:640px){
+  .method-home{padding:84px 0;}
+  .method-head{margin-bottom:44px;gap:22px;}
+  .method-head h2{font-size:clamp(2.6rem,13vw,4.4rem);}
+  .method-tab{min-width:164px;grid-template-columns:30px 1fr;gap:8px;}
+  .method-tab .tab-title{font-size:.72rem;}
+  .method-counter{font-size:5.6rem;margin-top:24px;}
+  .method-content{margin-top:-10px;}
+  .method-title{font-size:clamp(2.55rem,13vw,4.3rem);}
+  .method-lead{font-size:1rem;margin-bottom:25px;}
+  .method-points{grid-template-columns:1fr;}
+  .method-point{font-size:.84rem;padding:13px 0;}
+  .method-foot{align-items:flex-start;flex-direction:column;margin-top:46px;}
 }
 
+
+/* ===== DIRECCIÓN PREMIUM VÉA — Brief creativo aplicado ===== */
+body{font-family:'Inter',sans-serif;font-weight:400;background:#fff;color:#111;}
+h1,h2,.premium-title,.method-title,.premium-tech-row h3,.partner-statement h2,.premium-academy-copy h2{font-family:'Instrument Serif',serif!important;font-weight:400!important;text-transform:none!important;letter-spacing:-.035em!important;}
+.nav{background:rgba(255,255,255,.9)!important;border-bottom:1px solid #ececec!important;backdrop-filter:blur(18px);}
+.brand,.nav-links a{color:#111!important}.brand span{font-weight:300}.nav-links a{font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.08em;font-size:.67rem}.nav .btn-k{background:#111;color:#fff}
+.premium-hero{background:#fff!important;color:#111;min-height:100svh;padding:calc(var(--nav-h) + 70px) 0 64px;display:flex;align-items:center;position:relative;overflow:hidden;}
+.premium-hero:before{display:none!important}.premium-hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(50px,8vw,120px);align-items:center;}
+.premium-hero-copy{max-width:620px}.premium-hero .hero-eyebrow{color:#8d8d8d!important;margin-bottom:28px}.premium-title{font-size:clamp(4.2rem,7vw,8rem)!important;line-height:.91!important;color:#111!important;margin:0;max-width:720px}.premium-sub{font-size:clamp(1rem,1.25vw,1.2rem);line-height:1.85;color:#707070;max-width:590px;margin:32px 0 38px}.premium-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap}.premium-link{display:inline-flex;align-items:center;gap:12px;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500;border-bottom:1px solid #bbb;padding-bottom:8px;color:#111}.premium-link span{font-size:1rem}.premium-hero-visual{margin:0;position:relative}.premium-hero-visual img{width:100%;height:min(70vh,720px);object-fit:contain;background:#fafafa}.premium-hero-visual figcaption{font-size:.72rem;color:#888;margin-top:14px;letter-spacing:.04em}.premium-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#999;display:flex;gap:12px}
+.premium-philosophy{padding:160px 0;background:#f7f7f7}.premium-philosophy-inner{max-width:980px;text-align:center}.premium-philosophy h2{font-size:clamp(3.6rem,6.4vw,7rem);line-height:.95;margin:24px auto 34px;max-width:1050px}.premium-philosophy p{font-size:1.08rem;line-height:1.9;max-width:680px;margin:0 auto;color:#777}
+.premium-partner{padding:150px 0;background:#fff}.premium-partner-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(60px,10vw,160px);align-items:start}.partner-statement{padding-top:18px;border-top:1px solid #ddd}.partner-statement span{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:#999}.partner-statement h2{font-size:clamp(3.4rem,5.3vw,6rem);line-height:.96;margin-top:28px}.partner-statement.is-vea h2{max-width:800px}.partner-statement p{max-width:620px;margin:30px 0;color:#707070;line-height:1.9}
+.method-home{padding:140px 0!important;background:#111!important}.method-head h2{font-size:clamp(3.8rem,6vw,7rem)!important}.method-experience{border-color:rgba(255,255,255,.12)!important}.method-tab{font-family:'Inter',sans-serif!important}.method-title{font-size:clamp(3.6rem,6vw,6.6rem)!important}
+.premium-tech{padding:160px 0;background:#fff}.premium-section-head{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:start;margin-bottom:80px}.premium-section-head .home-kicker{grid-column:1}.premium-section-head h2{font-size:clamp(3.6rem,6vw,6.8rem);line-height:.95;grid-column:1/3;max-width:950px}.premium-section-head p{grid-column:2;max-width:560px;color:#777;line-height:1.85}.premium-tech-list{border-top:1px solid #ddd}.premium-tech-row{display:grid;grid-template-columns:60px 1fr 260px 30px;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid #ddd;transition:opacity .25s}.premium-tech-row:hover{opacity:.65}.ptr-num{font-size:.68rem;letter-spacing:.14em;color:#aaa}.ptr-copy h3{font-size:clamp(2.2rem,3vw,3.6rem);line-height:1}.ptr-copy p{font-size:.92rem;color:#777;margin-top:8px}.premium-tech-row img{width:260px;height:150px;object-fit:contain;background:#fafafa}.ptr-arrow{font-size:1.2rem}
+.premium-confidence{padding:150px 0;background:#f7f7f7}.premium-confidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.premium-confidence h2{font-size:clamp(3.3rem,5vw,5.8rem);line-height:.96;margin-top:22px}.confidence-lines{border-top:1px solid #d7d7d7}.confidence-line{display:grid;grid-template-columns:50px 180px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid #d7d7d7}.confidence-line span{font-size:.68rem;color:#aaa}.confidence-line h3{font-family:'Inter',sans-serif;font-size:.95rem;letter-spacing:-.01em}.confidence-line p{font-size:.9rem;color:#777;line-height:1.7}
+.premium-academy{padding:160px 0;background:#fff}.premium-academy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(60px,9vw,140px);align-items:center}.premium-academy-image img{width:100%;height:min(78vh,760px);object-fit:cover;object-position:center top}.premium-academy-copy h2{font-size:clamp(3.8rem,6vw,6.8rem);line-height:.94;margin:22px 0 30px}.premium-academy-copy p{max-width:520px;color:#777;line-height:1.9;margin-bottom:32px}
+.ecosystem-home,.academy-home{display:none!important}
+@media(max-width:980px){.premium-hero-grid,.premium-partner-grid,.premium-section-head,.premium-confidence-grid,.premium-academy-grid{grid-template-columns:1fr}.premium-hero{min-height:auto;padding-top:calc(var(--nav-h) + 54px)}.premium-title{font-size:clamp(3.7rem,13vw,6.4rem)!important}.premium-hero-visual{order:2}.premium-hero-visual img{height:auto;max-height:none;aspect-ratio:4/3}.premium-philosophy,.premium-partner,.premium-tech,.premium-confidence,.premium-academy{padding:100px 0}.premium-section-head h2,.premium-section-head p{grid-column:1}.premium-tech-row{grid-template-columns:44px 1fr 150px 24px}.premium-tech-row img{width:150px;height:100px}.premium-confidence-grid{gap:46px}.premium-academy-image img{height:auto;max-height:680px}}
+@media(max-width:640px){.wrap{width:min(100% - 32px,1240px)}.premium-hero{padding-bottom:76px}.premium-title{font-size:clamp(3.25rem,15vw,4.7rem)!important}.premium-sub{font-size:.95rem;margin:24px 0 30px}.premium-actions{align-items:flex-start;flex-direction:column;gap:20px}.premium-hero-visual img{aspect-ratio:1/1;object-fit:contain}.premium-scroll{display:none}.premium-philosophy h2,.partner-statement h2,.premium-section-head h2,.premium-confidence h2,.premium-academy-copy h2{font-size:clamp(2.8rem,13vw,4rem)!important}.premium-philosophy{padding:86px 0}.premium-partner-grid{gap:70px}.premium-tech-row{grid-template-columns:38px 1fr 24px;padding:28px 0}.premium-tech-row img{grid-column:2/4;width:100%;height:190px;margin-top:18px}.ptr-arrow{grid-column:3;grid-row:1}.confidence-line{grid-template-columns:38px 1fr}.confidence-line h3{grid-column:2}.confidence-line p{grid-column:2}.premium-academy-grid{gap:42px}.premium-academy-image img{max-height:none;aspect-ratio:4/5}.method-home{padding:90px 0!important}}
 </style>
-<link href="https://veamedical.com/" rel="canonical"/></head>
+<link href="https://veamedical.com/" rel="canonical"/><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
 <body data-hero-dark="1">
 <!-- NAV -->
 <header class="nav dark-nav" id="nav">
@@ -705,194 +743,136 @@ footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,2
 <a class="ml" href="index.html">Inicio</a><a class="ml" href="nosotros.html">Nosotros</a><a class="ml" href="por-que-vea.html">Por qué VÉA</a><a class="ml" href="tecnologia.html">Tecnologías</a><a class="ml" href="academy.html">Academy</a><a class="ml mm-btn" href="contacto.html">Agenda una Experiencia →</a></div>
 <main>
 <!-- ═══ SECCIÓN 1: HERO + FORM ═══ -->
-<section class="hero" id="inicio">
-<!-- LEFT: copy -->
-<div class="wrap" style="display:contents;">
-<div class="hero-copy" style="padding-left:max(24px, calc((100vw - 1240px)/2 + 32px));">
-<div class="hero-eyebrow sr">Clinical Technology Partner</div>
-<h1 class="hero-h sr d1">
-        La confianza
-        <span class="soft">para tomar la</span>
-        decisión correcta.
-      </h1>
-<p class="hero-p sr d2">
-        Transformamos la incorporación de tecnología en una estrategia de crecimiento clínico, respaldada por <strong>experiencia, metodología y acompañamiento continuo.</strong>
-</p>
-<nav class="hero-nav sr d3">
-<a class="hn-link" href="por-que-vea.html">Por qué VÉA</a>
-<span class="hn-sep">·</span>
-<a class="hn-link" href="tecnologia.html">Tecnologías</a>
-<span class="hn-sep">·</span>
-<a class="hn-link" href="nosotros.html">Nosotros</a>
-</nav>
-</div>
-<!-- RIGHT: form -->
-<div class="hero-form-col" style="padding-right:max(24px, calc((100vw - 1240px)/2 + 32px));">
-<div class="form-box" id="fb-wrap">
-<div class="fb-title">Agenda una Experiencia VÉA</div>
-<div class="fb-sub">Sin compromiso · Respuesta en menos de 24 horas</div>
-<form id="hero-form" onsubmit="sendForm(event)">
-<input name="access_key" type="hidden" value="TU_CLAVE_WEB3FORMS_AQUI"/>
-<input name="subject" type="hidden" value="Nueva Experiencia VÉA – Inicio"/>
-<input name="redirect" type="hidden" value="false"/>
-<div class="fg">
-<div class="ff"><label>Nombre *</label><input name="nombre" placeholder="Tu nombre" required="" type="text"/></div>
-<div class="ff"><label>Clínica / Centro *</label><input name="clinica" placeholder="Nombre de tu clínica" required="" type="text"/></div>
-<div class="ff"><label>WhatsApp *</label><input name="whatsapp" placeholder="+1 000 000 0000" required="" type="tel"/></div>
-<div class="ff"><label>País</label><input name="pais" placeholder="República Dominicana" type="text"/></div>
-</div>
-<div class="fg one">
-<div class="ff"><label>Email</label><input name="email" placeholder="tu@clinica.com" type="email"/></div>
-</div>
-<div class="fg one">
-<div class="ff">
-<label>Objetivo principal</label>
-<select name="objetivo">
-<option value="">Selecciona una opción</option>
-<option>Aumentar ticket promedio</option>
-<option>Incorporar diagnóstico facial con IA</option>
-<option>Ofrecer lifting sin cirugía</option>
-<option>Infusión de activos avanzada</option>
-<option>Conocer el ecosistema VÉA completo</option>
-</select>
-</div>
-</div>
-<button class="fb-btn" type="submit">
-<span class="fb-btn-ico">→</span>
-            Hablar con un Clinical Technology Partner
-          </button>
-<div class="fb-note">🔒 info@veamedical.com · Tu información es confidencial</div>
-</form>
-<div class="fb-success" id="fb-success">
-<div class="fb-success-check">✓</div>
-<h3>¡Solicitud recibida!</h3>
-<p>Un Clinical Technology Partner te contacta en menos de 24 horas.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ SECCIÓN 2: TECNOLOGÍAS ═══ -->
-<section>
-<div class="techs-inner">
-<a class="tc sr" href="tecnologia.html#intelligence">
-<div class="tc-num">01 · VÉA Intelligence</div>
-<div class="tc-name">Scanner<br/>Facial IA</div>
-<p class="tc-desc">17 tipos de análisis en segundos. Cuando el paciente ve el problema, acepta el tratamiento.</p>
-<div class="tc-link">Conocer más</div>
-</a>
-<a class="tc sr d1" href="tecnologia.html#skin">
-<div class="tc-num">02 · VÉA Skin</div>
-<div class="tc-name">Drug<br/>Delivery</div>
-<p class="tc-desc">Microchip sin aguja + aguja convencional en un solo equipo. Hasta 20× más rápido.</p>
-<div class="tc-link">Conocer más</div>
-</a>
-<a class="tc sr d2" href="tecnologia.html#pigment">
-<div class="tc-num">03 · VÉA Pigment</div>
-<div class="tc-name">Lifting<br/>Sin Cirugía</div>
-<p class="tc-desc">Radiofrecuencia monopolar 6.78 MHz. Retracción facial y corporal sin recuperación.</p>
-<div class="tc-link">Conocer más</div>
-</a>
-</div>
-</section>
-
-<!-- ═══ SECCIÓN 3: PROPUESTA DE VALOR ═══ -->
-<section class="home-intro">
-  <div class="wrap home-intro-grid">
-    <div class="sr">
-      <div class="home-kicker">Más que tecnología médica</div>
-      <div class="home-lead">La tecnología solo genera valor cuando está conectada con una <strong>decisión clínica correcta, un equipo preparado y una estrategia de crecimiento.</strong></div>
+<section class="hero premium-hero" id="inicio">
+  <div class="wrap premium-hero-grid">
+    <div class="premium-hero-copy">
+      <div class="hero-eyebrow sr">Clinical Technology Partner</div>
+      <h1 class="premium-title sr d1">La confianza para tomar la decisión correcta.</h1>
+      <p class="premium-sub sr d2">Transformamos la incorporación de tecnología en una estrategia de crecimiento clínico, respaldada por experiencia, metodología y acompañamiento continuo.</p>
+      <div class="premium-actions sr d3">
+        <a class="btn btn-k" href="contacto.html">Agenda una Experiencia VÉA</a>
+        <a class="premium-link" href="#metodo">Descubre el Método VÉA 360° <span>↘</span></a>
+      </div>
     </div>
-    <div class="home-copy sr d1">
-      <p>En VÉA Medical acompañamos a clínicas, centros estéticos y profesionales de la salud en todo el proceso: desde identificar la oportunidad correcta hasta convertir la nueva tecnología en resultados clínicos, comerciales y operativos.</p>
-      <p>No recomendamos equipos por tendencia ni por precio. Analizamos el perfil de la clínica, su cartera de servicios, sus pacientes, su equipo humano y sus objetivos antes de diseñar una recomendación.</p>
-      <a class="mini-link" href="por-que-vea.html">Descubre por qué VÉA →</a>
-    </div>
-  </div>
-</section>
-
-<section class="home-visual-story">
-  <div class="wrap home-visual-grid">
-    <figure class="home-visual-main sr-scale">
-      <img src="metodo-overview.jpg" alt="Método VÉA 360 grados aplicado a una clínica" loading="lazy" decoding="async"/>
-      <figcaption class="visual-caption"><strong>Una metodología completa</strong><span>Diagnóstico, selección, implementación, capacitación, lanzamiento y optimización.</span></figcaption>
+    <figure class="premium-hero-visual sr-scale d2">
+      <img src="tech-intelligence.jpg" alt="Tecnología VÉA Intelligence presentada como producto premium" decoding="async"/>
+      <figcaption>La tecnología es el medio. La decisión correcta es el punto de partida.</figcaption>
     </figure>
-    <div class="home-visual-side">
-      <figure class="home-visual-card sr d1"><img src="tech-intelligence.jpg" alt="Tecnología de diagnóstico facial VÉA Intelligence" loading="lazy"/><figcaption class="visual-caption"><strong>Tecnología con criterio</strong><span>Seleccionada según la realidad clínica y financiera.</span></figcaption></figure>
-      <figure class="home-visual-card sr d2"><img src="academy-jhoana-alumna-2.jpg" alt="Jhoana y alumna durante certificación VÉA Academy" loading="lazy"/><figcaption class="visual-caption"><strong>Equipo preparado</strong><span>Capacitación práctica y certificación oficial.</span></figcaption></figure>
+  </div>
+  <div class="premium-scroll">Explorar <span>↓</span></div>
+</section>
+<!-- ═══ FILOSOFÍA Y PARTNER ═══ -->
+<section class="premium-philosophy">
+  <div class="wrap premium-philosophy-inner">
+    <div class="home-kicker sr">Por qué existe VÉA</div>
+    <h2 class="sr d1">Invertir en tecnología no debería sentirse como una apuesta.</h2>
+    <p class="sr d2">Una tecnología puede ser clínicamente avanzada y aun así no ser adecuada para tu clínica. La diferencia está en el criterio con el que se elige, se implementa y se acompaña.</p>
+  </div>
+</section>
+<section class="premium-partner">
+  <div class="wrap premium-partner-grid">
+    <div class="partner-statement sr">
+      <span>Un proveedor</span>
+      <h2>Entrega tecnología.</h2>
+    </div>
+    <div class="partner-statement is-vea sr d1">
+      <span>Un Clinical Technology Partner</span>
+      <h2>Construye claridad, método y crecimiento alrededor de ella.</h2>
+      <p>VÉA comprende la clínica, identifica la oportunidad, diseña la implementación y permanece presente después de la entrega.</p>
+      <a class="premium-link" href="por-que-vea.html">Comprender la diferencia <span>↗</span></a>
     </div>
   </div>
 </section>
-
 <!-- ═══ SECCIÓN 4: MÉTODO VÉA 360 ═══ -->
 <section class="method-home" id="metodo">
   <div class="wrap">
     <div class="method-head">
       <div class="sr">
         <div class="label" style="color:rgba(255,255,255,.28);margin-bottom:18px;">Método VÉA 360°</div>
-        <h2>De la decisión a la rentabilidad.</h2>
+        <h2>La confianza nace de tener un método.</h2>
       </div>
-      <p class="sr d1">Un proceso diseñado para reducir incertidumbre, acelerar la adopción y lograr que cada tecnología se integre de forma real al modelo de negocio de la clínica.</p>
-    </div>
-    <div class="method-grid">
-      <article class="method-step sr"><div class="ms-num">01 · DIAGNÓSTICO</div><h3>Entendemos tu clínica</h3><p>Evaluamos servicios, pacientes, capacidad operativa, objetivos y oportunidades antes de recomendar una solución.</p></article>
-      <article class="method-step sr d1"><div class="ms-num">02 · ESTRATEGIA</div><h3>Diseñamos la integración</h3><p>Definimos cómo incorporar la tecnología, posicionarla, protocolizarla y conectarla con tu oferta actual.</p></article>
-      <article class="method-step sr d2"><div class="ms-num">03 · CERTIFICACIÓN</div><h3>Preparamos a tu equipo</h3><p>Capacitación clínica y comercial para trabajar con seguridad, comunicar valor y generar confianza desde el primer día.</p></article>
-      <article class="method-step sr d3"><div class="ms-num">04 · OPTIMIZACIÓN</div><h3>Acompañamos el crecimiento</h3><p>Seguimiento posterior, revisión de resultados y ajustes para mejorar adopción, productividad y retorno.</p></article>
+      <p class="sr d1">Siete etapas que convierten una decisión tecnológica en una implementación clara, medible y acompañada. Selecciona cada etapa para explorar el proceso.</p>
     </div>
 
-    <div class="method-media">
-      <figure class="sr"><img src="metodo-01-diagnostico.jpg" alt="Diagnóstico estratégico VÉA 360" loading="lazy"/><figcaption>Antes de recomendar, analizamos la clínica, el mercado, los pacientes y los objetivos.</figcaption></figure>
-      <figure class="sr d1"><img src="metodo-06-rentabilidad.jpg" alt="Rentabilidad medible en el Método VÉA 360" loading="lazy"/><figcaption>La implementación se acompaña con métricas, seguimiento y decisiones basadas en resultados.</figcaption></figure>
+    <div class="method-experience sr">
+      <div class="method-tabs" id="methodTabs" role="tablist" aria-label="Etapas del Método VÉA 360°">
+        <button class="method-tab active" type="button" data-step="0"><span class="tab-num">01</span><span class="tab-title">Diagnóstico estratégico</span></button>
+        <button class="method-tab" type="button" data-step="1"><span class="tab-num">02</span><span class="tab-title">Selección inteligente</span></button>
+        <button class="method-tab" type="button" data-step="2"><span class="tab-num">03</span><span class="tab-title">Implementación con propósito</span></button>
+        <button class="method-tab" type="button" data-step="3"><span class="tab-num">04</span><span class="tab-title">Capacitación de alto nivel</span></button>
+        <button class="method-tab" type="button" data-step="4"><span class="tab-num">05</span><span class="tab-title">Lanzamiento estratégico</span></button>
+        <button class="method-tab" type="button" data-step="5"><span class="tab-num">06</span><span class="tab-title">Rentabilidad medible</span></button>
+        <button class="method-tab" type="button" data-step="6"><span class="tab-num">07</span><span class="tab-title">Optimización continua</span></button>
+      </div>
+
+      <div class="method-stage" aria-live="polite">
+        <div class="method-counter" id="methodCounter">01</div>
+        <div class="method-content" id="methodContent">
+          <div class="method-kicker" id="methodKicker">Nuestra metodología</div>
+          <h3 class="method-title" id="methodTitle">Diagnóstico estratégico</h3>
+          <p class="method-lead" id="methodLead">Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología.</p>
+          <div class="method-points" id="methodPoints"></div>
+          <div class="method-progress" id="methodProgress" aria-hidden="true"></div>
+          <div class="method-nav">
+            <button class="method-arrow" type="button" id="methodPrev" aria-label="Etapa anterior">←</button>
+            <button class="method-arrow" type="button" id="methodNext" aria-label="Siguiente etapa">→</button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="method-foot sr">
-      <p>Cada implementación es distinta. Por eso el Método VÉA 360° se adapta al tamaño, especialidad y etapa de crecimiento de cada aliado.</p>
-      <a class="btn btn-w" href="nosotros.html#metodo">Conocer el método <span class="bico">→</span></a>
+      <p>Cada implementación es distinta. El Método VÉA 360° se adapta al tamaño, especialidad, equipo humano y etapa de crecimiento de cada clínica.</p>
+      <a class="btn btn-w" href="contacto.html">Hablar con un Clinical Technology Partner <span class="bico">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ SECCIÓN 5: ECOSISTEMA ═══ -->
-<section class="ecosystem-home">
+
+<!-- ═══ TECNOLOGÍAS EDITORIALES ═══ -->
+<section class="premium-tech" id="tecnologias">
   <div class="wrap">
-    <div class="eco-head">
-      <div class="sr"><div class="home-kicker">Ecosistema VÉA</div><h2>Todo lo necesario para implementar con confianza.</h2></div>
-      <p class="sr d1">La entrega del equipo es solo una parte. Integramos conocimiento, estrategia, acompañamiento y medición para que la tecnología se convierta en una nueva capacidad para tu clínica.</p>
+    <div class="premium-section-head sr">
+      <div class="home-kicker">Tecnologías VÉA</div>
+      <h2>Tecnología al servicio de una estrategia.</h2>
+      <p>No se trata de incorporar más equipos. Se trata de seleccionar la tecnología que tenga sentido para la clínica, el paciente y la inversión.</p>
     </div>
-    <div class="eco-grid">
-      <article class="eco-card sr"><div class="eco-num">01</div><h3>Diagnóstico estratégico</h3><p>Análisis del negocio, cartera de servicios, perfil de pacientes y oportunidades de crecimiento.</p></article>
-      <article class="eco-card sr d1"><div class="eco-num">02</div><h3>Selección tecnológica</h3><p>Recomendamos la solución adecuada según tus objetivos clínicos y capacidad de implementación.</p></article>
-      <article class="eco-card sr d2"><div class="eco-num">03</div><h3>Protocolos clínicos</h3><p>Estructuración de aplicaciones, combinaciones, criterios de uso y experiencia del paciente.</p></article>
-      <article class="eco-card sr"><div class="eco-num">04</div><h3>VÉA Academy</h3><p>Formación para operadores, médicos y equipo comercial con enfoque práctico y certificación.</p></article>
-      <article class="eco-card sr d1"><div class="eco-num">05</div><h3>Lanzamiento estratégico</h3><p>Apoyo para presentar el nuevo servicio, comunicar beneficios y acelerar su adopción.</p></article>
-      <article class="eco-card sr d2"><div class="eco-num">06</div><h3>Optimización continua</h3><p>Seguimiento, análisis y acompañamiento para proteger la inversión y ampliar resultados.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SECCIÓN 6: ACADEMY ═══ -->
-<section class="academy-home">
-  <div class="wrap academy-grid">
-    <div class="academy-panel sr">
-      <span class="label">VÉA Academy</span>
-      <h2>Tu equipo no recibe una demostración. Recibe preparación.</h2>
-      <p>Convertimos conocimiento técnico en confianza clínica y capacidad comercial, para que cada integrante entienda qué hace la tecnología, cómo utilizarla y cómo comunicar su valor al paciente.</p>
-    </div>
-    <div class="academy-content-stack">
-      <div class="academy-photo-grid">
-        <figure class="academy-photo sr"><img src="academy-jhoana-alumna-1.jpg" alt="Jhoana junto a una alumna en VÉA Academy" loading="lazy"/><figcaption>Capacitación y acompañamiento práctico.</figcaption></figure>
-        <figure class="academy-photo sr d1"><img src="academy-jhoana-alumna-2.jpg" alt="Entrega de certificación VÉA Medical" loading="lazy"/><figcaption>Certificación oficial al completar la formación.</figcaption></figure>
-      </div>
-      <div class="academy-points">
-        <div class="academy-point sr"><div class="ap-num">01</div><div><h3>Entrenamiento clínico</h3><p>Fundamentos, protocolos, indicaciones, experiencia del paciente y buenas prácticas.</p></div></div>
-        <div class="academy-point sr d1"><div class="ap-num">02</div><div><h3>Entrenamiento comercial</h3><p>Cómo explicar beneficios, presentar planes y transformar el diagnóstico en una conversación de valor.</p></div></div>
-        <div class="academy-point sr d2"><div class="ap-num">03</div><div><h3>Certificación y seguimiento</h3><p>Validamos la preparación del equipo y reforzamos la implementación después del entrenamiento inicial.</p></div></div>
-        <a class="btn btn-ol sr d3" href="academy.html" style="justify-self:start;margin-top:12px;">Conocer VÉA Academy →</a>
-      </div>
+    <div class="premium-tech-list">
+      <a class="premium-tech-row sr" href="tecnologia.html#intelligence">
+        <div class="ptr-num">01</div><div class="ptr-copy"><h3>VÉA Intelligence</h3><p>Claridad para evaluar. Confianza para recomendar.</p></div><img src="tech-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"/><span class="ptr-arrow">↗</span>
+      </a>
+      <a class="premium-tech-row sr d1" href="tecnologia.html#skin">
+        <div class="ptr-num">02</div><div class="ptr-copy"><h3>VÉA Skin</h3><p>Versatilidad clínica para ampliar las posibilidades de tratamiento.</p></div><img src="tech-skin.jpg" alt="VÉA Skin" loading="lazy"/><span class="ptr-arrow">↗</span>
+      </a>
+      <a class="premium-tech-row sr d2" href="tecnologia.html#pigment">
+        <div class="ptr-num">03</div><div class="ptr-copy"><h3>VÉA Pigment</h3><p>Precisión para incorporar nuevas soluciones faciales y corporales.</p></div><img src="tech-pigment.jpg" alt="VÉA Pigment" loading="lazy"/><span class="ptr-arrow">↗</span>
+      </a>
     </div>
   </div>
 </section>
-
+<!-- ═══ CONFIANZA TANGIBLE ═══ -->
+<section class="premium-confidence">
+  <div class="wrap premium-confidence-grid">
+    <div class="sr"><div class="home-kicker">Lo que hace tangible la tranquilidad</div><h2>Claridad antes. Preparación durante. Acompañamiento después.</h2></div>
+    <div class="confidence-lines">
+      <div class="confidence-line sr"><span>01</span><h3>Antes de invertir</h3><p>Analizamos la clínica, sus pacientes, su capacidad operativa y la oportunidad real.</p></div>
+      <div class="confidence-line sr d1"><span>02</span><h3>Durante la implementación</h3><p>Preparamos protocolos, equipo humano, comunicación y lanzamiento.</p></div>
+      <div class="confidence-line sr d2"><span>03</span><h3>Después de la entrega</h3><p>Medimos, acompañamos y optimizamos para proteger el valor de la inversión.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ═══ VÉA ACADEMY ═══ -->
+<section class="premium-academy">
+  <div class="wrap premium-academy-grid">
+    <figure class="premium-academy-image sr-scale"><img src="academy-jhoana-alumna-1.jpg" alt="Capacitación y certificación VÉA Academy" loading="lazy"/></figure>
+    <div class="premium-academy-copy">
+      <div class="home-kicker sr">VÉA Academy</div>
+      <h2 class="sr d1">La tranquilidad de saber que tu equipo está preparado.</h2>
+      <p class="sr d2">Formación clínica, práctica supervisada, protocolos y certificación para que la tecnología se utilice con seguridad y confianza desde el primer día.</p>
+      <a class="premium-link sr d3" href="academy.html">Conocer VÉA Academy <span>↗</span></a>
+    </div>
+  </div>
+</section>
 <!-- ═══ SECCIÓN 7: ACOMPAÑAMIENTO ═══ -->
 <section class="support-home">
   <div class="wrap support-grid">
@@ -1008,5 +988,73 @@ function ok(){
   document.getElementById('fb-success').style.display='block';
 }
 </script>
+
+<script>
+const methodData=[
+  {
+    number:'01', title:'Diagnóstico estratégico',
+    lead:'Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología.',
+    points:['Perfil de pacientes y necesidades reales','Servicios actuales y oportunidades de crecimiento','Competencia y mercado','Objetivos clínicos y financieros','Evaluación de espacios y equipos existentes']
+  },
+  {
+    number:'02', title:'Selección inteligente',
+    lead:'Seleccionamos tecnologías con criterios claros, medibles y alineados con la realidad de tu clínica.',
+    points:['Evidencia clínica comprobada','Seguridad y eficacia','Innovación y diferenciación','Rentabilidad y retorno de inversión','Soporte técnico y respaldo','Adaptación a tu modelo de negocio']
+  },
+  {
+    number:'03', title:'Implementación con propósito',
+    lead:'Instalamos, adaptamos y definimos protocolos exclusivos para integrar la tecnología correctamente.',
+    points:['Instalación y calibración profesional','Adaptación de protocolos personalizados','Flujo de trabajo optimizado','Documentación y estandarización','Acompañamiento en las primeras semanas']
+  },
+  {
+    number:'04', title:'Capacitación de alto nivel',
+    lead:'Formamos a tu equipo para que obtenga resultados excepcionales con seguridad y confianza.',
+    points:['Capacitación teórica y práctica','Protocolos clínicos exclusivos','Certificación VÉA Medical','Entrenamiento en seguridad y parámetros','Seguimiento y actualización constante']
+  },
+  {
+    number:'05', title:'Lanzamiento estratégico',
+    lead:'Creamos las condiciones para que tu inversión genere impacto desde el primer día.',
+    points:['Estrategia de comunicación personalizada','Página web profesional del equipo','Materiales comerciales premium','Contenido para redes sociales','Campañas de lanzamiento','Activaciones y eventos','Acompañamiento durante las primeras ventas']
+  },
+  {
+    number:'06', title:'Rentabilidad medible',
+    lead:'Transformamos tu inversión en resultados medibles y sostenibles en el tiempo.',
+    points:['Proyección de ingresos y costos','Seguimiento del retorno de inversión','Evolución del volumen de tratamientos','Captación y recurrencia de pacientes','Eficiencia clínica y operativa']
+  },
+  {
+    number:'07', title:'Optimización continua',
+    lead:'Evolucionamos contigo para escalar, corregir y mantener resultados superiores.',
+    points:['Seguimiento periódico de indicadores','Ajuste de protocolos y estrategias','Soporte técnico permanente','Actualización de conocimientos','Detección de nuevas oportunidades de crecimiento']
+  }
+];
+let methodIndex=0;
+const tabs=[...document.querySelectorAll('.method-tab')];
+const content=document.getElementById('methodContent');
+const counter=document.getElementById('methodCounter');
+const title=document.getElementById('methodTitle');
+const lead=document.getElementById('methodLead');
+const points=document.getElementById('methodPoints');
+const progress=document.getElementById('methodProgress');
+function renderMethod(index, animate=true){
+  methodIndex=(index+methodData.length)%methodData.length;
+  const item=methodData[methodIndex];
+  if(animate) content.classList.add('is-changing');
+  setTimeout(()=>{
+    counter.textContent=item.number;
+    title.textContent=item.title;
+    lead.textContent=item.lead;
+    points.innerHTML=item.points.map(p=>`<div class="method-point">${p}</div>`).join('');
+    progress.innerHTML=methodData.map((_,i)=>`<span class="method-dot ${i===methodIndex?'active':''}"></span>`).join('');
+    tabs.forEach((tab,i)=>{tab.classList.toggle('active',i===methodIndex);tab.setAttribute('aria-selected',i===methodIndex?'true':'false');});
+    tabs[methodIndex].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    content.classList.remove('is-changing');
+  },animate?170:0);
+}
+tabs.forEach((tab,i)=>tab.addEventListener('click',()=>renderMethod(i)));
+document.getElementById('methodPrev').addEventListener('click',()=>renderMethod(methodIndex-1));
+document.getElementById('methodNext').addEventListener('click',()=>renderMethod(methodIndex+1));
+renderMethod(0,false);
+</script>
+
 </body>
 </html>
