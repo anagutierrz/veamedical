@@ -1,1335 +1,253 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>VÉA Medical | Clinical Technology Partner</title>
-<meta content="La confianza para tomar la decisión correcta. VÉA Medical es el Clinical Technology Partner de clínicas que buscan crecer." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
-<style>
+<meta name="description" content="VÉA Medical: el Clinical Technology Partner que acompaña a clínicas en el diagnóstico, selección e implementación de tecnología médico-estética con resultados medibles.">
+<link rel="canonical" href="https://veamedical.com/index.html">
+<meta name="robots" content="index, follow">
 
-:root{
-  --ink:#0e0e0e; --ink2:#1a1a1a; --mid:#666; --light:#999; --muted:#bbb;
-  --fog:#e5e5e5; --pearl:#f2f2f2; --snow:#f8f8f8; --white:#fff;
-  --fh:'Raleway',sans-serif; --fb:'Lato',sans-serif; --nav-h:80px;
-  --ease:cubic-bezier(.16,1,.3,1);
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;font-size:16px;}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-button,input,select,textarea{font:inherit;border:none;outline:none;background:none;}
-body{font-family:var(--fb);background:var(--white);color:var(--ink2);overflow-x:hidden;line-height:1.6;}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VÉA Medical">
+<meta property="og:title" content="VÉA Medical | Clinical Technology Partner">
+<meta property="og:description" content="VÉA Medical: el Clinical Technology Partner que acompaña a clínicas en el diagnóstico, selección e implementación de tecnología médico-estética con resultados medibles.">
+<meta property="og:url" content="https://veamedical.com/index.html">
+<meta property="og:image" content="https://veamedical.com/hero-intelligence.jpg">
+<meta property="og:locale" content="es_DO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VÉA Medical | Clinical Technology Partner">
+<meta name="twitter:description" content="VÉA Medical: el Clinical Technology Partner que acompaña a clínicas en el diagnóstico, selección e implementación de tecnología médico-estética con resultados medibles.">
+<meta name="twitter:image" content="https://veamedical.com/hero-intelligence.jpg">
 
-.wrap{width:min(1240px,100% - 64px);margin:0 auto;}
-.wrap-sm{width:min(860px,100% - 64px);margin:0 auto;}
-.wrap-md{width:min(1060px,100% - 64px);margin:0 auto;}
-
-/* TYPE */
-h1,h2,h3{font-family:var(--fh);color:var(--ink);letter-spacing:-.04em;line-height:1;}
-h1{font-size:clamp(2.4rem,5.5vw,5.6rem);font-weight:900;text-transform:uppercase;}
-h2{font-size:clamp(1.8rem,3.5vw,3.6rem);font-weight:800;text-transform:uppercase;}
-h3{font-size:1rem;font-weight:700;font-family:var(--fb);letter-spacing:-.01em;}
-.display{font-size:clamp(3rem,7vw,8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.95;}
-p{color:var(--mid);line-height:1.75;font-size:1rem;}
-strong{color:var(--ink);font-weight:700;}
-.label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);}
-.rule{width:32px;height:1px;background:var(--fog);}
-.rule-dark{width:32px;height:1px;background:rgba(255,255,255,.2);}
-
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:11px;padding:14px 30px;font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .25s var(--ease);}
-.btn-k{background:var(--ink);color:var(--white);}
-.btn-k:hover{background:#000;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.22);}
-.btn-w{background:var(--white);color:var(--ink);}
-.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.14);}
-.btn-o{background:transparent;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.25);}
-.btn-o:hover{background:rgba(255,255,255,.08);color:var(--white);}
-.btn-ol{background:transparent;color:var(--ink);border:1px solid var(--fog);}
-.btn-ol:hover{border-color:var(--ink);background:var(--snow);}
-.bico{width:30px;height:30px;border-radius:1px;display:inline-grid;place-items:center;flex-shrink:0;font-size:.85rem;}
-.btn-k .bico{background:rgba(255,255,255,.12);}
-.btn-w .bico{background:var(--pearl);}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
-  display:flex;align-items:center;
-  background:rgba(255,255,255,.93);
-  backdrop-filter:blur(20px) saturate(1.2);
-  -webkit-backdrop-filter:blur(20px) saturate(1.2);
-  border-bottom:1px solid var(--fog);
-  transition:box-shadow .3s ease;}
-.nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.07);}
-.nav.dark-nav{background:rgba(10,10,10,.92);border-bottom:1px solid rgba(255,255,255,.08);}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;gap:24px;}
-.brand{font-family:var(--fh);font-weight:900;font-size:1.15rem;letter-spacing:-.055em;color:var(--ink);text-transform:uppercase;white-space:nowrap;flex-shrink:0;display:flex;align-items:baseline;gap:3px;}
-.brand span{font-weight:300;}
-.brand.light{color:var(--white);}
-.nav-links{display:flex;align-items:center;gap:28px;flex:1;justify-content:center;}
-.nav-links a{font-size:.73rem;font-weight:700;color:var(--mid);letter-spacing:.06em;text-transform:uppercase;transition:color .2s;white-space:nowrap;}
-.nav-links a:hover,.nav-links a.active{color:var(--ink);}
-.nav-links.light a{color:rgba(255,255,255,.55);}
-.nav-links.light a:hover{color:var(--white);}
-.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.ham{display:none;flex-direction:column;gap:5px;width:24px;cursor:pointer;flex-shrink:0;}
-.ham span{display:block;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s;}
-.ham.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px);}
-.ham.open span:nth-child(2){opacity:0;}
-.ham.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px);}
-.ham.light span{background:var(--white);}
-.mmenu{display:none;position:fixed;inset:0;z-index:99;background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:40px;}
-.mmenu.open{display:flex;}
-.mmenu a{font-size:1.4rem;font-family:var(--fh);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);}
-.mmenu a:hover{color:var(--muted);}
-.mm-btn{font-size:.8rem !important;background:var(--ink);color:var(--white) !important;padding:13px 28px;border-radius:2px;letter-spacing:.08em !important;margin-top:6px;}
-
-/* SECTION CHROME */
-section{padding:120px 0;}
-.section-dark{background:var(--ink);}
-.section-pearl{background:var(--pearl);}
-.section-snow{background:var(--snow);}
-
-/* SCROLL REVEAL */
-.sr{opacity:0;transform:translateY(22px);transition:opacity .75s var(--ease),transform .75s var(--ease);}
-.sr.in{opacity:1;transform:translateY(0);}
-.sr-left{opacity:0;transform:translateX(-24px);transition:opacity .75s var(--ease),transform .75s var(--ease);}
-.sr-left.in{opacity:1;transform:translateX(0);}
-.sr-scale{opacity:0;transform:scale(.96);transition:opacity .75s var(--ease),transform .75s var(--ease);}
-.sr-scale.in{opacity:1;transform:scale(1);}
-.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}.d5{transition-delay:.5s;}
-
-/* TICKER */
-.ticker{overflow:hidden;padding:15px 0;border-top:1px solid var(--fog);border-bottom:1px solid var(--fog);background:var(--white);}
-.ticker-track{display:flex;width:max-content;animation:tkr 30s linear infinite;}
-.ti{display:flex;align-items:center;gap:18px;padding:0 40px;white-space:nowrap;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
-.ti .dot{width:3px;height:3px;border-radius:50%;background:var(--fog);}
-@keyframes tkr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* FOOTER */
-footer{background:var(--ink);padding:64px 0 36px;border-top:1px solid rgba(255,255,255,.06);}
-.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px;}
-.foot-brand-col .fb{font-family:var(--fh);font-weight:900;font-size:1.1rem;letter-spacing:-.055em;color:var(--white);text-transform:uppercase;margin-bottom:6px;}
-.foot-brand-col .fb span{font-weight:300;}
-.foot-brand-col .fs{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;}
-.foot-brand-col p{font-size:.84rem;color:rgba(255,255,255,.35);line-height:1.65;}
-.foot-col h4{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;}
-.foot-col a{display:block;font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:8px;transition:color .2s;}
-.foot-col a:hover{color:var(--white);}
-.foot-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.07);}
-.foot-copy{font-size:.72rem;color:rgba(255,255,255,.25);font-weight:700;}
-
-/* RESPONSIVE */
-@media(max-width:980px){
-  :root{--nav-h:66px;}
-  section{padding:80px 0;}
-  .wrap,.wrap-md{width:min(100% - 48px,1240px);}
-  .nav-links,.nav-right .btn-ol{display:none;}
-  .ham{display:flex;}
-  .foot-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:640px){
-  :root{--nav-h:60px;}
-  section{padding:60px 0;}
-  .wrap,.wrap-md,.wrap-sm{width:min(100% - 32px,1240px);}
-  .display{font-size:clamp(2.2rem,12vw,3.5rem);}
-  h1{font-size:clamp(2rem,10vw,2.8rem);}
-  h2{font-size:clamp(1.6rem,8vw,2.2rem);}
-  .foot-grid{grid-template-columns:1fr;}
-}
-
-
-/* ── HOME HERO ── */
-.hero{
-  min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end;
-  padding-bottom:80px; padding-top:var(--nav-h);
-  background:var(--ink); position:relative; overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 70% at 80% 40%,rgba(255,255,255,.03) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 50% at 20% 70%,rgba(255,255,255,.02) 0%,transparent 50%),
-    var(--ink);
-}
-.hero-inner{position:relative;z-index:1;}
-.hero-top{
-  display:flex;align-items:flex-start;justify-content:space-between;
-  gap:24px;padding-top:clamp(60px,8vh,120px);padding-bottom:clamp(60px,8vh,100px);
-}
-.hero-left{flex:1;}
-.hero-eyebrow{
-  font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(255,255,255,.3);margin-bottom:28px;
-}
-.hero-h1{
-  font-family:var(--fh);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;
-  font-size:clamp(2.2rem,5.5vw,6rem);line-height:.96;color:var(--white);
-  max-width:880px;
-}
-.hero-h1 em{
-  font-style:normal;color:transparent;
-  -webkit-text-stroke:1.2px rgba(255,255,255,.3);
-}
-.hero-right{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;gap:16px;padding-top:120px;}
-.hero-sub{font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:340px;text-align:right;}
-.hero-btns{display:flex;gap:10px;justify-content:flex-end;margin-top:8px;}
-.hero-divider{width:100%;height:1px;background:rgba(255,255,255,.08);margin:12px 0;}
-.hero-stats{
-  display:flex;align-items:center;gap:48px;padding-top:24px;
-}
-.hs{}
-.hs-val{font-family:var(--fh);font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:-.05em;line-height:1;}
-.hs-lbl{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:5px;}
-.hs-div{width:1px;height:40px;background:rgba(255,255,255,.1);}
-
-/* ── STATEMENT ── */
-.statement{background:var(--white);padding:140px 0;}
-.stmt-text{font-family:var(--fh);font-weight:300;font-size:clamp(1.5rem,3.5vw,3.2rem);color:var(--ink);line-height:1.22;letter-spacing:-.03em;max-width:820px;}
-.stmt-text strong{font-weight:900;}
-.stmt-aside{max-width:400px;}
-.stmt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:start;}
-
-/* ── TECHS PREVIEW ── */
-.techs{background:var(--pearl);padding:120px 0;}
-.techs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:72px;}
-.tech-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.tech-card{
-  background:var(--white);padding:0;overflow:hidden;position:relative;
-  cursor:pointer;transition:all .35s var(--ease);
-  display:block;
-}
-.tech-card:hover{background:var(--ink);}
-.tech-img{
-  height:320px;overflow:hidden;position:relative;
-  background:linear-gradient(160deg,#ebebeb 0%,#e0e0e0 100%);
-}
-.tech-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
-.tech-card:hover .tech-img img{transform:scale(1.04);}
-.tech-body{padding:28px 30px 32px;}
-.tech-num{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;transition:color .3s;}
-.tech-card:hover .tech-num{color:rgba(255,255,255,.35);}
-.tech-name{font-family:var(--fh);font-size:1.4rem;font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);margin-bottom:8px;line-height:1.05;transition:color .3s;}
-.tech-card:hover .tech-name{color:var(--white);}
-.tech-desc{font-size:.87rem;color:var(--mid);line-height:1.65;transition:color .3s;}
-.tech-card:hover .tech-desc{color:rgba(255,255,255,.5);}
-.tech-arrow{display:flex;align-items:center;justify-content:space-between;margin-top:20px;}
-.tech-tag{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);transition:color .3s;}
-.tech-card:hover .tech-tag{color:rgba(255,255,255,.2);}
-.ta{font-size:1.1rem;color:var(--fog);transition:all .3s;}
-.tech-card:hover .ta{color:rgba(255,255,255,.5);transform:translateX(4px);}
-
-/* ── WHY (numbered sections like Estetique) ── */
-.why{background:var(--white);}
-.why-head{padding-bottom:80px;border-bottom:1px solid var(--fog);margin-bottom:0;}
-.why-row{
-  display:grid;grid-template-columns:280px 1fr 1fr;gap:40px;
-  padding:72px 0;border-bottom:1px solid var(--fog);
-  align-items:start;
-}
-.why-num{font-size:.68rem;font-weight:700;letter-spacing:.14em;color:var(--muted);padding-top:4px;}
-.why-title{font-family:var(--fh);font-size:clamp(1.3rem,2.5vw,2.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);line-height:1.05;}
-.why-title em{font-style:normal;color:var(--muted);}
-.why-content p{font-size:.93rem;margin-bottom:12px;}
-.why-content ul{list-style:none;margin-top:14px;display:grid;gap:6px;}
-.why-content li{display:flex;align-items:flex-start;gap:10px;font-size:.87rem;color:var(--mid);}
-.why-content li::before{content:"—";color:var(--fog);flex-shrink:0;}
-
-/* ── CTA BAND ── */
-.cta-band{background:var(--ink);padding:120px 0;}
-.cta-band-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-.cta-band-title{font-family:var(--fh);font-size:clamp(1.6rem,3.5vw,3.2rem);font-weight:300;color:rgba(255,255,255,.9);line-height:1.18;letter-spacing:-.02em;max-width:640px;}
-.cta-band-title strong{font-weight:900;color:var(--white);}
-.cta-band-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
-
-@media(max-width:980px){
-  .hero-top{flex-direction:column;gap:36px;padding-bottom:56px;}
-  .hero-right{align-items:flex-start;text-align:left;padding-top:0;}
-  .hero-sub{text-align:left;max-width:100%;}
-  .hero-btns{justify-content:flex-start;}
-  .hero-stats{gap:24px;flex-wrap:wrap;}
-  .stmt-grid{grid-template-columns:1fr;gap:36px;}
-  .tech-cards{grid-template-columns:1fr;gap:2px;}
-  .why-row{grid-template-columns:1fr;gap:16px;}
-  .cta-band-inner{grid-template-columns:1fr;gap:28px;}
-  .cta-band-right{align-items:flex-start;}
-  .techs-head{flex-direction:column;gap:16px;align-items:flex-start;}
-}
-@media(max-width:640px){
-  .hero{padding-top:calc(var(--nav-h)+36px);padding-bottom:48px;}
-  .hero-stats{gap:16px;}
-  .hs-div{display:none;}
-  .tech-img{height:240px;}
-}
-
-
-/* ─── HERO ─────────────────────────────── */
-.hero{
-  min-height:100svh;display:flex;align-items:flex-start;
-  padding-top:calc(var(--nav-h) + 48px);padding-bottom:64px;
-  background:var(--ink);overflow:hidden;position:relative;
-}
-.hero::before{
-  content:"";position:absolute;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.03) 0%,transparent 65%);
-  top:-220px;right:-150px;pointer-events:none;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:clamp(32px,5vw,64px);align-items:start;
-  position:relative;z-index:1;
-  padding:0;
-  width:100%;
-}
-.hero-eyebrow{font-size:.67rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:28px;}
-.hero-h{
-  font-family:var(--fh);font-weight:900;text-transform:uppercase;
-  letter-spacing:-.04em;line-height:.95;color:var(--white);
-  font-size:clamp(2.2rem,4.6vw,4.8rem);margin-bottom:20px;
-}
-.hero-h .dim{display:block;color:rgba(255,255,255,.2);}
-.hero-sub{font-size:.97rem;color:rgba(255,255,255,.45);line-height:1.75;max-width:430px;margin-bottom:32px;text-align:left;}
-.hero-sub strong{color:rgba(255,255,255,.7);font-weight:600;}
-.hero-links{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
-.hero-btn-ghost{color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.22);background:transparent;}
-.hero-btn-ghost:hover{color:var(--white);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08);transform:translateY(-2px);}
-.hero-pills{
-  display:flex;gap:20px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);
-  margin-top:28px;
-}
-.hp{}
-.hp-val{font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--white);letter-spacing:-.05em;line-height:1;}
-.hp-lbl{font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:4px;}
-
-/* ─── FORM CARD ─────────────────────────── */
-.form-card{
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.16);
-  padding:32px 30px;
-  border-radius:2px;
-}
-.fc-title{font-family:var(--fh);font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--white);margin-bottom:3px;}
-.fc-sub{font-size:.74rem;color:rgba(255,255,255,.3);margin-bottom:22px;}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.fg.one{grid-template-columns:1fr;}
-.ff{display:flex;flex-direction:column;gap:5px;}
-.ff label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);}
-.ff input,.ff select{
-  padding:11px 14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);
-  border-radius:2px;font-size:.88rem;color:var(--white);
-  transition:border-color .2s;-webkit-appearance:none;
-}
-.ff input::placeholder{color:rgba(255,255,255,.2);}
-.ff input:focus,.ff select:focus{border-color:rgba(255,255,255,.3);outline:none;}
-.ff select{
-  color:rgba(255,255,255,.55);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:30px;
-}
-.ff select option{background:var(--ink);color:var(--white);}
-.fc-btn{
-  width:100%;margin-top:6px;padding:14px;
-  background:var(--white);color:var(--ink);
-  font-family:var(--fh);font-size:.78rem;font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;
-  border:none;border-radius:2px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all .25s ease;
-}
-.fc-btn:hover{background:var(--pearl);transform:translateY(-2px);}
-.fc-btn .bico{width:28px;height:28px;background:var(--pearl);display:inline-grid;place-items:center;border-radius:1px;flex-shrink:0;}
-.fc-note{font-size:.63rem;color:rgba(255,255,255,.2);text-align:center;margin-top:8px;}
-.fc-success{display:none;text-align:center;padding:40px 16px;}
-.fc-success-ico{font-size:2rem;color:rgba(255,255,255,.5);margin-bottom:14px;}
-.fc-success h3{font-family:var(--fh);font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:8px;}
-.fc-success p{font-size:.84rem;color:rgba(255,255,255,.4);}
-
-/* ─── STATEMENT ─────────────────────────── */
-.statement{padding:100px 0;background:var(--white);}
-.stmt{
-  font-family:var(--fh);font-weight:300;
-  font-size:clamp(1.6rem,3.8vw,3.8rem);
-  color:var(--ink);line-height:1.18;letter-spacing:-.03em;
-  max-width:820px;
-}
-.stmt strong{font-weight:900;}
-
-/* ─── TECHS ─────────────────────────────── */
-.techs{background:var(--pearl);padding:100px 0;}
-.techs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:56px;flex-wrap:wrap;}
-.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.tc{
-  background:var(--white);overflow:hidden;display:block;
-  transition:background .3s ease,transform .3s ease;cursor:pointer;
-  text-decoration:none;
-}
-.tc:hover{background:var(--ink);}
-.tc-img{height:300px;overflow:hidden;position:relative;background:linear-gradient(160deg,#ebebeb,#e0e0e0);}
-.tc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
-.tc:hover .tc-img img{transform:scale(1.04);}
-.tc-body{padding:26px 28px 30px;}
-.tc-num{font-size:.63rem;font-weight:700;letter-spacing:.18em;color:var(--muted);margin-bottom:10px;transition:color .3s;}
-.tc:hover .tc-num{color:rgba(255,255,255,.3);}
-.tc-name{font-family:var(--fh);font-size:1.4rem;font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);margin-bottom:8px;line-height:1.05;transition:color .3s;}
-.tc:hover .tc-name{color:var(--white);}
-.tc-desc{font-size:.86rem;color:var(--mid);line-height:1.65;transition:color .3s;}
-.tc:hover .tc-desc{color:rgba(255,255,255,.5);}
-.tc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;}
-.tc-tag{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);transition:color .3s;}
-.tc:hover .tc-tag{color:rgba(255,255,255,.2);}
-.tc-arrow{font-size:1.1rem;color:var(--fog);transition:all .3s;}
-.tc:hover .tc-arrow{color:rgba(255,255,255,.4);transform:translateX(4px);}
-
-/* ─── CTA BAND ──────────────────────────── */
-.cta-band{background:var(--ink);padding:100px 0;}
-.cta-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-.cta-text h2{color:var(--white);font-size:clamp(1.5rem,3.2vw,3rem);margin-bottom:10px;}
-.cta-text p{color:rgba(255,255,255,.4);max-width:480px;}
-.cta-btns{display:flex;flex-direction:column;gap:10px;align-items:flex-end;}
-
-/* ─── RESPONSIVE ────────────────────────── */
-@media(max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:32px;padding:0;}
-  .tech-grid{grid-template-columns:1fr;}
-  .cta-inner{grid-template-columns:1fr;gap:28px;}
-  .cta-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap;}
-  .hero-pills{gap:14px;}
-}
-@media(max-width:640px){
-  .fg{grid-template-columns:1fr;}
-  .hero-links{flex-direction:column;}
-  .hero-links .btn{width:100%;}
-  .hero-pills{flex-wrap:wrap;gap:12px;}
-  .hp{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:12px 14px;border-radius:2px;flex:1;min-width:calc(50% - 7px);}
-  .tc-img{height:240px;}
-  .statement{padding:72px 0;}
-  .techs{padding:72px 0;}
-  .cta-band{padding:72px 0;}
-}
-
-
-/* ─── HERO ───────────────────────────── */
-.hero{
-  min-height:100svh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  background:var(--ink);
-  position:relative;overflow:hidden;
-}
-.hero::before{
-  content:"";position:absolute;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.028) 0%,transparent 65%);
-  top:-200px;right:-100px;pointer-events:none;
-}
-
-/* LEFT — copy */
-.hero-copy{
-  display:flex;flex-direction:column;justify-content:center;
-  padding:calc(var(--nav-h) + 56px) clamp(28px,5vw,72px) 64px 0;
-  position:relative;z-index:1;
-}
-.hero-eyebrow{
-  font-size:.66rem;font-weight:700;letter-spacing:.24em;
-  text-transform:uppercase;color:rgba(255,255,255,.26);
-  margin-bottom:32px;
-}
-.hero-h{
-  font-family:var(--fh);font-weight:900;text-transform:uppercase;
-  letter-spacing:-.04em;line-height:.93;color:var(--white);
-  font-size:clamp(2rem,4.2vw,4.4rem);
-  margin-bottom:28px;
-}
-.hero-h .soft{display:block;color:rgba(255,255,255,.18);}
-.hero-p{
-  font-size:.95rem;color:rgba(255,255,255,.4);
-  line-height:1.75;max-width:380px;margin-bottom:36px;
-}
-.hero-p strong{color:rgba(255,255,255,.65);font-weight:600;}
-.hero-nav{display:flex;gap:10px;flex-wrap:wrap;}
-.hn-link{
-  font-size:.72rem;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;color:rgba(255,255,255,.4);
-  padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);
-  transition:color .2s,border-color .2s;
-}
-.hn-link:hover{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.35);}
-.hn-sep{color:rgba(255,255,255,.15);font-size:.72rem;display:flex;align-items:center;}
-
-/* RIGHT — form */
-.hero-form-col{
-  display:flex;align-items:center;
-  background:rgba(255,255,255,.04);
-  border-left:1px solid rgba(255,255,255,.07);
-  padding:calc(var(--nav-h) + 48px) clamp(28px,5vw,64px) 64px;
-  position:relative;z-index:1;
-}
-.form-box{width:100%;max-width:500px;}
-.fb-title{
-  font-family:var(--fh);font-size:.88rem;font-weight:800;
-  text-transform:uppercase;letter-spacing:.07em;color:var(--white);
-  margin-bottom:4px;
-}
-.fb-sub{font-size:.74rem;color:rgba(255,255,255,.28);margin-bottom:24px;}
-
-/* form fields */
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.fg.one{grid-template-columns:1fr;margin-top:10px;}
-.ff{display:flex;flex-direction:column;gap:5px;}
-.ff label{
-  font-size:.6rem;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:rgba(255,255,255,.28);
-}
-.ff input,.ff select{
-  padding:12px 14px;
-  border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.05);
-  border-radius:2px;font-size:.88rem;color:var(--white);
-  transition:border-color .2s;-webkit-appearance:none;
-}
-.ff input::placeholder{color:rgba(255,255,255,.18);}
-.ff input:focus,.ff select:focus{border-color:rgba(255,255,255,.28);outline:none;}
-.ff select{
-  color:rgba(255,255,255,.4);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:30px;
-}
-.ff select option{background:#1a1a1a;color:var(--white);}
-.fb-btn{
-  width:100%;margin-top:14px;padding:15px 20px;
-  background:var(--white);color:var(--ink);
-  font-family:var(--fh);font-size:.78rem;font-weight:700;
-  letter-spacing:.09em;text-transform:uppercase;
-  border:none;border-radius:2px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all .25s ease;
-}
-.fb-btn:hover{background:var(--pearl);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.3);}
-.fb-btn-ico{width:28px;height:28px;background:var(--pearl);border-radius:1px;display:inline-grid;place-items:center;flex-shrink:0;}
-.fb-note{font-size:.63rem;color:rgba(255,255,255,.18);text-align:center;margin-top:10px;}
-.fb-success{
-  display:none;text-align:center;padding:48px 16px;
-}
-.fb-success-check{font-size:2rem;color:rgba(255,255,255,.4);margin-bottom:16px;}
-.fb-success h3{font-family:var(--fh);font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--white);margin-bottom:8px;}
-.fb-success p{font-size:.84rem;color:rgba(255,255,255,.35);}
-
-/* ─── TECHS STRIP ────────────────────── */
-.techs{background:var(--pearl);}
-.techs-inner{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:0;border-top:1px solid var(--fog);
-}
-.tc{
-  padding:36px 32px;border-right:1px solid var(--fog);
-  display:flex;flex-direction:column;gap:10px;
-  transition:background .25s;cursor:pointer;
-  text-decoration:none;
-}
-.tc:last-child{border-right:none;}
-.tc:hover{background:var(--white);}
-.tc-num{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
-.tc-name{font-family:var(--fh);font-size:1.3rem;font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);line-height:1;}
-.tc-desc{font-size:.83rem;color:var(--mid);line-height:1.6;}
-.tc-link{
-  font-size:.7rem;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--muted);
-  margin-top:4px;transition:color .2s;
-}
-.tc:hover .tc-link{color:var(--ink);}
-.tc-link::after{content:" →";}
-
-/* ─── RESPONSIVE ─────────────────────── */
-@media(max-width:980px){
-  .hero{grid-template-columns:1fr;min-height:auto;}
-  .hero-copy{padding:calc(var(--nav-h)+40px) 0 40px;}
-  .hero-form-col{border-left:none;border-top:1px solid rgba(255,255,255,.07);padding:40px 0 56px;background:rgba(255,255,255,.03);}
-  .form-box{max-width:100%;}
-  .techs-inner{grid-template-columns:1fr;}
-  .tc{border-right:none;border-bottom:1px solid var(--fog);}
-  .tc:last-child{border-bottom:none;}
-}
-@media(max-width:640px){
-  :root{--nav-h:60px;}
-  .hero-copy{padding:calc(var(--nav-h)+32px) 0 32px;}
-  .hero-form-col{padding:32px 0 48px;}
-  .fg{grid-template-columns:1fr;}
-  .hero-h{font-size:clamp(2rem,10vw,2.8rem);}
-  .hero-nav{gap:6px;}
-}
-
-/* ─── HOME CONTENT EXPANSION ───────────────── */
-.home-intro{background:var(--white);padding:110px 0;}
-.home-intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(44px,8vw,110px);align-items:start;}
-.home-kicker{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;}
-.home-lead{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,3.5rem);font-weight:300;line-height:1.15;letter-spacing:-.04em;color:var(--ink);}
-.home-lead strong{font-weight:900;}
-.home-copy p{font-size:.98rem;margin-bottom:16px;}
-.home-copy .mini-link{display:inline-flex;margin-top:12px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px;}
-
-.method-home{background:var(--ink);padding:120px 0;color:var(--white);overflow:hidden;}
-.method-head{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:end;margin-bottom:70px;}
-.method-head h2{color:var(--white);font-family:'Cormorant Garamond',serif;font-weight:500;text-transform:none;letter-spacing:-.035em;font-size:clamp(3rem,6vw,6rem);}
-.method-head p{color:rgba(255,255,255,.45);max-width:560px;}
-.method-experience{display:grid;grid-template-columns:320px minmax(0,1fr);gap:56px;align-items:start;}
-.method-tabs{display:grid;border-top:1px solid rgba(255,255,255,.12);position:sticky;top:110px;}
-.method-tab{appearance:none;width:100%;text-align:left;color:rgba(255,255,255,.42);padding:19px 0;border-bottom:1px solid rgba(255,255,255,.1);cursor:pointer;display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:center;transition:color .25s ease,padding-left .25s ease;}
-.method-tab:hover{color:rgba(255,255,255,.78);padding-left:6px;}
-.method-tab.active{color:#fff;}
-.method-tab .tab-num{font-size:.63rem;letter-spacing:.16em;color:rgba(255,255,255,.28);}
-.method-tab .tab-title{font-family:var(--fh);font-size:.83rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;}
-.method-stage{min-height:650px;position:relative;padding:8px 0 0;}
-.method-stage::before{content:'';position:absolute;inset:0 auto auto 0;width:100%;height:1px;background:rgba(255,255,255,.1);}
-.method-counter{font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,14vw,13rem);font-weight:400;line-height:.75;color:rgba(255,255,255,.08);letter-spacing:-.08em;margin-top:40px;}
-.method-content{max-width:820px;margin-left:auto;margin-top:-34px;transition:opacity .22s ease,transform .22s ease;}
-.method-content.is-changing{opacity:0;transform:translateY(10px);}
-.method-kicker{font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:20px;}
-.method-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,6.2rem);font-weight:500;line-height:.93;color:#fff;letter-spacing:-.04em;margin-bottom:26px;text-transform:none;}
-.method-lead{font-family:var(--fh);font-size:clamp(1.05rem,1.7vw,1.35rem);line-height:1.55;color:rgba(255,255,255,.72);max-width:720px;margin-bottom:34px;}
-.method-points{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;border-top:1px solid rgba(255,255,255,.1);}
-.method-point{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.88rem;color:rgba(255,255,255,.52);line-height:1.55;}
-.method-point::before{content:'✓';width:20px;height:20px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;font-size:.65rem;color:rgba(255,255,255,.68);margin-top:1px;}
-.method-progress{display:flex;align-items:center;gap:8px;margin-top:34px;}
-.method-dot{width:28px;height:2px;background:rgba(255,255,255,.13);transition:width .25s ease,background .25s ease;}
-.method-dot.active{width:64px;background:#fff;}
-.method-nav{display:flex;gap:10px;margin-top:32px;}
-.method-arrow{width:46px;height:46px;border:1px solid rgba(255,255,255,.15);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s ease,border-color .2s ease;}
-.method-arrow:hover{background:#fff;color:#111;border-color:#fff;}
-.method-foot{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:62px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);}
-.method-foot p{font-size:.82rem;color:rgba(255,255,255,.35);max-width:620px;}
-
-.ecosystem-home{background:var(--snow);padding:110px 0;}
-.eco-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:56px;}
-.eco-head p{max-width:460px;}
-.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.eco-card{background:var(--white);padding:34px 30px;min-height:230px;transition:transform .25s ease,box-shadow .25s ease;}
-.eco-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.07);}
-.eco-num{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--muted);margin-bottom:32px;}
-.eco-card h3{font-family:var(--fh);font-size:1.08rem;text-transform:uppercase;line-height:1.1;margin-bottom:12px;}
-.eco-card p{font-size:.84rem;line-height:1.65;}
-
-.academy-home{background:var(--white);padding:110px 0;}
-.academy-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(44px,8vw,110px);align-items:center;}
-.academy-panel{background:var(--ink);padding:54px;color:var(--white);position:relative;overflow:hidden;}
-.academy-panel::after{content:"VÉA";position:absolute;right:-18px;bottom:-42px;font-family:var(--fh);font-weight:900;font-size:8rem;color:rgba(255,255,255,.035);letter-spacing:-.08em;}
-.academy-panel .label{color:rgba(255,255,255,.3);margin-bottom:18px;display:block;}
-.academy-panel h2{color:var(--white);margin-bottom:22px;}
-.academy-panel p{color:rgba(255,255,255,.45);position:relative;z-index:1;}
-.academy-points{display:grid;gap:0;border-top:1px solid var(--fog);}
-.academy-point{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:23px 0;border-bottom:1px solid var(--fog);align-items:start;}
-.ap-num{font-size:.65rem;font-weight:800;letter-spacing:.12em;color:var(--muted);padding-top:3px;}
-.academy-point h3{font-family:var(--fh);font-size:1rem;text-transform:uppercase;margin-bottom:5px;}
-.academy-point p{font-size:.84rem;}
-
-.support-home{background:var(--pearl);padding:110px 0;}
-.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.support-main{background:var(--ink);padding:54px;}
-.support-main h2{color:var(--white);margin-bottom:20px;}
-.support-main p{color:rgba(255,255,255,.45);max-width:540px;}
-.support-list{background:var(--white);padding:16px 42px;}
-.support-item{padding:26px 0;border-bottom:1px solid var(--fog);display:grid;grid-template-columns:36px 1fr;gap:16px;}
-.support-item:last-child{border-bottom:none;}
-.support-item span{font-size:.65rem;font-weight:800;color:var(--muted);}
-.support-item h3{font-family:var(--fh);font-size:.98rem;text-transform:uppercase;margin-bottom:5px;}
-.support-item p{font-size:.82rem;}
-.home-final-cta{background:var(--ink);padding:105px 0;text-align:center;}
-.home-final-cta h2{color:var(--white);max-width:820px;margin:0 auto 20px;}
-.home-final-cta p{color:rgba(255,255,255,.42);max-width:620px;margin:0 auto 32px;}
-.home-final-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
-@media(max-width:980px){
- .home-intro-grid,.method-head,.academy-grid,.support-grid{grid-template-columns:1fr;}
- .method-grid{grid-template-columns:repeat(2,1fr);}
- .eco-grid{grid-template-columns:repeat(2,1fr);}
- .eco-head{align-items:flex-start;flex-direction:column;}
-}
-@media(max-width:640px){
- .home-intro,.method-home,.ecosystem-home,.academy-home,.support-home,.home-final-cta{padding:72px 0;}
- .method-grid,.eco-grid{grid-template-columns:1fr;}
- .method-foot{align-items:flex-start;flex-direction:column;}
- .academy-panel,.support-main{padding:34px 28px;}
- .support-list{padding:8px 24px;}
-}
-
-/* VISUALES EDITORIALES */
-.home-visual-story{background:var(--white);padding:0 0 110px;}
-.home-visual-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch;}
-.home-visual-main,.home-visual-side{position:relative;overflow:hidden;background:var(--pearl);min-height:520px;}
-.home-visual-side{display:grid;grid-template-rows:1fr 1fr;gap:16px;background:transparent;}
-.home-visual-card{position:relative;overflow:hidden;background:var(--pearl);min-height:250px;}
-.home-visual-grid img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease);}
-.home-visual-main:hover img,.home-visual-card:hover img{transform:scale(1.025);}
-.visual-caption{position:absolute;left:22px;right:22px;bottom:20px;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);color:#fff;padding:16px 18px;border:1px solid rgba(255,255,255,.1);}
-.visual-caption strong{display:block;color:#fff;font-family:var(--fh);font-size:.84rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
-.visual-caption span{font-size:.75rem;color:rgba(255,255,255,.58);}
-.method-media{margin-top:48px;display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch;}
-.method-media figure{overflow:hidden;position:relative;background:#151515;border:1px solid rgba(255,255,255,.08);}
-.method-media img{width:100%;height:100%;object-fit:cover;min-height:390px;}
-.method-media figcaption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(10,10,10,.8);color:rgba(255,255,255,.65);padding:12px 14px;font-size:.74rem;border:1px solid rgba(255,255,255,.08);}
-.academy-home .academy-grid{grid-template-columns:.8fr 1.2fr;}
-.academy-content-stack{display:grid;gap:28px;}
-.academy-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.academy-photo{position:relative;overflow:hidden;min-height:360px;background:var(--pearl);}
-.academy-photo img{width:100%;height:100%;object-fit:cover;}
-.academy-photo figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(10,10,10,.8);color:rgba(255,255,255,.62);padding:10px 12px;font-size:.72rem;}
-@media(max-width:980px){.home-visual-grid,.method-media,.academy-home .academy-grid{grid-template-columns:1fr}.home-visual-main{min-height:440px}.home-visual-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.method-media img{min-height:320px}}
-@media(max-width:640px){.home-visual-story{padding-bottom:72px}.home-visual-side,.academy-photo-grid{grid-template-columns:1fr}.home-visual-main{min-height:360px}.home-visual-card,.academy-photo{min-height:300px}}
-
-
-@media(max-width:980px){
-  .method-experience{grid-template-columns:1fr;gap:34px;}
-  .method-tabs{position:relative;top:auto;display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid rgba(255,255,255,.1);}
-  .method-tabs::-webkit-scrollbar{display:none;}
-  .method-tab{min-width:190px;padding:16px 12px 16px 0;border-bottom:none;border-right:1px solid rgba(255,255,255,.08);}
-  .method-stage{min-height:auto;}
-  .method-counter{font-size:7rem;margin-top:24px;}
-  .method-content{margin-top:-18px;}
-}
-@media(max-width:640px){
-  .method-home{padding:84px 0;}
-  .method-head{margin-bottom:44px;gap:22px;}
-  .method-head h2{font-size:clamp(2.6rem,13vw,4.4rem);}
-  .method-tab{min-width:164px;grid-template-columns:30px 1fr;gap:8px;}
-  .method-tab .tab-title{font-size:.72rem;}
-  .method-counter{font-size:5.6rem;margin-top:24px;}
-  .method-content{margin-top:-10px;}
-  .method-title{font-size:clamp(2.55rem,13vw,4.3rem);}
-  .method-lead{font-size:1rem;margin-bottom:25px;}
-  .method-points{grid-template-columns:1fr;}
-  .method-point{font-size:.84rem;padding:13px 0;}
-  .method-foot{align-items:flex-start;flex-direction:column;margin-top:46px;}
-}
-
-
-/* ===== DIRECCIÓN PREMIUM VÉA — Brief creativo aplicado ===== */
-body{font-family:'Inter',sans-serif;font-weight:400;background:#fff;color:#111;}
-h1,h2,.premium-title,.method-title,.premium-tech-row h3,.partner-statement h2,.premium-academy-copy h2{font-family:'Instrument Serif',serif!important;font-weight:400!important;text-transform:none!important;letter-spacing:-.035em!important;}
-.nav{background:rgba(255,255,255,.9)!important;border-bottom:1px solid #ececec!important;backdrop-filter:blur(18px);}
-.brand,.nav-links a{color:#111!important}.brand span{font-weight:300}.nav-links a{font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.08em;font-size:.67rem}.nav .btn-k{background:#111;color:#fff}
-.premium-hero{background:#fff!important;color:#111;min-height:100svh;padding:calc(var(--nav-h) + 70px) 0 64px;display:flex;align-items:center;position:relative;overflow:hidden;}
-.premium-hero:before{display:none!important}.premium-hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(50px,8vw,120px);align-items:center;}
-.premium-hero-copy{max-width:620px}.premium-hero .hero-eyebrow{color:#8d8d8d!important;margin-bottom:28px}.premium-title{font-size:clamp(4.2rem,7vw,8rem)!important;line-height:.91!important;color:#111!important;margin:0;max-width:720px}.premium-sub{font-size:clamp(1rem,1.25vw,1.2rem);line-height:1.85;color:#707070;max-width:590px;margin:32px 0 38px}.premium-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap}.premium-link{display:inline-flex;align-items:center;gap:12px;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500;border-bottom:1px solid #bbb;padding-bottom:8px;color:#111}.premium-link span{font-size:1rem}.premium-hero-visual{margin:0;position:relative}.premium-hero-visual img{width:100%;height:min(70vh,720px);object-fit:contain;background:#fafafa}.premium-hero-visual figcaption{font-size:.72rem;color:#888;margin-top:14px;letter-spacing:.04em}.premium-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#999;display:flex;gap:12px}
-.premium-philosophy{padding:160px 0;background:#f7f7f7}.premium-philosophy-inner{max-width:980px;text-align:center}.premium-philosophy h2{font-size:clamp(3.6rem,6.4vw,7rem);line-height:.95;margin:24px auto 34px;max-width:1050px}.premium-philosophy p{font-size:1.08rem;line-height:1.9;max-width:680px;margin:0 auto;color:#777}
-.premium-partner{padding:150px 0;background:#fff}.premium-partner-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(60px,10vw,160px);align-items:start}.partner-statement{padding-top:18px;border-top:1px solid #ddd}.partner-statement span{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:#999}.partner-statement h2{font-size:clamp(3.4rem,5.3vw,6rem);line-height:.96;margin-top:28px}.partner-statement.is-vea h2{max-width:800px}.partner-statement p{max-width:620px;margin:30px 0;color:#707070;line-height:1.9}
-.method-home{padding:140px 0!important;background:#111!important}.method-head h2{font-size:clamp(3.8rem,6vw,7rem)!important}.method-experience{border-color:rgba(255,255,255,.12)!important}.method-tab{font-family:'Inter',sans-serif!important}.method-title{font-size:clamp(3.6rem,6vw,6.6rem)!important}
-.premium-tech{padding:160px 0;background:#fff}.premium-section-head{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:start;margin-bottom:80px}.premium-section-head .home-kicker{grid-column:1}.premium-section-head h2{font-size:clamp(3.6rem,6vw,6.8rem);line-height:.95;grid-column:1/3;max-width:950px}.premium-section-head p{grid-column:2;max-width:560px;color:#777;line-height:1.85}.premium-tech-list{border-top:1px solid #ddd}.premium-tech-row{display:grid;grid-template-columns:60px 1fr 260px 30px;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid #ddd;transition:opacity .25s}.premium-tech-row:hover{opacity:.65}.ptr-num{font-size:.68rem;letter-spacing:.14em;color:#aaa}.ptr-copy h3{font-size:clamp(2.2rem,3vw,3.6rem);line-height:1}.ptr-copy p{font-size:.92rem;color:#777;margin-top:8px}.premium-tech-row img{width:260px;height:150px;object-fit:contain;background:#fafafa}.ptr-arrow{font-size:1.2rem}
-.premium-confidence{padding:150px 0;background:#f7f7f7}.premium-confidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.premium-confidence h2{font-size:clamp(3.3rem,5vw,5.8rem);line-height:.96;margin-top:22px}.confidence-lines{border-top:1px solid #d7d7d7}.confidence-line{display:grid;grid-template-columns:50px 180px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid #d7d7d7}.confidence-line span{font-size:.68rem;color:#aaa}.confidence-line h3{font-family:'Inter',sans-serif;font-size:.95rem;letter-spacing:-.01em}.confidence-line p{font-size:.9rem;color:#777;line-height:1.7}
-.premium-academy{padding:160px 0;background:#fff}.premium-academy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(60px,9vw,140px);align-items:center}.premium-academy-image img{width:100%;height:min(78vh,760px);object-fit:cover;object-position:center top}.premium-academy-copy h2{font-size:clamp(3.8rem,6vw,6.8rem);line-height:.94;margin:22px 0 30px}.premium-academy-copy p{max-width:520px;color:#777;line-height:1.9;margin-bottom:32px}
-.ecosystem-home,.academy-home{display:none!important}
-@media(max-width:980px){.premium-hero-grid,.premium-partner-grid,.premium-section-head,.premium-confidence-grid,.premium-academy-grid{grid-template-columns:1fr}.premium-hero{min-height:auto;padding-top:calc(var(--nav-h) + 54px)}.premium-title{font-size:clamp(3.7rem,13vw,6.4rem)!important}.premium-hero-visual{order:2}.premium-hero-visual img{height:auto;max-height:none;aspect-ratio:4/3}.premium-philosophy,.premium-partner,.premium-tech,.premium-confidence,.premium-academy{padding:100px 0}.premium-section-head h2,.premium-section-head p{grid-column:1}.premium-tech-row{grid-template-columns:44px 1fr 150px 24px}.premium-tech-row img{width:150px;height:100px}.premium-confidence-grid{gap:46px}.premium-academy-image img{height:auto;max-height:680px}}
-@media(max-width:640px){.wrap{width:min(100% - 32px,1240px)}.premium-hero{padding-bottom:76px}.premium-title{font-size:clamp(3.25rem,15vw,4.7rem)!important}.premium-sub{font-size:.95rem;margin:24px 0 30px}.premium-actions{align-items:flex-start;flex-direction:column;gap:20px}.premium-hero-visual img{aspect-ratio:1/1;object-fit:contain}.premium-scroll{display:none}.premium-philosophy h2,.partner-statement h2,.premium-section-head h2,.premium-confidence h2,.premium-academy-copy h2{font-size:clamp(2.8rem,13vw,4rem)!important}.premium-philosophy{padding:86px 0}.premium-partner-grid{gap:70px}.premium-tech-row{grid-template-columns:38px 1fr 24px;padding:28px 0}.premium-tech-row img{grid-column:2/4;width:100%;height:190px;margin-top:18px}.ptr-arrow{grid-column:3;grid-row:1}.confidence-line{grid-template-columns:38px 1fr}.confidence-line h3{grid-column:2}.confidence-line p{grid-column:2}.premium-academy-grid{gap:42px}.premium-academy-image img{max-height:none;aspect-ratio:4/5}.method-home{padding:90px 0!important}}
-
-/* === FINAL HOME REFINEMENTS === */
-.premium-hero{background:#fff!important;padding-top:calc(var(--nav-h) + 46px);padding-bottom:120px;min-height:auto;position:relative}
-.premium-hero::after{content:'';position:absolute;inset:auto 0 0 0;height:1px;background:#ececec}
-.premium-hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(340px,.94fr);gap:clamp(44px,6vw,88px);align-items:start}
-.premium-hero-copy{max-width:660px}
-.premium-hero-visual{margin:0;position:sticky;top:110px;background:#fafafa;border:1px solid #ececec;padding:28px}
-.premium-hero-visual img{width:100%;height:min(76vh,760px);object-fit:contain;background:transparent}
-.premium-hero-visual figcaption{font-size:.74rem;color:#888;margin-top:16px;letter-spacing:.04em}
-.hero-machine-chip{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #e8e8e8;background:#fff;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#111;position:absolute;left:26px;bottom:28px;box-shadow:0 18px 44px rgba(17,17,17,.07)}
-.hero-machine-chip .dot{width:8px;height:8px;border-radius:50%;background:#8b8bff;box-shadow:0 0 16px rgba(139,139,255,.65)}
-.hero-form-shell{margin-top:44px;border:1px solid #ececec;background:#fbfbfb;padding:26px 24px 24px;max-width:640px}
-.hero-form-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #ececec}
-.hero-form-head .k{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#8f8f8f;font-weight:700}
-.hero-form-head h3{font-family:'Instrument Serif',serif;font-size:clamp(1.55rem,2.6vw,2.25rem);font-weight:400;line-height:1;color:#111;margin-top:8px}
-.hero-form-head p{max-width:280px;font-size:.88rem;line-height:1.7;color:#7a7a7a}
-.hero-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.hero-form-field{display:flex;flex-direction:column;gap:6px}
-.hero-form-field.full{grid-column:1/-1}
-.hero-form-field label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8c8c8c}
-.hero-form-field input,.hero-form-field select,.hero-form-field textarea{width:100%;padding:13px 14px;border:1px solid #dfdfdf;background:#fff;color:#111;font-size:.9rem;border-radius:0;resize:vertical}
-.hero-form-field input::placeholder,.hero-form-field textarea::placeholder{color:#b3b3b3}
-.hero-form-field input:focus,.hero-form-field select:focus,.hero-form-field textarea:focus{border-color:#111}
-.hero-form-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:34px;color:#555}
-.fb-btn{width:100%;margin-top:16px;padding:15px 20px;background:#111;color:#fff;border:none;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
-.fb-btn:hover{background:#000;transform:translateY(-2px);box-shadow:0 14px 30px rgba(17,17,17,.12)}
-.fb-btn-ico{width:28px;height:28px;display:grid;place-items:center;background:rgba(255,255,255,.12)}
-.fb-note{font-size:.68rem;color:#8d8d8d;margin-top:10px}
-.fb-success{display:none;padding:30px;border:1px solid #ececec;background:#fff;text-align:center;margin-top:18px}
-.fb-success-check{font-size:1.8rem;color:#111;margin-bottom:10px}
-.fb-success h3{font-family:'Instrument Serif',serif;font-size:2rem;line-height:1;color:#111;font-weight:400;margin-bottom:8px}
-.fb-success p{color:#777;max-width:420px;margin:0 auto}
-.hero-proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px}
-.hero-proof div{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:#8c8c8c;font-weight:700}
-.hero-proof strong{display:block;font-size:1.15rem;letter-spacing:-.04em;color:#111;margin-bottom:5px;text-transform:none}
-.premium-tech-list{border-top:1px solid #ececec;border-bottom:1px solid #ececec}
-.premium-tech-row{display:grid;grid-template-columns:54px 1.1fr 1.1fr 28px;gap:18px;align-items:center;padding:28px 0;border-top:1px solid #ececec}
-.premium-tech-row:first-child{border-top:none}
-.premium-tech-row img{width:100%;height:210px;object-fit:contain;background:#f7f7f7;border:1px solid #ececec;padding:18px}
-.ptr-copy h3{margin-bottom:9px}
-.ptr-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.ptr-badge{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#888;border:1px solid #e3e3e3;padding:8px 10px;background:#fff}
-.method-home{background:#0f0f10!important;overflow:hidden}
-.method-experience{position:relative}
-.method-stage{position:relative;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);padding:36px;min-height:500px;overflow:hidden}
-.method-stage::before{content:'';position:absolute;inset:-20% auto auto -15%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,rgba(255,255,255,0) 65%);animation:floatGlow 14s ease-in-out infinite}
-.method-stage::after{content:'';position:absolute;right:-120px;bottom:-120px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,255,255,.06);animation:spinSlow 26s linear infinite}
-@keyframes floatGlow{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,18px)}}
-@keyframes spinSlow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.method-counter{position:absolute;right:36px;top:32px;font-size:clamp(4rem,9vw,8rem);line-height:.82;color:rgba(255,255,255,.07);font-family:'Instrument Serif',serif;pointer-events:none}
-.method-content{position:relative;z-index:1;max-width:840px;margin:0}
-.method-lead{max-width:620px}
-.method-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:30px}
-.method-point{padding:16px 18px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:rgba(255,255,255,.74);font-size:.93rem;line-height:1.55;position:relative;overflow:hidden}
-.method-point::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#fff;opacity:.14}
-.method-progress{display:flex;gap:10px;align-items:center;margin-top:26px;min-height:12px}
-.method-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.18);transition:all .25s ease}
-.method-dot.active{background:#fff;transform:scale(1.15)}
-.method-loader{height:2px;width:0;background:#fff;opacity:.45;display:block;animation:methodFill 6s linear forwards;transform-origin:left center}
-@keyframes methodFill{from{width:0}to{width:160px}}
-.method-nav{display:flex;gap:10px;margin-top:24px}
-.method-arrow{width:44px;height:44px;border:1px solid rgba(255,255,255,.14);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:all .2s ease}
-.method-arrow:hover{background:rgba(255,255,255,.08)}
-@media(max-width:980px){
-  .premium-hero-grid{grid-template-columns:1fr;gap:34px}
-  .premium-hero-visual{position:relative;top:auto;order:2}
-  .hero-form-head{flex-direction:column;align-items:flex-start}
-  .method-points{grid-template-columns:1fr}
-  .premium-tech-row{grid-template-columns:44px 1fr 24px}
-  .premium-tech-row img{grid-column:2/4;width:100%;height:240px;margin-top:16px}
-}
-@media(max-width:640px){
-  .premium-hero{padding-top:calc(var(--nav-h) + 30px);padding-bottom:86px}
-  .hero-form-shell{padding:22px 18px 18px}
-  .hero-form-grid{grid-template-columns:1fr}
-  .premium-hero-visual{padding:18px}
-  .premium-hero-visual img{height:auto;max-height:none;aspect-ratio:1/1;object-fit:contain}
-  .hero-machine-chip{left:18px;right:18px;bottom:18px;justify-content:center}
-  .method-stage{padding:28px 22px 24px;min-height:auto}
-  .method-counter{position:relative;right:auto;top:auto;margin-bottom:12px;font-size:3.7rem}
-}
-
-
-/* === HOME RESTRUCTURE AUG 2026 === */
-.premium-hero{background:#fff!important;padding-top:calc(var(--nav-h) + 46px);padding-bottom:110px;min-height:auto;position:relative;overflow:hidden}
-.home-hero-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(360px,1.05fr);gap:clamp(40px,5vw,76px);align-items:center}
-.home-hero-copy{max-width:650px}
-.home-hero-copy .premium-title{font-size:clamp(4.1rem,7vw,7.8rem)!important;line-height:.9!important;margin-bottom:0}
-.home-hero-copy .premium-sub{max-width:620px}
-.hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
-.hero-proof div{border:1px solid #ececec;background:#fff;padding:16px 14px;min-height:94px;display:flex;flex-direction:column;gap:10px;font-size:.82rem;color:#777;line-height:1.55;box-shadow:0 14px 34px rgba(17,17,17,.04)}
-.hero-proof strong{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#111}
-.hero-showcase{position:relative;min-height:760px;border:1px solid #ececec;background:linear-gradient(180deg,#ffffff 0%,#fbfbfc 100%);overflow:hidden}
-.showcase-gridlines{position:absolute;inset:0;background-image:linear-gradient(rgba(17,17,17,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(17,17,17,.04) 1px, transparent 1px);background-size:72px 72px;mask-image:linear-gradient(180deg, rgba(0,0,0,.75), rgba(0,0,0,.15));pointer-events:none}
-.showcase-orb{position:absolute;border-radius:50%;filter:blur(8px);opacity:.9}
-.orb-a{width:320px;height:320px;right:6%;top:6%;background:radial-gradient(circle, rgba(126,140,255,.2) 0%, rgba(126,140,255,0) 72%)}
-.orb-b{width:280px;height:280px;left:12%;bottom:8%;background:radial-gradient(circle, rgba(126,220,255,.16) 0%, rgba(126,220,255,0) 72%)}
-.machine-stack{position:absolute;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border:1px solid rgba(17,17,17,.08);box-shadow:0 30px 70px rgba(17,17,17,.12);padding:16px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.machine-stack img{width:100%;height:100%;object-fit:contain;display:block}
-.machine-main{top:34px;right:48px;width:min(46vw,370px);height:380px;z-index:3}
-.machine-left{left:46px;bottom:46px;width:min(34vw,300px);height:300px;z-index:2}
-.machine-right{right:34px;bottom:34px;width:min(24vw,220px);height:220px;z-index:4}
-.machine-label{position:absolute;left:14px;top:14px;padding:8px 10px;border:1px solid #ececec;background:#fff;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#111;z-index:2}
-.showcase-note{position:absolute;left:20px;top:20px;font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8e8e8e}
-.home-machines{padding:110px 0;background:#fff}
-.machines-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:42px}
-.machines-head h2{font-family:'Instrument Serif',serif;font-size:clamp(3rem,5vw,5.2rem);line-height:.96;color:#111;font-weight:400;grid-column:1/2}
-.machines-head p{max-width:540px;color:#777;line-height:1.85;justify-self:end}
-.machines-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.machine-card{position:relative;border:1px solid #ececec;background:#fff;overflow:hidden;display:flex;flex-direction:column;min-height:100%}
-.machine-card::before{content:'';position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,#111 0%, rgba(111,131,255,.92) 55%, rgba(111,209,255,.92) 100%)}
-.machine-card-media{min-height:280px;padding:18px;background:linear-gradient(180deg,#fafafb 0%,#f2f3f6 100%);display:grid;place-items:center;border-bottom:1px solid #ececec}
-.machine-card-media img{width:100%;height:250px;object-fit:contain;display:block}
-.machine-card-body{padding:24px;display:flex;flex-direction:column;gap:14px;flex:1}
-.machine-card-index{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8c8c8c}
-.machine-card h3{font-family:'Instrument Serif',serif;font-size:clamp(2rem,2.3vw,2.7rem);line-height:.95;font-weight:400;color:#111}
-.machine-card p{font-size:.92rem;line-height:1.8;color:#6f6f6f;flex:1}
-.home-contact{padding:110px 0;background:#f7f7f8}
-.home-contact-grid{display:grid;grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:36px;align-items:start}
-.home-contact-copy h2{font-family:'Instrument Serif',serif;font-size:clamp(3rem,5vw,5.4rem);line-height:.96;font-weight:400;color:#111;margin-bottom:18px}
-.home-contact-copy p{max-width:520px;font-size:1rem;line-height:1.9;color:#707070;margin-bottom:26px}
-.contact-mini-list{display:grid;gap:12px}
-.contact-mini-list div{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;padding:14px 0;border-top:1px solid #e3e3e3}
-.contact-mini-list div:last-child{border-bottom:1px solid #e3e3e3}
-.contact-mini-list strong{font-size:.72rem;letter-spacing:.14em;color:#999}
-.contact-mini-list span{font-size:.9rem;color:#666;line-height:1.65}
-.contact-form-shell{margin-top:0!important;max-width:none!important;background:#fff!important;box-shadow:0 28px 60px rgba(17,17,17,.06)}
-.contact-form-shell .hero-form-head p{max-width:300px}
-#formulario .fb-note{margin-top:14px}
-.premium-philosophy{padding:120px 0;background:#fff;border-top:1px solid #ececec}
-.premium-philosophy-inner{max-width:980px;text-align:center}
-.premium-philosophy h2{font-family:'Instrument Serif',serif;font-size:clamp(3.4rem,6vw,6.2rem);line-height:.95;font-weight:400;margin:16px auto 24px;max-width:980px}
-.premium-philosophy p{font-size:1rem;line-height:1.9;color:#777;max-width:700px;margin:0 auto}
-.premium-academy{padding:120px 0;background:#fff}
-.premium-academy-image img{border:1px solid #ececec;box-shadow:0 30px 70px rgba(17,17,17,.08)}
-.home-final-cta{background:#0f0f10;padding:95px 0;text-align:center}
-@media(max-width:1100px){
-  .home-hero-grid,.home-contact-grid,.machines-head{grid-template-columns:1fr}
-  .machines-head p{justify-self:start}
-}
-@media(max-width:980px){
-  .premium-hero{padding-bottom:78px}
-  .hero-showcase{min-height:640px}
-  .machine-main{position:absolute;top:34px;right:24px;width:min(62vw,330px);height:320px}
-  .machine-left{left:24px;bottom:24px;width:min(48vw,270px);height:250px}
-  .machine-right{right:20px;bottom:18px;width:min(34vw,190px);height:190px}
-  .machines-grid{grid-template-columns:1fr 1fr}
-  .hero-proof{grid-template-columns:1fr}
-}
-@media(max-width:640px){
-  .home-hero-copy .premium-title{font-size:clamp(3.15rem,16vw,4.8rem)!important}
-  .premium-hero{padding-top:calc(var(--nav-h) + 30px);padding-bottom:60px}
-  .hero-showcase{min-height:470px}
-  .machine-main{top:18px;right:14px;width:68%;height:230px;padding:10px}
-  .machine-left{left:14px;bottom:14px;width:54%;height:180px;padding:10px}
-  .machine-right{right:12px;bottom:12px;width:33%;height:140px;padding:10px}
-  .machine-label{font-size:.54rem;padding:6px 8px}
-  .showcase-note{left:14px;top:12px;font-size:.56rem;letter-spacing:.16em}
-  .machines-grid{grid-template-columns:1fr}
-  .machine-card-media{min-height:220px}
-  .machine-card-media img{height:190px}
-  .home-machines,.method-home,.home-contact,.premium-philosophy,.premium-academy{padding:78px 0}
-  .home-contact-copy h2,.machines-head h2,.premium-philosophy h2{font-size:clamp(2.75rem,13vw,4rem)}
-}
-
-</style>
-<link href="https://veamedical.com/" rel="canonical"/><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"VÉA Medical","alternateName":"VÉA Medical — Clinical Technology Partner","description":"Clinical Technology Partner que acompaña a clínicas y centros de estética en el diagnóstico, selección, implementación y rentabilidad de tecnología médico-estética.","url":"https://veamedical.com/","logo":"https://veamedical.com/logo.png","image":"https://veamedical.com/hero-intelligence.jpg","email":"info@veamedical.com","areaServed":{"@type":"Country","name":"República Dominicana"},"sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://veamedical.com/index.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"Product","position":1,"name":"VÉA Intelligence","description":"Scanner facial con inteligencia artificial, 17 tipos de análisis.","url":"https://veamedical.com/tecnologia.html#intelligence"},{"@type":"Product","position":2,"name":"VÉA Skin","description":"Sistema de drug delivery 2 en 1: microchip y aguja convencional.","url":"https://veamedical.com/tecnologia.html#skin"},{"@type":"Product","position":3,"name":"VÉA Meso RF","description":"Tecnología facial compacta de precisión y experiencia premium.","url":"https://veamedical.com/tecnologia.html#meso-rf"}]}</script>
 </head>
-<body data-hero-dark="1">
-<!-- NAV -->
-<header class="nav dark-nav" id="nav">
-<div class="wrap nav-inner">
-<a class="brand light" href="index.html">VÉA <span>MEDICAL</span></a>
-<nav class="nav-links light"><a href="nosotros.html">Nosotros</a><a href="por-que-vea.html">Por qué VÉA</a><a href="tecnologia.html">Tecnologías</a><a href="academy.html">Academy</a><a href="contacto.html">Contacto</a></nav>
-<div class="nav-right">
-<a class="btn btn-k" href="contacto.html">Agenda una Experiencia →</a>
-</div>
-<div class="ham light" id="ham"><span></span><span></span><span></span></div>
-</div>
-</header>
-<div class="mmenu" id="mmenu">
+<body>
 
-
-
-
-
-
-<a class="ml" href="index.html">Inicio</a><a class="ml" href="nosotros.html">Nosotros</a><a class="ml" href="por-que-vea.html">Por qué VÉA</a><a class="ml" href="tecnologia.html">Tecnologías</a><a class="ml" href="academy.html">Academy</a><a class="ml mm-btn" href="contacto.html">Agenda una Experiencia →</a></div>
-<main>
-
-<!-- ═══ HERO REESTRUCTURADO ═══ -->
-<section class="premium-hero" id="inicio">
-  <div class="wrap premium-hero-grid home-hero-grid">
-    <div class="premium-hero-copy home-hero-copy">
-      <div class="hero-eyebrow sr">Clinical Technology Partner</div>
-      <h1 class="premium-title sr d1">La confianza para tomar la decisión correcta.</h1>
-      <p class="premium-sub sr d2">Transformamos la incorporación de tecnología en una estrategia de crecimiento clínico, respaldada por experiencia, metodología y acompañamiento continuo.</p>
-      <div class="premium-actions sr d3">
-        <a class="btn btn-k" href="#formulario"><span class="bico">→</span> Agendar una experiencia VÉA</a>
-        <a class="premium-link" href="#metodo">Descubre el Método VÉA 360° <span>↘</span></a>
-      </div>
-      <div class="hero-proof sr d4">
-        <div><strong>Diagnóstico</strong>Clarity before every investment.</div>
-        <div><strong>Método</strong>Implementación guiada y acompañamiento.</div>
-        <div><strong>Resultados</strong>Rentabilidad medible para tu clínica.</div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="por-que-vea.html">Por qué VÉA</a></li>
+        <li><a href="tecnologia.html">Tecnologías</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="contacto.html"><span class="label">Agenda una Experiencia</span> <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+        </button>
       </div>
     </div>
-
-    <div class="hero-showcase sr-scale d2" aria-label="Tecnologías destacadas de VÉA Medical">
-      <div class="showcase-gridlines"></div>
-      <div class="showcase-orb orb-a"></div>
-      <div class="showcase-orb orb-b"></div>
-
-      <figure class="machine-stack machine-main">
-        <div class="machine-label">Análisis facial con IA</div>
-        <img src="hero-intelligence.jpg" alt="VÉA Intelligence" decoding="async"/>
-      </figure>
-
-      <figure class="machine-stack machine-left">
-        <div class="machine-label">Plataforma de infusión</div>
-        <img src="hero-skinboost.jpg" alt="SKIN BOOST™" loading="lazy"/>
-      </figure>
-
-      <figure class="machine-stack machine-right">
-        <div class="machine-label">Tecnología facial compacta</div>
-        <img src="tech-meso-rf.jpg" alt="VÉA Meso RF" loading="lazy"/>
-      </figure>
-
-      <div class="showcase-note">Tres tecnologías. Un mismo criterio clínico.</div>
-    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="por-que-vea.html">Por qué VÉA</a>
+      <a href="tecnologia.html">Tecnologías</a>
+      <a href="academy.html">Academy</a>
+      <a href="contacto.html">Contacto</a>
+      <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
   </div>
-</section>
 
-<!-- ═══ TRES MÁQUINAS ═══ -->
-<section class="home-machines" id="tecnologias">
-  <div class="wrap">
-    <div class="machines-head sr">
-      <div class="home-kicker">Tecnologías destacadas</div>
-      <h2>Tres soluciones, una experiencia VÉA consistente.</h2>
-      <p>Presentamos cada tecnología con el mismo lenguaje visual: elegancia, claridad clínica y una percepción premium alineada con la marca.</p>
-    </div>
+<main id="main">
 
-    <div class="machines-grid">
-      <article class="machine-card sr">
-        <div class="machine-card-media">
-          <img src="hero-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"/>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="kicker">Clinical Technology Partner</span>
+        <h1>La confianza para tomar la decisión correcta.</h1>
+        <p class="lede">Transformamos la incorporación de tecnología en una estrategia de crecimiento clínico, respaldada por experiencia, metodología y acompañamiento continuo.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contacto.html">Agendar una experiencia VÉA <span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="hero-link-inline" href="#metodo">Descubre el Método VÉA 360° ↘</a>
         </div>
-        <div class="machine-card-body">
-          <span class="machine-card-index">01</span>
-          <h3>VÉA Intelligence</h3>
-          <p>Diagnóstico facial con inteligencia artificial para convertir evaluación clínica en claridad, confianza y mejor conversación con el paciente.</p>
-          <a class="btn btn-k" href="tecnologia.html#intelligence"><span class="bico">→</span> Ver tecnología</a>
+        <div class="hero-stats">
+          <div><span class="kicker">Diagnóstico</span><p>Clarity before every investment.</p></div>
+          <div><span class="kicker">Método</span><p>Implementación guiada y acompañamiento.</p></div>
+          <div><span class="kicker">Resultados</span><p>Rentabilidad medible para tu clínica.</p></div>
         </div>
-      </article>
-
-      <article class="machine-card sr d1">
-        <div class="machine-card-media">
-          <img src="hero-skinboost.jpg" alt="SKIN BOOST™" loading="lazy"/>
-        </div>
-        <div class="machine-card-body">
-          <span class="machine-card-index">02</span>
-          <h3>SKIN BOOST™</h3>
-          <p>Plataforma de infusión inteligente diseñada para integrar activos profesionales dentro de protocolos personalizados con una experiencia clínica premium.</p>
-          <a class="btn btn-k" href="tecnologia.html#skin"><span class="bico">→</span> Ver tecnología</a>
-        </div>
-      </article>
-
-      <article class="machine-card sr d2">
-        <div class="machine-card-media">
-          <img src="tech-meso-rf.jpg" alt="VÉA Meso RF" loading="lazy"/>
-        </div>
-        <div class="machine-card-body">
-          <span class="machine-card-index">03</span>
-          <h3>VÉA Meso RF</h3>
-          <p>Tecnología facial compacta para clínicas que buscan precisión operativa, experiencia sofisticada y una integración elegante dentro de la cabina.</p>
-          <a class="btn btn-k" href="tecnologia.html#meso-rf"><span class="bico">→</span> Ver tecnología</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ MÉTODO VÉA 360 ═══ -->
-<section class="method-home" id="metodo">
-  <div class="wrap">
-    <div class="method-head">
-      <div class="sr">
-        <div class="label" style="color:rgba(255,255,255,.28);margin-bottom:18px;">Método VÉA 360°</div>
-        <h2>Una metodología interactiva para convertir tecnología en resultados.</h2>
       </div>
-      <p class="sr d1">Explora cada etapa del proceso. El contenido cambia dinámicamente para mostrar cómo VÉA acompaña a la clínica antes, durante y después de la implementación.</p>
-    </div>
-
-    <div class="method-experience sr">
-      <div class="method-tabs" id="methodTabs" role="tablist" aria-label="Etapas del Método VÉA 360°">
-        <button class="method-tab active" type="button" data-step="0"><span class="tab-num">01</span><span class="tab-title">Diagnóstico estratégico</span></button>
-        <button class="method-tab" type="button" data-step="1"><span class="tab-num">02</span><span class="tab-title">Selección inteligente</span></button>
-        <button class="method-tab" type="button" data-step="2"><span class="tab-num">03</span><span class="tab-title">Implementación con propósito</span></button>
-        <button class="method-tab" type="button" data-step="3"><span class="tab-num">04</span><span class="tab-title">Capacitación de alto nivel</span></button>
-        <button class="method-tab" type="button" data-step="4"><span class="tab-num">05</span><span class="tab-title">Lanzamiento estratégico</span></button>
-        <button class="method-tab" type="button" data-step="5"><span class="tab-num">06</span><span class="tab-title">Rentabilidad medible</span></button>
-        <button class="method-tab" type="button" data-step="6"><span class="tab-num">07</span><span class="tab-title">Optimización continua</span></button>
-      </div>
-
-      <div class="method-stage" aria-live="polite">
-        <div class="method-counter" id="methodCounter">01</div>
-        <div class="method-content" id="methodContent">
-          <div class="method-kicker" id="methodKicker">Nuestra metodología</div>
-          <h3 class="method-title" id="methodTitle">Diagnóstico estratégico</h3>
-          <p class="method-lead" id="methodLead">Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología.</p>
-          <div class="method-points" id="methodPoints"></div>
-          <div class="method-progress" id="methodProgress" aria-hidden="true"></div>
-          <div class="method-nav">
-            <button class="method-arrow" type="button" id="methodPrev" aria-label="Etapa anterior">←</button>
-            <button class="method-arrow" type="button" id="methodNext" aria-label="Siguiente etapa">→</button>
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-visual-frame">
+          <div class="hero-visual-label"><span>Tres tecnologías</span><span>Un mismo criterio clínico</span></div>
+          <div class="hero-stack">
+            <img class="h1" src="hero-intelligence.jpg" alt="VÉA Intelligence — scanner de análisis facial con inteligencia artificial" width="600" height="600" loading="eager">
+            <img class="h2" src="hero-skinboost.jpg" alt="VÉA Skin — plataforma de infusión de activos SKIN BOOST" width="480" height="480" loading="eager">
+            <img class="h3" src="tech-meso-rf.jpg" alt="VÉA Meso RF — tecnología facial compacta" width="420" height="420" loading="eager">
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="method-foot sr">
-      <p>Cada implementación es distinta. El Método VÉA 360° se adapta al tipo de clínica, a la madurez del equipo y al objetivo de crecimiento de cada aliado.</p>
-      <a class="btn btn-w" href="#formulario">Hablar con un Clinical Technology Partner <span class="bico">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FILOSOFÍA VÉA ═══ -->
-<section class="premium-philosophy">
-  <div class="wrap premium-philosophy-inner">
-    <div class="home-kicker sr">Filosofía de VÉA</div>
-    <h2 class="sr d1">No vendemos máquinas. Diseñamos tranquilidad clínica.</h2>
-    <p class="sr d2">La tecnología solo tiene valor cuando existe un criterio para elegirla, una metodología para implementarla y un acompañamiento real para transformarla en crecimiento sostenible.</p>
-  </div>
-</section>
-
-<!-- ═══ FORMULARIO ═══ -->
-<section class="home-contact" id="formulario">
-  <div class="wrap home-contact-grid">
-    <div class="home-contact-copy sr">
-      <div class="home-kicker">Contacto</div>
-      <h2>Agenda una experiencia VÉA.</h2>
-      <p>Cuéntanos sobre tu clínica y un Clinical Technology Partner se pondrá en contacto contigo para ayudarte a evaluar la próxima decisión tecnológica con claridad.</p>
-      <div class="contact-mini-list">
-        <div><strong>01</strong><span>Analizamos tu objetivo clínico y comercial.</span></div>
-        <div><strong>02</strong><span>Identificamos la tecnología más adecuada.</span></div>
-        <div><strong>03</strong><span>Te orientamos sobre implementación y siguiente paso.</span></div>
+  <section aria-labelledby="tec-h">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Tecnologías destacadas</span>
+        <h2 id="tec-h">Tres soluciones, una experiencia VÉA consistente.</h2>
+        <p class="lede">Presentamos cada tecnología con el mismo lenguaje visual: elegancia, claridad clínica y una percepción premium alineada con la marca.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <figure><img src="hero-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"><figcaption>Análisis facial con IA</figcaption></figure>
+          <div class="product-body">
+            <span class="num">01</span>
+            <h3>VÉA Intelligence</h3>
+            <p>Diagnóstico facial con inteligencia artificial para convertir evaluación clínica en claridad, confianza y mejor conversación con el paciente.</p>
+            <a class="btn btn-ghost" href="tecnologia.html#intelligence">Ver tecnología →</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <figure><img src="hero-skinboost.jpg" alt="VÉA Skin — SKIN BOOST" loading="lazy"><figcaption>Plataforma de infusión</figcaption></figure>
+          <div class="product-body">
+            <span class="num">02</span>
+            <h3>VÉA Skin</h3>
+            <p>Plataforma de infusión inteligente diseñada para integrar activos profesionales dentro de protocolos personalizados con una experiencia clínica premium.</p>
+            <a class="btn btn-ghost" href="tecnologia.html#skin">Ver tecnología →</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <figure><img src="tech-meso-rf.jpg" alt="VÉA Meso RF" loading="lazy"><figcaption>Tecnología facial compacta</figcaption></figure>
+          <div class="product-body">
+            <span class="num">03</span>
+            <h3>VÉA Meso RF</h3>
+            <p>Tecnología facial compacta para clínicas que buscan precisión operativa, experiencia sofisticada y una integración elegante dentro de la cabina.</p>
+            <a class="btn btn-ghost" href="tecnologia.html#meso-rf">Ver tecnología →</a>
+          </div>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="hero-form-shell sr d1 contact-form-shell">
-      <div class="hero-form-head">
+  <section id="metodo" class="section-dark" aria-labelledby="metodo-h" data-method>
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Método VÉA 360°</span>
+        <h2 id="metodo-h">Una metodología interactiva para convertir tecnología en resultados.</h2>
+        <p class="lede">Explora cada etapa del proceso. El contenido cambia para mostrar cómo VÉA acompaña a la clínica antes, durante y después de la implementación.</p>
+      </div>
+      <div class="method">
         <div>
-          <div class="k">Formulario de contacto</div>
-          <h3>Solicita información</h3>
+          <div class="method-steps" role="tablist" aria-orientation="vertical">
+            <button class="method-step" role="tab" data-title="Diagnóstico estratégico" data-lead="Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología."><span class="n">01</span> Diagnóstico estratégico</button>
+            <button class="method-step" role="tab" data-title="Selección inteligente" data-lead="Elegimos la tecnología correcta con criterio clínico, técnico y financiero — no la más cara."><span class="n">02</span> Selección inteligente</button>
+            <button class="method-step" role="tab" data-title="Implementación con propósito" data-lead="Instalación, protocolos y puesta en marcha alineados con el objetivo comercial de tu clínica."><span class="n">03</span> Implementación con propósito</button>
+            <button class="method-step" role="tab" data-title="Capacitación de alto nivel" data-lead="Formamos a tu equipo para que trate con confianza y resultados desde el primer paciente."><span class="n">04</span> Capacitación de alto nivel</button>
+            <button class="method-step" role="tab" data-title="Lanzamiento estratégico" data-lede="Estrategia de comunicación, materiales y campañas listas antes de que el equipo llegue." data-lead="Estrategia de comunicación, materiales y campañas listas antes de que el equipo llegue."><span class="n">05</span> Lanzamiento estratégico</button>
+            <button class="method-step" role="tab" data-title="Rentabilidad medible" data-lead="Transformamos tu inversión en resultados medibles y sostenibles en el tiempo."><span class="n">06</span> Rentabilidad medible</button>
+            <button class="method-step" role="tab" data-title="Optimización continua" data-lead="Seguimiento, ajuste de protocolos y soporte técnico permanente — para siempre."><span class="n">07</span> Optimización continua</button>
+          </div>
+          <div class="method-progress"><div class="method-progress-bar"></div></div>
         </div>
-        <p>Respuesta en menos de 24 horas. Sin compromiso.</p>
-      </div>
-      <form id="hero-form" onsubmit="sendForm(event)">
-        <input type="hidden" name="access_key" value="TU_CLAVE_WEB3FORMS_AQUI"/>
-        <input type="hidden" name="subject" value="Solicitud desde Home VÉA Medical"/>
-        <input type="hidden" name="from_name" value="VÉA Medical Website"/>
-        <div class="hero-form-grid">
-          <div class="hero-form-field">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required/>
-          </div>
-          <div class="hero-form-field">
-            <label for="clinica">Clínica</label>
-            <input id="clinica" name="clinica" type="text" placeholder="Nombre de la clínica" required/>
-          </div>
-          <div class="hero-form-field">
-            <label for="whatsapp">WhatsApp</label>
-            <input id="whatsapp" name="whatsapp" type="tel" placeholder="809 000 0000" required/>
-          </div>
-          <div class="hero-form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="correo@clinica.com"/>
-          </div>
-          <div class="hero-form-field full">
-            <label for="objetivo">¿Qué deseas evaluar?</label>
-            <select id="objetivo" name="objetivo" required>
-              <option value="" selected disabled>Selecciona una opción</option>
-              <option value="Adquirir nueva tecnología">Adquirir nueva tecnología</option>
-              <option value="Optimizar una inversión existente">Optimizar una inversión existente</option>
-              <option value="Capacitación para mi equipo">Capacitación para mi equipo</option>
-              <option value="Quiero una experiencia VÉA completa">Quiero una experiencia VÉA completa</option>
-            </select>
-          </div>
-          <div class="hero-form-field full">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué estás buscando."></textarea>
+        <div class="method-panel" role="tabpanel">
+          <span class="kicker" data-method-kicker>01 / 07</span>
+          <h3 data-method-title>Diagnóstico estratégico</h3>
+          <p class="lede" data-method-lead>Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología.</p>
+          <p class="lede" style="margin-top:2rem;">Cada implementación es distinta. El Método VÉA 360° se adapta al tipo de clínica, a la madurez del equipo y al objetivo de crecimiento de cada aliado.</p>
+          <a class="btn btn-primary" href="contacto.html" style="margin-top:1.4rem;">Hablar con un Clinical Technology Partner →</a>
+          <div class="method-nav">
+            <button type="button" data-method-prev aria-label="Etapa anterior">←</button>
+            <button type="button" data-method-next aria-label="Etapa siguiente">→</button>
           </div>
         </div>
-        <button class="fb-btn" type="submit"><span class="fb-btn-ico">→</span> Enviar solicitud</button>
-        <div class="fb-note">También puedes escribirnos a info@veamedical.com</div>
-      </form>
-      <div class="fb-success" id="fb-success">
-        <div class="fb-success-check">✓</div>
-        <h3>Gracias por escribirnos.</h3>
-        <p>Recibimos tu información. Un Clinical Technology Partner se pondrá en contacto contigo para agendar la experiencia VÉA.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ VÉA ACADEMY ═══ -->
-<section class="premium-academy">
-  <div class="wrap premium-academy-grid">
-    <figure class="premium-academy-image sr-scale"><img src="academy-jhoana-alumna-1.jpg" alt="Capacitación y certificación VÉA Academy" loading="lazy"/></figure>
-    <div class="premium-academy-copy">
-      <div class="home-kicker sr">VÉA Academy</div>
-      <h2 class="sr d1">La tecnología también necesita un equipo preparado.</h2>
-      <p class="sr d2">Formación clínica, práctica supervisada y protocolos para que cada implementación se viva como una experiencia segura, profesional y alineada con el estándar VÉA.</p>
-      <a class="premium-link sr d3" href="academy.html">Conocer VÉA Academy <span>↗</span></a>
+  <section class="statement" aria-labelledby="fil-h">
+    <div class="container">
+      <span class="kicker">Filosofía de VÉA</span>
+      <h2 id="fil-h">No vendemos máquinas. Diseñamos tranquilidad clínica.</h2>
+      <p class="lede">La tecnología solo tiene valor cuando existe un criterio para elegirla, una metodología para implementarla y un acompañamiento real para transformarla en crecimiento sostenible.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ CTA FINAL ═══ -->
-<section class="home-final-cta">
-  <div class="wrap sr">
-    <div class="label" style="color:rgba(255,255,255,.25);margin-bottom:20px;">Experiencia VÉA</div>
-    <h2>Tu próxima inversión tecnológica debe comenzar con una mejor decisión.</h2>
-    <p>Conversemos sobre tus pacientes, tus objetivos y el tipo de crecimiento que buscas. VÉA te acompaña a dar el siguiente paso con claridad.</p>
-    <div class="home-final-actions">
-      <a class="btn btn-w" href="#formulario"><span class="bico">→</span> Agendar una experiencia</a>
-      <a class="btn btn-o" href="tecnologia.html">Explorar tecnologías</a>
+  <section class="section-tint" aria-labelledby="academy-h">
+    <div class="container feature-row">
+      <div class="feature-media">
+        <img src="academy-jhoana-alumna-1.jpg" alt="Formación práctica y certificación de equipo clínico en VÉA Academy" loading="lazy">
+      </div>
+      <div>
+        <span class="kicker">VÉA Academy</span>
+        <h2 id="academy-h">La tecnología también necesita un equipo preparado.</h2>
+        <p class="lede">Formación clínica, práctica supervisada y protocolos para que cada implementación se viva como una experiencia segura, profesional y alineada con el estándar VÉA.</p>
+        <div class="feature-actions" style="margin-top:1.6rem;">
+          <a class="btn btn-primary" href="academy.html">Conocer VÉA Academy ↗</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section aria-labelledby="cta-h">
+    <div class="container">
+      <div class="cta-band" style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+        <div>
+          <span class="kicker">Experiencia VÉA</span>
+          <h2 id="cta-h">Tu próxima inversión tecnológica debe comenzar con una mejor decisión.</h2>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="contacto.html">Agendar una experiencia →</a>
+          <a class="btn btn-ghost" href="tecnologia.html">Explorar tecnologías</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
-<!-- FOOTER -->
-<footer style="background:#0a0a0a;padding:44px 0 28px;border-top:1px solid rgba(255,255,255,.06);">
-<div class="wrap" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;">
-<div>
-<div style="font-family:var(--fh);font-weight:900;font-size:1.05rem;letter-spacing:-.055em;color:var(--white);text-transform:uppercase;margin-bottom:6px;">VÉA <span style="font-weight:300;">MEDICAL</span></div>
-<div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px;">Clinical Technology Partner</div>
-<p style="font-size:.82rem;color:rgba(255,255,255,.28);line-height:1.65;">"No entregamos tecnología. Diseñamos el futuro clínico de nuestros aliados."</p>
-</div>
-<div>
-<div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;">Empresa</div>
-<a href="nosotros.html" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;transition:color .2s;">Nosotros</a>
-<a href="por-que-vea.html" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">Por qué VÉA</a>
-<a href="nosotros.html#metodo" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">Método VÉA 360°</a>
-<a href="academy.html" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);font-weight:700;">VÉA Academy</a>
-</div>
-<div>
-<div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;">Tecnologías</div>
-<a href="tecnologia.html#intelligence" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">VÉA Intelligence</a>
-<a href="tecnologia.html#skin" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">VÉA Skin</a>
-<a href="tecnologia.html#pigment" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);font-weight:700;">VÉA Pigment</a>
-</div>
-<div>
-<div style="font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;">Contacto</div>
-<a href="contacto.html" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">Agendar experiencia</a>
-<a href="mailto:info@veamedical.com" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:8px;font-weight:700;">info@veamedical.com</a>
-<a href="https://wa.me/18090000000" style="display:block;font-size:.82rem;color:rgba(255,255,255,.38);font-weight:700;" target="_blank">WhatsApp</a>
-</div>
-</div>
-<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px;">
-<div style="font-size:.7rem;color:rgba(255,255,255,.18);font-weight:700;">© 2025 VÉA Medical · Clinical Technology Partner</div>
-<div style="font-size:.7rem;color:rgba(255,255,255,.18);font-weight:700;">info@veamedical.com</div>
-</div>
-</footer>
-<script>
-// Nav transition on scroll
-const nav=document.getElementById('nav');
-const brand=document.querySelector('.brand');
-const nlinks=document.querySelector('.nav-links');
-const hamEl=document.getElementById('ham');
-window.addEventListener('scroll',()=>{
-  const s=window.scrollY>60;
-  nav.classList.toggle('scrolled',s);
-  if(s){nav.classList.remove('dark-nav');brand.classList.remove('light');if(nlinks)nlinks.classList.remove('light');if(hamEl)hamEl.classList.remove('light');}
-  else{nav.classList.add('dark-nav');brand.classList.add('light');if(nlinks)nlinks.classList.add('light');if(hamEl)hamEl.classList.add('light');}
-},{passive:true});
 
-// Hamburger
-const ham=document.getElementById('ham');
-const menu=document.getElementById('mmenu');
-if(ham&&menu){
-  ham.addEventListener('click',()=>{ham.classList.toggle('open');menu.classList.toggle('open');document.body.style.overflow=menu.classList.contains('open')?'hidden':'';
-  });
-  document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{ham.classList.remove('open');menu.classList.remove('open');document.body.style.overflow='';}));
-}
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
+          <p>Clinical Technology Partner. No entregamos tecnología. Diseñamos el futuro clínico de nuestros aliados.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="academy.html">VÉA Academy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Tecnologías</h5>
+          <ul>
+            <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#meso-rf">VÉA Meso RF</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="contacto.html">Agendar experiencia</a></li>
+            <li><a href="mailto:info@veamedical.com">info@veamedical.com</a></li>
+            <li><a href="https://wa.me/18090000000" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> VÉA Medical · Clinical Technology Partner</span>
+        <span>info@veamedical.com</span>
+      </div>
+    </div>
+  </footer>
 
-// Scroll reveal
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.07});
-document.querySelectorAll('.sr,.sr-left,.sr-scale').forEach(el=>obs.observe(el));
-
-// Form submit
-async function sendForm(e){
-  e.preventDefault();
-  const form=document.getElementById('hero-form');
-  if(!form)return;
-  const btn=form.querySelector('.fb-btn');
-  btn.textContent='Enviando...';btn.disabled=true;
-  const data=new FormData(form);
-  const hasKey=data.get('access_key')!=='TU_CLAVE_WEB3FORMS_AQUI';
-  if(hasKey){
-    try{
-      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:data});
-      const json=await res.json();
-      if(json.success){ok();return;}
-    }catch(_){}
-  }
-  const n=data.get('nombre');const c=data.get('clinica');const w=data.get('whatsapp');
-  const em=data.get('email')||'';const ob=data.get('objetivo')||'';
-  const body=`Nombre: ${n}\nClínica: ${c}\nWhatsApp: ${w}\nEmail: ${em}\nObjetivo: ${ob}`;
-  window.location.href='mailto:info@veamedical.com?subject=Experiencia+V%C3%89A+-+'+encodeURIComponent(n)+'&body='+encodeURIComponent(body);
-  ok();
-}
-function ok(){
-  document.getElementById('hero-form').style.display='none';
-  document.getElementById('fb-success').style.display='block';
-}
-</script>
-
-<script>
-const methodData=[
-  {
-    number:'01', title:'Diagnóstico estratégico',
-    lead:'Analizamos tu clínica de manera integral antes de recomendar cualquier tecnología.',
-    points:['Perfil de pacientes y necesidades reales','Servicios actuales y oportunidades de crecimiento','Competencia y mercado','Objetivos clínicos y financieros','Evaluación de espacios y equipos existentes']
-  },
-  {
-    number:'02', title:'Selección inteligente',
-    lead:'Seleccionamos tecnologías con criterios claros, medibles y alineados con la realidad de tu clínica.',
-    points:['Evidencia clínica comprobada','Seguridad y eficacia','Innovación y diferenciación','Rentabilidad y retorno de inversión','Soporte técnico y respaldo','Adaptación a tu modelo de negocio']
-  },
-  {
-    number:'03', title:'Implementación con propósito',
-    lead:'Instalamos, adaptamos y definimos protocolos exclusivos para integrar la tecnología correctamente.',
-    points:['Instalación y calibración profesional','Adaptación de protocolos personalizados','Flujo de trabajo optimizado','Documentación y estandarización','Acompañamiento en las primeras semanas']
-  },
-  {
-    number:'04', title:'Capacitación de alto nivel',
-    lead:'Formamos a tu equipo para que obtenga resultados excepcionales con seguridad y confianza.',
-    points:['Capacitación teórica y práctica','Protocolos clínicos exclusivos','Certificación VÉA Medical','Entrenamiento en seguridad y parámetros','Seguimiento y actualización constante']
-  },
-  {
-    number:'05', title:'Lanzamiento estratégico',
-    lead:'Creamos las condiciones para que tu inversión genere impacto desde el primer día.',
-    points:['Estrategia de comunicación personalizada','Página web profesional del equipo','Materiales comerciales premium','Contenido para redes sociales','Campañas de lanzamiento','Activaciones y eventos','Acompañamiento durante las primeras ventas']
-  },
-  {
-    number:'06', title:'Rentabilidad medible',
-    lead:'Transformamos tu inversión en resultados medibles y sostenibles en el tiempo.',
-    points:['Proyección de ingresos y costos','Seguimiento del retorno de inversión','Evolución del volumen de tratamientos','Captación y recurrencia de pacientes','Eficiencia clínica y operativa']
-  },
-  {
-    number:'07', title:'Optimización continua',
-    lead:'Evolucionamos contigo para escalar, corregir y mantener resultados superiores.',
-    points:['Seguimiento periódico de indicadores','Ajuste de protocolos y estrategias','Soporte técnico permanente','Actualización de conocimientos','Detección de nuevas oportunidades de crecimiento']
-  }
-];
-let methodIndex=0;
-const tabs=[...document.querySelectorAll('.method-tab')];
-const content=document.getElementById('methodContent');
-const counter=document.getElementById('methodCounter');
-const title=document.getElementById('methodTitle');
-const lead=document.getElementById('methodLead');
-const points=document.getElementById('methodPoints');
-const progress=document.getElementById('methodProgress');
-function renderMethod(index, animate=true){
-  methodIndex=(index+methodData.length)%methodData.length;
-  const item=methodData[methodIndex];
-  if(animate) content.classList.add('is-changing');
-  setTimeout(()=>{
-    counter.textContent=item.number;
-    title.textContent=item.title;
-    lead.textContent=item.lead;
-    points.innerHTML=item.points.map(p=>`<div class="method-point">${p}</div>`).join('');
-    progress.innerHTML=methodData.map((_,i)=>`<span class="method-dot ${i===methodIndex?'active':''}"></span>`).join('');
-    tabs.forEach((tab,i)=>{tab.classList.toggle('active',i===methodIndex);tab.setAttribute('aria-selected',i===methodIndex?'true':'false');});
-    tabs[methodIndex].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-    content.classList.remove('is-changing');
-  },animate?170:0);
-}
-tabs.forEach((tab,i)=>tab.addEventListener('click',()=>renderMethod(i)));
-document.getElementById('methodPrev').addEventListener('click',()=>renderMethod(methodIndex-1));
-
-document.getElementById('methodNext').addEventListener('click',()=>{resetMethodAuto();renderMethod(methodIndex+1);});
-function buildMethodLoader(){
-  progress.innerHTML=methodData.map((_,i)=>i===methodIndex?`<span class="method-dot active"></span><span class="method-loader"></span>`:`<span class="method-dot"></span>`).join('');
-}
-const oldRenderMethod=renderMethod;
-renderMethod=function(index,animate=true){
-  methodIndex=(index+methodData.length)%methodData.length;
-  const item=methodData[methodIndex];
-  if(animate) content.classList.add('is-changing');
-  setTimeout(()=>{
-    counter.textContent=item.number;
-    title.textContent=item.title;
-    lead.textContent=item.lead;
-    points.innerHTML=item.points.map(p=>`<div class="method-point">${p}</div>`).join('');
-    buildMethodLoader();
-    tabs.forEach((tab,i)=>{tab.classList.toggle('active',i===methodIndex);tab.setAttribute('aria-selected',i===methodIndex?'true':'false');});
-    tabs[methodIndex].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-    content.classList.remove('is-changing');
-  },animate?170:0);
-}
-tabs.forEach((tab,i)=>tab.onclick=()=>{resetMethodAuto();renderMethod(i);});
-let methodAuto;
-function startMethodAuto(){methodAuto=setInterval(()=>renderMethod(methodIndex+1),6000);} 
-function resetMethodAuto(){clearInterval(methodAuto);startMethodAuto();}
-renderMethod(0,false);
-startMethodAuto();
-
-</script>
-
+<script src="main.js" defer></script>
 </body>
 </html>

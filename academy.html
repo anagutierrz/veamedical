@@ -1,43 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>VÉA Academy | Formación clínica y certificación</title>
-<meta name="description" content="VÉA Academy: capacitación teórica y práctica, protocolos clínicos y certificación oficial para que tu equipo trate con confianza desde el día 1."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
-<style>
-:root{--ink:#0e0e0e;--ink2:#1a1a1a;--mid:#666;--light:#999;--muted:#bbb;--fog:#e5e5e5;--pearl:#f2f2f2;--snow:#f8f8f8;--white:#fff;--fh:'Raleway',sans-serif;--fb:'Lato',sans-serif;--nav-h:80px;--ease:cubic-bezier(.16,1,.3,1);}*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;font-size:16px;}body{font-family:var(--fb);background:#fff;color:var(--ink2);overflow-x:hidden;line-height:1.6;}img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}button,input,textarea,select{font:inherit;border:none;outline:none;background:none;}
-.wrap{width:min(1240px,100% - 64px);margin:0 auto;}.wrap-md{width:min(1060px,100% - 64px);margin:0 auto;}.wrap-sm{width:min(860px,100% - 64px);margin:0 auto;}
-h1,h2,h3{font-family:var(--fh);color:var(--ink);letter-spacing:-.04em;line-height:1;}h1{font-size:clamp(2.7rem,6vw,6.2rem);font-weight:900;text-transform:uppercase;}h2{font-size:clamp(2rem,4vw,4rem);font-weight:900;text-transform:uppercase;}h3{font-size:1rem;font-weight:700;font-family:var(--fb);}p{color:var(--mid);line-height:1.8;font-size:1rem;}strong{color:var(--ink);} .label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);} .btn{display:inline-flex;align-items:center;gap:11px;padding:14px 30px;font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .25s var(--ease);} .btn-k{background:var(--ink);color:#fff;} .btn-k:hover{background:#000;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.22);} .btn-ol{border:1px solid rgba(0,0,0,.12);color:var(--ink);background:transparent;} .btn-ol:hover{border-color:var(--ink);transform:translateY(-2px);} .bico{display:inline-grid;place-items:center;width:30px;height:30px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.08);} 
-.nav{position:fixed;top:0;left:0;width:100%;height:var(--nav-h);display:flex;align-items:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);transition:all .35s var(--ease);background:rgba(10,10,10,.82);backdrop-filter:blur(14px);} .nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--fog);} .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;} .brand{font-family:var(--fh);font-weight:900;font-size:1.15rem;letter-spacing:-.055em;color:#fff;text-transform:uppercase;white-space:nowrap;display:flex;align-items:baseline;gap:3px;} .brand span{font-weight:300;letter-spacing:-.02em;} .nav.scrolled .brand{color:var(--ink);} .nav-links{display:flex;gap:34px;align-items:center;justify-content:center;flex:1 1 auto;min-width:0;} .nav-links a{font-size:.73rem;font-weight:700;color:rgba(255,255,255,.68);letter-spacing:.06em;text-transform:uppercase;transition:color .2s;white-space:nowrap;} .nav.scrolled .nav-links a{color:var(--mid);} .nav-links a:hover,.nav-links a.active{color:#fff;} .nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{color:var(--ink);} .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0;} .nav-right .btn-ol{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.2);} .nav.scrolled .nav-right .btn-ol{color:var(--ink);border-color:rgba(0,0,0,.12);} .nav-right .btn-k{padding:0;width:46px;height:46px;justify-content:center;} .ham{width:44px;height:44px;display:none;place-items:center;cursor:pointer;position:relative;flex-shrink:0;} .ham span{position:absolute;width:22px;height:2px;background:#fff;transition:transform .25s,opacity .25s;} .nav.scrolled .ham span{background:var(--ink);} .ham span:nth-child(1){transform:translateY(-6px);} .ham span:nth-child(3){transform:translateY(6px);} .ham.open span:nth-child(1){transform:rotate(45deg);} .ham.open span:nth-child(2){opacity:0;} .ham.open span:nth-child(3){transform:rotate(-45deg);} .mmenu{position:fixed;inset:var(--nav-h) 0 0 0;background:rgba(255,255,255,.98);display:none;flex-direction:column;padding:28px 24px 40px;gap:16px;z-index:999;} .mmenu.open{display:flex;} .mmenu a{font-size:1.35rem;font-family:var(--fh);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:var(--ink);} .mm-btn{margin-top:auto;display:inline-flex;padding:16px 18px;background:var(--ink);color:#fff!important;font-size:.95rem!important;}
-.sr{opacity:0;transform:translateY(22px);transition:opacity .75s var(--ease),transform .75s var(--ease);} .sr.in{opacity:1;transform:translateY(0);} .sr-scale{opacity:0;transform:scale(.96);transition:opacity .75s var(--ease),transform .75s var(--ease);} .sr-scale.in{opacity:1;transform:scale(1);} .d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
-.hero{padding:calc(var(--nav-h) + 78px) 0 84px;background:var(--ink);position:relative;overflow:hidden;} .hero:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 90% at 76% 24%,rgba(255,255,255,.06) 0%,transparent 58%);} .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;} .hero-k{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:18px;} .hero h1{color:#fff;max-width:820px;} .hero h1 em{font-style:normal;color:rgba(255,255,255,.28);} .hero p{max-width:560px;color:rgba(255,255,255,.5);font-size:1.03rem;margin-top:22px;} .hero-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px;max-width:600px;} .stat{border:1px solid rgba(255,255,255,.1);padding:18px;background:rgba(255,255,255,.04);} .stat strong{display:block;color:#fff;font-family:var(--fh);font-size:1.35rem;line-height:1;margin-bottom:8px;} .stat span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);} .hero-visual{display:grid;gap:14px;} .hero-visual img{width:100%;border-radius:2px;object-fit:cover;} .hero-visual-main img{aspect-ratio:4/5;} .hero-visual-sub{display:grid;grid-template-columns:1fr 1fr;gap:14px;} .hero-visual-sub img{aspect-ratio:1/1;}
-.ticker{background:#fff;border-top:1px solid var(--fog);border-bottom:1px solid var(--fog);overflow:hidden;} .ticker-track{display:flex;min-width:max-content;animation:tkr 40s linear infinite;} .ti{display:flex;align-items:center;gap:18px;padding:0 40px;height:44px;white-space:nowrap;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);} .dot{width:4px;height:4px;border-radius:50%;background:var(--fog);} @keyframes tkr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.section{padding:110px 0;} .intro-grid,.cert-grid,.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;} .photo-card{background:#fff;border:1px solid var(--fog);padding:14px;box-shadow:0 24px 70px rgba(0,0,0,.06);} .photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;} .photo-card figcaption{padding:14px 4px 2px;font-size:.84rem;color:var(--mid);line-height:1.7;} .copy h2{margin:14px 0 20px;} .copy p{margin-bottom:14px;} .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px;} .mini-card{border:1px solid var(--fog);padding:24px 20px;background:var(--white);} .mini-card strong{display:block;font-family:var(--fh);font-size:1.15rem;margin-bottom:8px;} .mini-card p{font-size:.85rem;line-height:1.65;} .academy-split{display:grid;grid-template-columns:minmax(320px,.9fr) 1.3fr;gap:42px;align-items:start;} .academy-panel{background:var(--ink);color:var(--white);padding:54px 52px;position:sticky;top:120px;overflow:hidden;min-height:680px;display:flex;flex-direction:column;justify-content:space-between;} .academy-panel:after{content:"VÉA";position:absolute;right:18px;bottom:-6px;font-family:var(--fh);font-size:8rem;font-weight:900;letter-spacing:-.06em;color:rgba(255,255,255,.06);line-height:.8;} .academy-panel .label{color:rgba(255,255,255,.38);} .academy-panel h2{color:var(--white);font-size:clamp(2.4rem,4.1vw,4.8rem);line-height:.94;margin:18px 0 24px;max-width:540px;overflow-wrap:anywhere;} .academy-panel p{color:rgba(255,255,255,.58);font-size:1rem;max-width:430px;} .academy-rail{display:grid;gap:28px;} .academy-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;} .academy-gallery figure{background:#fff;border:1px solid var(--fog);padding:10px;box-shadow:0 22px 60px rgba(0,0,0,.06);} .academy-gallery img{width:100%;border-radius:2px;display:block;} .academy-gallery .portrait img{aspect-ratio:4/5;object-fit:cover;object-position:center top;} .academy-gallery .landscape img{height:auto;aspect-ratio:auto;object-fit:contain;background:#f5f5f5;} .academy-gallery figcaption{margin-top:10px;padding:10px 12px;background:rgba(0,0,0,.78);color:rgba(255,255,255,.82);font-size:.82rem;line-height:1.45;} .academy-list{border-top:1px solid var(--fog);} .academy-row{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--fog);} .academy-row .n{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;padding-top:4px;} .academy-row h3{font-family:var(--fh);font-size:1.05rem;font-weight:900;text-transform:uppercase;letter-spacing:-.03em;color:var(--ink);margin-bottom:6px;} .academy-row p{font-size:.92rem;line-height:1.7;}
-.dark-band{background:var(--ink);padding:110px 0;} .dark-band .label{color:rgba(255,255,255,.35);} .dark-band h2,.dark-band h3,.dark-band strong{color:#fff;} .dark-band p{color:rgba(255,255,255,.5);} .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;} .step{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);padding:22px;} .step-n{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px;} .step h3{font-family:var(--fh);font-size:1.1rem;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:10px;} .step p{font-size:.84rem;line-height:1.7;} 
-.curriculum{background:var(--pearl);} .curr-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start;} .pillars{display:grid;gap:14px;margin-top:26px;} .pillar{background:#fff;border:1px solid var(--fog);padding:22px 22px 18px;} .pillar .n{font-size:.68rem;color:var(--muted);font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;} .pillar h3{font-family:var(--fh);font-size:1.2rem;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:8px;color:var(--ink);} .pillar p{font-size:.88rem;}
-.tools-list{display:grid;gap:14px;margin-top:24px;} .tool{background:#fff;border:1px solid var(--fog);padding:18px 20px;} .tool h3{font-family:var(--fh);font-size:1rem;text-transform:uppercase;letter-spacing:-.04em;margin-bottom:6px;color:var(--ink);} .tool p{font-size:.86rem;}
-.final-cta{padding:110px 0;background:linear-gradient(180deg,#fff 0%,#fff 54%,var(--ink) 54%,var(--ink) 100%);} .final-cta .top-quote{padding:0 0 90px;} .top-quote h2{font-size:clamp(2.4rem,5.8vw,5.4rem);text-transform:none;line-height:.95;max-width:800px;} .bottom-cta{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;} .bottom-copy .label{color:rgba(255,255,255,.3);} .bottom-copy h2{color:#fff;margin-top:16px;max-width:520px;} .bottom-copy p{color:rgba(255,255,255,.5);max-width:480px;margin-top:16px;} .cta-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:34px;} .cta-card h3{font-family:var(--fh);font-size:1.3rem;font-weight:900;text-transform:uppercase;letter-spacing:-.04em;color:#fff;margin-bottom:8px;} .cta-card p{color:rgba(255,255,255,.45);font-size:.88rem;margin-bottom:20px;} 
-footer{background:var(--ink);color:#fff;padding:28px 0 22px;border-top:1px solid rgba(255,255,255,.08);} .foot-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr .8fr;gap:32px;padding:44px 0 34px;} .foot-brand-col .fb{font-family:var(--fh);font-weight:900;font-size:1.1rem;letter-spacing:-.055em;color:var(--white);text-transform:uppercase;margin-bottom:6px;} .foot-brand-col .fb span{font-weight:300;} .foot-brand-col .fs{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;} .foot-brand-col p{color:rgba(255,255,255,.45);max-width:280px;font-size:.85rem;line-height:1.75;} .foot-col h4{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;} .foot-col a{display:block;font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:8px;transition:color .2s;} .foot-col a:hover{color:var(--white);} .foot-bottom{padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;} .foot-copy{font-size:.74rem;color:rgba(255,255,255,.34);} 
-@media(max-width:980px){.wrap,.wrap-md,.wrap-sm{width:min(100% - 40px,1240px)} .nav-links,.nav-right .btn-ol{display:none;} .ham{display:grid;} .hero-grid,.intro-grid,.cert-grid,.tools-grid,.curr-grid,.bottom-cta,.academy-split{grid-template-columns:1fr;} .cards4,.steps{grid-template-columns:1fr 1fr;} .foot-grid{grid-template-columns:1fr 1fr;} .hero-visual-main img{aspect-ratio:16/11;} .academy-panel{position:relative;top:auto;min-height:auto;padding:40px 34px;} .academy-gallery{grid-template-columns:1fr 1fr;} }
-@media(max-width:640px){.wrap,.wrap-md,.wrap-sm{width:min(100% - 28px,1240px)} .hero{padding:calc(var(--nav-h) + 54px) 0 72px;} .hero-cards,.hero-visual-sub,.cards4,.steps,.foot-grid,.academy-gallery{grid-template-columns:1fr;} .foot-grid{gap:20px;} .top-quote h2{font-size:clamp(2rem,12vw,3.4rem);} .academy-panel{padding:30px 22px;} .academy-panel h2{font-size:clamp(2rem,11vw,3.2rem);max-width:none;} .academy-rail{gap:18px;} .academy-row{grid-template-columns:42px 1fr;gap:14px;padding:18px 0;} .hero p,.copy p,.pillar p,.tool p,.academy-row p{font-size:.92rem;} }
-</style>
+<meta name="description" content="VÉA Academy: capacitación teórica y práctica, protocolos clínicos exclusivos y certificación oficial para que tu equipo trate con confianza desde el día 1.">
+<link rel="canonical" href="https://veamedical.com/academy.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VÉA Medical">
+<meta property="og:title" content="VÉA Academy | Formación clínica y certificación">
+<meta property="og:description" content="VÉA Academy: capacitación teórica y práctica, protocolos clínicos exclusivos y certificación oficial para que tu equipo trate con confianza desde el día 1.">
+<meta property="og:url" content="https://veamedical.com/academy.html">
+<meta property="og:image" content="https://veamedical.com/hero-intelligence.jpg">
+<meta property="og:locale" content="es_DO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VÉA Academy | Formación clínica y certificación">
+<meta name="twitter:description" content="VÉA Academy: capacitación teórica y práctica, protocolos clínicos exclusivos y certificación oficial para que tu equipo trate con confianza desde el día 1.">
+<meta name="twitter:image" content="https://veamedical.com/hero-intelligence.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"VÉA Medical","alternateName":"VÉA Medical — Clinical Technology Partner","description":"Clinical Technology Partner que acompaña a clínicas y centros de estética en el diagnóstico, selección, implementación y rentabilidad de tecnología médico-estética.","url":"https://veamedical.com/","logo":"https://veamedical.com/logo.png","image":"https://veamedical.com/hero-intelligence.jpg","email":"info@veamedical.com","areaServed":{"@type":"Country","name":"República Dominicana"},"sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://veamedical.com/index.html"},{"@type":"ListItem","position":2,"name":"VÉA Academy","item":"https://veamedical.com/academy.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"VÉA Academy — Certificación clínica VÉA Medical","description":"Formación clínica y comercial con práctica real y certificación oficial para equipos de clínicas estéticas.","provider":{"@type":"Organization","name":"VÉA Medical","sameAs":"https://veamedical.com/"}}</script>
 </head>
 <body>
-<header class="nav" id="nav"><div class="wrap nav-inner"><a href="index.html" class="brand">VÉA <span>MEDICAL</span></a><nav class="nav-links"><a href="nosotros.html">Nosotros</a><a href="por-que-vea.html">Por qué VÉA</a><a href="tecnologia.html">Tecnologías</a><a class="active" href="academy.html">Academy</a><a href="contacto.html">Contacto</a></nav><div class="nav-right"><a class="btn btn-ol" href="contacto.html">Agenda una Experiencia</a><a class="btn btn-k" href="contacto.html"><span class="bico">→</span></a></div><div class="ham" id="ham"><span></span><span></span><span></span></div></div></header>
-<div class="mmenu" id="mmenu"><a class="ml" href="index.html">Inicio</a><a class="ml" href="nosotros.html">Nosotros</a><a class="ml" href="por-que-vea.html">Por qué VÉA</a><a class="ml" href="tecnologia.html">Tecnologías</a><a class="ml" href="academy.html">Academy</a><a class="ml" href="contacto.html">Contacto</a><a class="ml mm-btn" href="contacto.html">Agenda una Experiencia →</a></div>
-<section class="hero"><div class="wrap hero-grid"><div><div class="hero-k sr">VÉA Academy</div><h1 class="sr d1">Tu equipo trata con confianza <em>desde el día 1.</em></h1><p class="sr d2">VÉA Academy es la plataforma de formación clínica y certificación oficial con la que tu equipo aprende a utilizar la tecnología con criterio, seguridad y resultados desde el primer tratamiento.</p><div class="hero-cards sr d3"><div class="stat"><strong>Día 1</strong><span>Listo para tratar</span></div><div class="stat"><strong>Real</strong><span>Práctica con pacientes</span></div><div class="stat"><strong>Cert.</strong><span>Oficial VÉA Medical</span></div><div class="stat"><strong>Continuo</strong><span>Seguimiento y actualización</span></div></div></div><div class="hero-visual sr-scale d2"><figure class="hero-visual-main"><img src="academy-jhoana-alumna-1.jpg" alt="Jhoana durante la capacitación de VÉA Academy"/></figure><div class="hero-visual-sub"><img src="academy-jhoana-alumna-2.jpg" alt="Entrega de certificado VÉA Medical" loading="lazy"/><img src="academy-jhoana-alumna-1.jpg" alt="Capacitación práctica de VÉA Academy" loading="lazy"/></div></div></div></section>
-<div class="ticker"><div class="ticker-track"><div class="ti"><span>Capacitación práctica</span><span class="dot"></span></div><div class="ti"><span>Protocolos clínicos</span><span class="dot"></span></div><div class="ti"><span>Certificación oficial</span><span class="dot"></span></div><div class="ti"><span>Entrenamiento comercial</span><span class="dot"></span></div><div class="ti"><span>Seguimiento continuo</span><span class="dot"></span></div><div class="ti"><span>Capacitación práctica</span><span class="dot"></span></div><div class="ti"><span>Protocolos clínicos</span><span class="dot"></span></div><div class="ti"><span>Certificación oficial</span><span class="dot"></span></div><div class="ti"><span>Entrenamiento comercial</span><span class="dot"></span></div><div class="ti"><span>Seguimiento continuo</span><span class="dot"></span></div></div></div>
-<section class="section"><div class="wrap-md academy-split"><div class="academy-panel sr-scale"><div><div class="label">VÉA Academy</div><h2>Tu equipo no recibe una demostración. Recibe preparación.</h2><p>Convertimos conocimiento técnico en confianza clínica y capacidad comercial, para que cada integrante entienda qué hace la tecnología, cómo utilizarla y cómo comunicar su valor al paciente.</p></div><div class="cards4" style="grid-template-columns:1fr;gap:10px;max-width:460px;margin-top:34px;"><div class="mini-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);"><strong style="color:#fff;">Clínico</strong><p style="color:rgba(255,255,255,.55);">Indicaciones, protocolos, experiencia del paciente y buenas prácticas.</p></div><div class="mini-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);"><strong style="color:#fff;">Comercial</strong><p style="color:rgba(255,255,255,.55);">Cómo explicar beneficios, presentar planes y convertir el diagnóstico en valor.</p></div><div class="mini-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);"><strong style="color:#fff;">Seguimiento</strong><p style="color:rgba(255,255,255,.55);">Validamos la preparación del equipo y reforzamos la implementación.</p></div></div></div><div class="academy-rail"><div class="academy-gallery"><figure class="portrait sr"><img src="academy-jhoana-alumna-1.jpg" alt="Capacitación y acompañamiento práctico en VÉA Academy" loading="lazy" decoding="async"/><figcaption>Capacitación y acompañamiento práctico.</figcaption></figure><figure class="landscape sr d1"><img src="academy-jhoana-alumna-2.jpg" alt="Certificación oficial al completar la formación" loading="lazy" decoding="async"/><figcaption>Certificación oficial al completar la formación.</figcaption></figure></div><div class="academy-list"><article class="academy-row sr"><div class="n">01</div><div><h3>Entrenamiento clínico</h3><p>Fundamentos, protocolos, indicaciones, experiencia del paciente y buenas prácticas.</p></div></article><article class="academy-row sr d1"><div class="n">02</div><div><h3>Entrenamiento comercial</h3><p>Cómo explicar beneficios, presentar planes y transformar el diagnóstico en una conversación de valor.</p></div></article><article class="academy-row sr d2"><div class="n">03</div><div><h3>Certificación y seguimiento</h3><p>Validamos la preparación del equipo y reforzamos la implementación después del entrenamiento inicial.</p></div></article></div></div></div></section>
-<section class="dark-band"><div class="wrap"><div class="label sr">Qué incluye</div><h2 class="sr d1" style="color:#fff;margin-top:14px;max-width:760px;">Una ruta clara de aprendizaje para que el equipo opere con seguridad.</h2><div class="steps"><div class="step sr"><div class="step-n">01</div><h3>Fundamentos clínicos</h3><p>Conocimiento del equipo, parámetros, seguridad y selección adecuada de pacientes.</p></div><div class="step sr d1"><div class="step-n">02</div><h3>Práctica real</h3><p>Entrenamiento supervisado para que el equipo gane criterio y confianza real.</p></div><div class="step sr d2"><div class="step-n">03</div><h3>Protocolos VÉA</h3><p>Guías claras de tratamiento, flujo de consulta y estructura operativa.</p></div><div class="step sr d3"><div class="step-n">04</div><h3>Certificación oficial</h3><p>Entrega de certificado y acceso a actualización y acompañamiento continuo.</p></div></div></div></section>
-<section class="section curriculum"><div class="wrap curr-grid"><div><div class="label sr">Currículum Academy</div><h2 class="sr d1" style="margin-top:14px;">Capacitación que se traduce en acción.</h2><div class="pillars"><div class="pillar sr"><div class="n">Módulo 01</div><h3>Evaluación y diagnóstico</h3><p>Cómo entender el caso del paciente, detectar la oportunidad de tratamiento y explicar el valor de la tecnología.</p></div><div class="pillar sr d1"><div class="n">Módulo 02</div><h3>Operación y parámetros</h3><p>Uso correcto del equipo, recomendaciones por caso, precauciones y ajustes clave para cada sesión.</p></div><div class="pillar sr d2"><div class="n">Módulo 03</div><h3>Protocolos de tratamiento</h3><p>Estructuras de sesiones, combinaciones, recomendaciones al paciente y estandarización del servicio.</p></div><div class="pillar sr d3"><div class="n">Módulo 04</div><h3>Presentación y cierre</h3><p>Cómo comunicar la propuesta de valor, responder objeciones y apoyar la conversión en primera consulta.</p></div></div></div><div class="tools-grid"><figure class="photo-card sr-scale"><img src="academy-jhoana-alumna-2.jpg" alt="Certificación y acompañamiento en VÉA Academy"/><figcaption><strong>Práctica guiada.</strong> Aprender a operar no es suficiente: el objetivo es saber hacerlo bien, con seguridad y confianza.</figcaption></figure><div><div class="label sr">Recursos incluidos</div><div class="tools-list"><div class="tool sr"><h3>Protocolos exclusivos</h3><p>Guías de tratamiento, precios sugeridos, consentimientos y flujo de consulta.</p></div><div class="tool sr d1"><h3>Material de apoyo</h3><p>Checklists, estructura de sesiones y recomendaciones para el seguimiento del paciente.</p></div><div class="tool sr d2"><h3>Actualización continua</h3><p>Acceso a nuevas recomendaciones, soporte y capacitación para nuevos integrantes del equipo.</p></div></div></div></div></div></section>
-<section class="section"><div class="wrap cert-grid"><div class="copy"><div class="label sr">Certificación oficial</div><h2 class="sr d1">Un estándar que respalda a tu clínica.</h2><p class="sr d2">Cada clínica que trabaja con VÉA puede certificar a su equipo con una formación oficial. Esto no solo mejora la ejecución del tratamiento; también transmite confianza al paciente y fortalece la percepción de profesionalismo.</p><p class="sr d3">La certificación convierte el aprendizaje en un estándar interno: el equipo sabe qué hacer, cómo hacerlo y cómo sostener la calidad con el tiempo.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;"><a class="btn btn-k sr d3" href="contacto.html"><span class="bico">→</span> Solicitar información</a><a class="btn btn-ol sr d4" href="contacto.html">Agendar demostración</a></div></div><div class="hero-visual"><figure class="photo-card sr-scale"><img src="academy-jhoana-alumna-1.jpg" alt="Jhoana y alumna durante la certificación VÉA Academy"/><figcaption><strong>Capacitación y acompañamiento humano.</strong> La formación se vive de forma cercana, práctica y enfocada en resultados.</figcaption></figure></div></div></section>
-<section class="final-cta"><div class="wrap top-quote"><div class="label sr">La promesa VÉA</div><h2 class="sr d1">“Nuestro trabajo no termina con una venta. <span style="font-weight:300;">Comienza con ella.</span>”</h2></div><div class="wrap bottom-cta"><div class="bottom-copy"><div class="label sr">Agenda una experiencia VÉA</div><h2 class="sr d1">La confianza para tomar la decisión correcta.</h2><p class="sr d2">Conoce cómo VÉA Academy puede preparar a tu equipo para operar, vender y sostener una experiencia clínica superior desde el primer día.</p></div><div class="cta-card sr-scale d2"><h3>Hablemos de tu clínica</h3><p>Sin compromiso · Respuesta en menos de 24 horas</p><a class="btn btn-k" href="contacto.html"><span class="bico">→</span> Agenda una Experiencia</a></div></div></section>
-<footer><div class="wrap"><div class="foot-grid"><div class="foot-brand-col"><div class="fb">VÉA <span>MEDICAL</span></div><div class="fs">Clinical Technology Partner</div><p>No entregamos tecnología. Diseñamos el futuro clínico de nuestros aliados.</p></div><div class="foot-col"><h4>Empresa</h4><a href="nosotros.html">Nosotros</a><a href="por-que-vea.html">Por qué VÉA</a><a href="academy.html">VÉA Academy</a></div><div class="foot-col"><h4>Tecnologías</h4><a href="tecnologia.html#intelligence">VÉA Intelligence</a><a href="tecnologia.html#skin">VÉA Skin</a><a href="tecnologia.html#pigment">VÉA Pigment</a></div><div class="foot-col"><h4>Contacto</h4><a href="contacto.html">Agendar experiencia</a><a href="mailto:info@veamedical.com">info@veamedical.com</a><a href="https://wa.me/18090000000">WhatsApp</a></div></div><div class="foot-bottom"><div class="foot-copy">© 2025 VÉA Medical · Clinical Technology Partner</div><div class="foot-copy">info@veamedical.com</div></div></div></footer>
-<script>
-const nav=document.getElementById('nav'); window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
-const ham=document.getElementById('ham'), menu=document.getElementById('mmenu'); if(ham&&menu){ham.addEventListener('click',()=>{ham.classList.toggle('open');menu.classList.toggle('open');document.body.style.overflow=menu.classList.contains('open')?'hidden':'';}); menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');menu.classList.remove('open');document.body.style.overflow='';}));}
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.08,rootMargin:'0px 0px -32px 0px'}); document.querySelectorAll('.sr,.sr-scale').forEach(el=>obs.observe(el));
-</script>
-</body></html>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="por-que-vea.html">Por qué VÉA</a></li>
+        <li><a href="tecnologia.html">Tecnologías</a></li>
+        <li><a href="academy.html" aria-current="page">Academy</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="contacto.html"><span class="label">Agenda una Experiencia</span> <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="por-que-vea.html">Por qué VÉA</a>
+      <a href="tecnologia.html">Tecnologías</a>
+      <a href="academy.html" aria-current="page">Academy</a>
+      <a href="contacto.html">Contacto</a>
+      <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
+  </div>
+
+<main id="main">
+
+  <section class="hero" style="min-height:auto; padding-bottom:2.5rem;">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker">VÉA Academy</span>
+        <h1 style="max-width:14em;">Tu equipo trata con confianza <span class="italic">desde el día 1.</span></h1>
+        <p class="lede">VÉA Academy es la plataforma de formación clínica y certificación oficial con la que tu equipo aprende a utilizar la tecnología con criterio, seguridad y resultados desde el primer tratamiento.</p>
+        <div class="badge-row">
+          <div><strong>Día 1</strong>Listo para tratar</div>
+          <div><strong>Real</strong>Práctica con pacientes</div>
+          <div><strong>Cert.</strong>Oficial VÉA Medical</div>
+          <div><strong>Continuo</strong>Seguimiento y actualización</div>
+        </div>
+      </div>
+      <div class="feature-media" style="aspect-ratio:4/5;">
+        <img src="academy-jhoana-alumna-1.jpg" alt="Formación práctica de VÉA Academy con una alumna certificándose" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tint" aria-labelledby="prep-h">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">VÉA Academy</span>
+        <h2 id="prep-h">Tu equipo no recibe una demostración. Recibe preparación.</h2>
+        <p class="lede" style="margin-inline:auto;">Convertimos conocimiento técnico en confianza clínica y capacidad comercial, para que cada integrante entienda qué hace la tecnología, cómo utilizarla y cómo comunicar su valor al paciente.</p>
+      </div>
+      <div class="pillars cols-3">
+        <div class="pillar"><h3>Clínico</h3><p>Indicaciones, protocolos, experiencia del paciente y buenas prácticas.</p></div>
+        <div class="pillar"><h3>Comercial</h3><p>Cómo explicar beneficios, presentar planes y convertir el diagnóstico en valor.</p></div>
+        <div class="pillar"><h3>Seguimiento</h3><p>Validamos la preparación del equipo y reforzamos la implementación.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ruta-h">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Qué incluye</span>
+        <h2 id="ruta-h">Una ruta clara de aprendizaje para que el equipo opere con seguridad.</h2>
+      </div>
+      <div class="modules">
+        <div class="module"><span class="n">01</span><h3>Fundamentos clínicos</h3><p>Conocimiento del equipo, parámetros, seguridad y selección adecuada de pacientes.</p></div>
+        <div class="module"><span class="n">02</span><h3>Práctica real</h3><p>Entrenamiento supervisado para que el equipo gane criterio y confianza real.</p></div>
+        <div class="module"><span class="n">03</span><h3>Protocolos VÉA</h3><p>Guías claras de tratamiento, flujo de consulta y estructura operativa.</p></div>
+        <div class="module"><span class="n">04</span><h3>Certificación oficial</h3><p>Entrega de certificado y acceso a actualización y acompañamiento continuo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tint" aria-labelledby="curr-h">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Currículum Academy</span>
+        <h2 id="curr-h">Capacitación que se traduce en acción.</h2>
+      </div>
+      <div class="modules">
+        <div class="module"><span class="n">Módulo 01</span><h3>Evaluación y diagnóstico</h3><p>Cómo entender el caso del paciente, detectar la oportunidad de tratamiento y explicar el valor de la tecnología.</p></div>
+        <div class="module"><span class="n">Módulo 02</span><h3>Operación y parámetros</h3><p>Uso correcto del equipo, recomendaciones por caso, precauciones y ajustes clave para cada sesión.</p></div>
+        <div class="module"><span class="n">Módulo 03</span><h3>Protocolos de tratamiento</h3><p>Estructuras de sesiones, combinaciones, recomendaciones al paciente y estandarización del servicio.</p></div>
+        <div class="module"><span class="n">Módulo 04</span><h3>Presentación y cierre</h3><p>Cómo comunicar la propuesta de valor, responder objeciones y apoyar la conversión en primera consulta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cert-h">
+    <div class="container feature-row reverse">
+      <div class="feature-media"><img src="academy-jhoana-alumna-1.jpg" alt="Capacitación y acompañamiento humano en VÉA Academy" loading="lazy"></div>
+      <div>
+        <span class="kicker">Certificación oficial</span>
+        <h2 id="cert-h">Un estándar que respalda a tu clínica.</h2>
+        <p class="lede">Cada clínica que trabaja con VÉA puede certificar a su equipo con una formación oficial. Esto no solo mejora la ejecución del tratamiento; también transmite confianza al paciente y fortalece la percepción de profesionalismo.</p>
+        <p>La certificación convierte el aprendizaje en un estándar interno: el equipo sabe qué hacer, cómo hacerlo y cómo sostener la calidad con el tiempo.</p>
+        <div class="feature-actions">
+          <a class="btn btn-primary" href="contacto.html">Solicitar información →</a>
+          <a class="btn btn-ghost" href="contacto.html">Agendar demostración</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" aria-labelledby="promesa-h">
+    <div class="container">
+      <span class="kicker">La promesa VÉA</span>
+      <h2 id="promesa-h">"Nuestro trabajo no termina con una venta. Comienza con ella."</h2>
+    </div>
+  </section>
+
+  <section class="section-tint" aria-labelledby="cta-h">
+    <div class="container" style="text-align:center;">
+      <span class="kicker">Agenda una experiencia VÉA</span>
+      <h2 id="cta-h" style="max-width:24em; margin-inline:auto;">La confianza para tomar la decisión correcta.</h2>
+      <p class="lede" style="margin-inline:auto; margin-top:1rem;">Conoce cómo VÉA Academy puede preparar a tu equipo para operar, vender y sostener una experiencia clínica superior desde el primer día.</p>
+      <div class="cta-band-actions" style="justify-content:center; margin-top:2rem;">
+        <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
+      </div>
+      <p style="font-size:.85rem; color:var(--gray-500); margin-top:1rem;">Sin compromiso · Respuesta en menos de 24 horas</p>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
+          <p>Clinical Technology Partner. No entregamos tecnología. Diseñamos el futuro clínico de nuestros aliados.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="academy.html">VÉA Academy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Tecnologías</h5>
+          <ul>
+            <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#meso-rf">VÉA Meso RF</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="contacto.html">Agendar experiencia</a></li>
+            <li><a href="mailto:info@veamedical.com">info@veamedical.com</a></li>
+            <li><a href="https://wa.me/18090000000" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> VÉA Medical · Clinical Technology Partner</span>
+        <span>info@veamedical.com</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
