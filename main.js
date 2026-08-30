@@ -3,6 +3,14 @@
    Sin dependencias externas. Sin scroll-jacking.
    ============================================================ */
 
+// ---------- Kicker "vivo": solo el eyebrow que antecede a un H1/H2 recibe el punto pulsante ----------
+document.querySelectorAll('.kicker').forEach(function (el) {
+  var next = el.nextElementSibling;
+  if (next && (next.tagName === 'H1' || next.tagName === 'H2')) {
+    el.classList.add('kicker-live');
+  }
+});
+
 // ---------- Año dinámico en el footer ----------
 document.querySelectorAll('[data-year]').forEach(function (el) {
   el.textContent = new Date().getFullYear();
@@ -147,6 +155,55 @@ document.querySelectorAll('[data-year]').forEach(function (el) {
     if (input) input.addEventListener('input', update);
   });
   update();
+})();
+
+// ---------- Scroll reveal — se aplica automáticamente a lo largo de todo el sitio ----------
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SELECTOR = [
+    'section .section-head', '.product-card', '.pillar', '.module', '.wavelength-card',
+    '.receive-card', '.compare-col', '.feature-row > *', '.hero-stats > div',
+    '.spec-stats > div', '.badge-row > div', '.image-band-caption p', '.statement h2',
+    '.statement .lede', '.cta-band > *'
+  ].join(',');
+
+  document.querySelectorAll(SELECTOR).forEach(function (el) {
+    if (el.closest('.mobile-menu')) return;
+    el.classList.add('sr');
+  });
+
+  // stagger dentro de cada contenedor padre (máx 6 pasos)
+  var parents = new Set();
+  document.querySelectorAll('.sr').forEach(function (el) { parents.add(el.parentElement); });
+  parents.forEach(function (parent) {
+    var kids = Array.prototype.filter.call(parent.children, function (c) { return c.classList.contains('sr'); });
+    kids.forEach(function (el, i) {
+      el.classList.add('sr-stagger');
+      el.style.setProperty('--sr-i', Math.min(i, 6));
+    });
+  });
+
+  if (reduce) {
+    document.querySelectorAll('.sr').forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '80px 0px -30px 0px' });
+
+  document.querySelectorAll('.sr').forEach(function (el) { obs.observe(el); });
+
+  // Red de seguridad: el contenido nunca debe depender 100% del observer.
+  // Si algo falla o el usuario navega muy rápido, se revela todo igual.
+  setTimeout(function () {
+    document.querySelectorAll('.sr:not(.is-visible)').forEach(function (el) { el.classList.add('is-visible'); });
+  }, 4000);
 })();
 
 // ---------- Fichas técnicas dinámicas: tabs por producto ----------

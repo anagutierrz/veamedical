@@ -201,6 +201,44 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); }
 .reveal-delay-2{ animation-delay:.16s; }
 .reveal-delay-3{ animation-delay:.24s; }
 
+/* ---------- Scroll reveal (aplicado por JS a lo largo de todo el sitio) ---------- */
+/* Con .js en <html> (ver script inline en <head>): si JS no carga, el contenido
+   nunca queda oculto — se ve normal desde el primer render. */
+.js .sr{ opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.js .sr.is-visible{ opacity:1; transform:translateY(0); }
+.sr-stagger.is-visible{ transition-delay:calc(var(--sr-i, 0) * 70ms); }
+
+/* ---------- Live/status dot — solo en los eyebrows principales de sección (antes de H1/H2) ---------- */
+.kicker.kicker-live{ display:inline-flex; align-items:center; gap:.5em; }
+.kicker.kicker-live::before{
+  content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0;
+  animation:pulse-dot 2.4s ease-in-out infinite;
+}
+@keyframes pulse-dot{
+  0%, 100%{ opacity:1; box-shadow:0 0 0 0 rgba(74,95,232,.35); }
+  50%{ opacity:.55; box-shadow:0 0 0 4px rgba(74,95,232,0); }
+}
+
+/* ---------- Flotación suave en el hero stack — movimiento continuo, discreto ---------- */
+@keyframes float-y{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-8px); } }
+.hero-stack .h1{ animation:float-y 6.5s ease-in-out infinite; }
+.hero-stack .h2{ animation:float-y 7.5s ease-in-out infinite 1.2s; }
+.hero-stack .h3{ animation:float-y 5.8s ease-in-out infinite .6s; }
+
+/* ---------- Banda de imagen a todo lo ancho (separador editorial) ---------- */
+.image-band{ position:relative; height:46vh; min-height:320px; max-height:520px; overflow:hidden; background:var(--black); }
+.image-band img{ width:100%; height:100%; object-fit:cover; }
+.image-band::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 55%); }
+.image-band-caption{
+  position:absolute; left:0; right:0; bottom:0; padding:2rem 6vw;
+  color:var(--white); display:flex; justify-content:center;
+}
+.image-band-caption p{ font-family:var(--serif); font-size:1.3rem; max-width:34em; text-align:center; }
+
+@media (prefers-reduced-motion: reduce){
+  .hero-stack .h1, .hero-stack .h2, .hero-stack .h3, .kicker-live::before{ animation:none; }
+}
+
 /* ============================================================
    SECTIONS / LAYOUT
    ============================================================ */
@@ -318,6 +356,7 @@ section{ padding:6.5rem 0; }
 :root{ --mono:'JetBrains Mono', 'SF Mono', Consolas, monospace; }
 
 .specsheet{ display:grid; grid-template-columns:.85fr 1.15fr; gap:2.6rem; align-items:start; margin-top:1.4rem; }
+.specsheet > *{ min-width:0; }
 
 .spec-visual{ position:relative; padding:14px; }
 .spec-visual::before, .spec-visual::after,
@@ -351,10 +390,22 @@ section{ padding:6.5rem 0; }
 .spec-stats strong{ display:block; font-family:var(--mono); font-size:1.3rem; color:var(--accent); }
 .spec-stats span{ font-size:.7rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:.04em; }
 
-.spec-data .tab-row{ display:flex; gap:.4rem; flex-wrap:wrap; border-bottom:1px solid var(--line); margin-bottom:1.4rem; }
+.spec-data{ position:relative; }
+.spec-data .tab-row{
+  display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:1.4rem;
+  overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.spec-data .tab-row::-webkit-scrollbar{ display:none; }
+.spec-data::after{
+  content:""; position:absolute; top:0; right:0; width:28px; height:2.6rem;
+  background:linear-gradient(90deg, rgba(247,247,247,0), var(--gray-50) 70%);
+  pointer-events:none;
+}
+section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, rgba(255,255,255,0), var(--white) 70%); }
+@media (min-width:640px){ .spec-data::after{ display:none; } }
 .spec-tab{
-  font-family:var(--mono); font-size:.76rem; letter-spacing:.02em; color:var(--gray-500);
-  background:none; border:0; padding:.7em .2em; margin-right:1.2rem; position:relative;
+  font-family:var(--mono); font-size:.76rem; letter-spacing:.02em; color:var(--gray-500); white-space:nowrap;
+  background:none; border:0; padding:.7em .2em; margin-right:1.2rem; position:relative; flex-shrink:0;
 }
 .spec-tab::after{ content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .25s var(--ease); }
 .spec-tab[aria-selected="true"]{ color:var(--black); }
@@ -517,6 +568,8 @@ form.is-submitted .field-set{ display:none; }
   /* fix: botones con etiquetas largas (p. ej. "Hablar con un Clinical Technology
      Partner →") ya no fuerzan el ancho de la cuadrícula — se permite el salto de línea. */
   .btn{ white-space:normal; text-align:left; }
+  .spec-row{ flex-direction:column; gap:.25rem; }
+  .spec-row .v{ text-align:left; max-width:100%; }
 }
 
 @media (max-width:760px){
