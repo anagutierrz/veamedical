@@ -149,6 +149,71 @@ document.querySelectorAll('[data-year]').forEach(function (el) {
   update();
 })();
 
+// ---------- Fichas técnicas dinámicas: tabs por producto ----------
+(function () {
+  document.querySelectorAll('[data-specsheet]').forEach(function (root) {
+    var tabs = Array.from(root.querySelectorAll('.spec-tab'));
+    var panels = Array.from(root.querySelectorAll('.spec-panel'));
+    function select(i) {
+      tabs.forEach(function (t, idx) { t.setAttribute('aria-selected', String(idx === i)); t.tabIndex = idx === i ? 0 : -1; });
+      panels.forEach(function (p, idx) { p.hidden = idx !== i; });
+    }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(i); });
+      tab.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); var n = (i + 1) % tabs.length; select(n); tabs[n].focus(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); var p = (i - 1 + tabs.length) % tabs.length; select(p); tabs[p].focus(); }
+      });
+    });
+    select(0);
+  });
+})();
+
+// ---------- Scanline: se activa una vez al entrar en viewport (respeta reduced-motion) ----------
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  var targets = document.querySelectorAll('.spec-visual[data-scan]');
+  if (!targets.length) return;
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-scanning');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  targets.forEach(function (t) { obs.observe(t); });
+})();
+
+// ---------- Contadores animados (stats de ficha técnica) ----------
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('[data-count-to]');
+  if (!els.length) return;
+  function animate(el) {
+    var to = parseFloat(el.getAttribute('data-count-to'));
+    var suffix = el.getAttribute('data-count-suffix') || '';
+    var prefix = el.getAttribute('data-count-prefix') || '';
+    if (reduce || isNaN(to)) { el.textContent = prefix + to + suffix; return; }
+    var start = null, dur = 900;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + Math.round(to * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { animate(entry.target); obs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.6 });
+  els.forEach(function (el) { obs.observe(el); });
+})();
+
 // ---------- Formularios: validación + estado de éxito (sin backend conectado) ----------
 // TODO(Ana / desarrollo): estos formularios muestran el estado de éxito en el cliente
 // pero NO envían los datos a ningún lado todavía. Conectar FORM_ENDPOINT a tu backend
