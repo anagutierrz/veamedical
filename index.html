@@ -36,12 +36,19 @@
       <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-controls="tech-dropdown">Tecnología <span class="caret" aria-hidden="true">⌄</span></button>
+            <ul class="nav-dropdown" id="tech-dropdown">
+              <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+        <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
+        <li><a href="academy.html">VÉA Academy</a></li>
+        <li><a href="por-que-vea.html">Insights</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="por-que-vea.html">Por qué VÉA</a></li>
-        <li><a href="tecnologia.html">Tecnologías</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
@@ -53,12 +60,16 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html" aria-current="page">Inicio</a>
+      <span class="mobile-menu-label">Tecnología</span>
+      <a href="tecnologia.html#intelligence" class="mobile-sub">VÉA Intelligence</a>
+      <a href="tecnologia.html#skin" class="mobile-sub">VÉA Skin</a>
+      <a href="tecnologia.html#pigment" class="mobile-sub">VÉA Pigment</a>
+      <span class="mobile-menu-divider"></span>
+      <a href="nosotros.html#metodo">Método VÉA 360°</a>
+      <a href="nosotros.html#lab">Clinical Innovation Lab</a>
+      <a href="academy.html">VÉA Academy</a>
+      <a href="por-que-vea.html">Insights</a>
       <a href="nosotros.html">Nosotros</a>
-      <a href="por-que-vea.html">Por qué VÉA</a>
-      <a href="tecnologia.html">Tecnologías</a>
-      <a href="academy.html">Academy</a>
-      <a href="contacto.html">Contacto</a>
       <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
   </div>
 
@@ -75,9 +86,24 @@
           <a class="hero-link-inline" href="#metodo">Descubre el Método VÉA 360° ↘</a>
         </div>
         <div class="hero-stats">
-          <div><span class="kicker">Diagnóstico</span><p>Clarity before every investment.</p></div>
-          <div><span class="kicker">Método</span><p>Implementación guiada y acompañamiento.</p></div>
-          <div><span class="kicker">Resultados</span><p>Rentabilidad medible para tu clínica.</p></div>
+          <div>
+            <div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" stroke-width="1.6"/><line x1="15.3" y1="15.3" x2="21" y2="21" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <span class="num">01</span>
+            <h4>Diagnóstico</h4>
+            <p>Entender antes de invertir.</p>
+          </div>
+          <div>
+            <div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2" stroke-width="1.6"/><circle cx="18" cy="6" r="2.2" stroke-width="1.6"/><circle cx="12" cy="18" r="2.2" stroke-width="1.6"/><line x1="7.8" y1="7.2" x2="10.6" y2="16" stroke-width="1.6"/><line x1="16.2" y1="7.2" x2="13.4" y2="16" stroke-width="1.6"/><line x1="8.2" y1="6" x2="15.8" y2="6" stroke-width="1.6"/></svg></div>
+            <span class="num">02</span>
+            <h4>Implementación</h4>
+            <p>Convertir tecnología en protocolos y experiencia.</p>
+          </div>
+          <div>
+            <div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="3,17 9,11 13,15 21,6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,6 21,6 21,12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <span class="num">03</span>
+            <h4>Resultados</h4>
+            <p>Medir impacto clínico y económico.</p>
+          </div>
         </div>
       </div>
       <div class="hero-visual reveal reveal-delay-2">
@@ -102,30 +128,30 @@
       </div>
       <div class="product-grid">
         <article class="product-card">
-          <figure><img src="hero-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"><figcaption>Análisis facial con IA</figcaption></figure>
+          <figure><img src="hero-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"></figure>
           <div class="product-body">
             <span class="num">01</span>
             <h3>VÉA Intelligence</h3>
             <p>Diagnóstico facial con inteligencia artificial para convertir evaluación clínica en claridad, confianza y mejor conversación con el paciente.</p>
-            <a class="btn btn-ghost" href="tecnologia.html#intelligence">Ver tecnología →</a>
+            <a class="card-link" href="tecnologia.html#intelligence">Conocer más <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="product-card">
-          <figure><img src="hero-skinboost.jpg" alt="VÉA Skin — SKIN BOOST" loading="lazy"><figcaption>Plataforma de infusión</figcaption></figure>
+          <figure><img src="hero-skinboost.jpg" alt="VÉA Skin — SKIN BOOST" loading="lazy"></figure>
           <div class="product-body">
             <span class="num">02</span>
             <h3>VÉA Skin</h3>
             <p>Plataforma de infusión inteligente diseñada para integrar activos profesionales dentro de protocolos personalizados con una experiencia clínica premium.</p>
-            <a class="btn btn-ghost" href="tecnologia.html#skin">Ver tecnología →</a>
+            <a class="card-link" href="tecnologia.html#skin">Conocer más <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </article>
         <article class="product-card">
-          <figure><img src="tech-pigment.jpg" alt="VÉA Pigment" loading="lazy"><figcaption>Corrección de pigmentos</figcaption></figure>
+          <figure><img src="tech-pigment.jpg" alt="VÉA Pigment" loading="lazy"></figure>
           <div class="product-body">
             <span class="num">03</span>
             <h3>VÉA Pigment</h3>
             <p>Plataforma Nd:YAG para corrección de pigmentos, remoción de tatuajes y protocolos Hollywood Peel — precisión clínica con cuatro longitudes de onda.</p>
-            <a class="btn btn-ghost" href="tecnologia.html#pigment">Ver tecnología →</a>
+            <a class="card-link" href="tecnologia.html#pigment">Conocer más <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>
@@ -220,8 +246,9 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
-            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
             <li><a href="academy.html">VÉA Academy</a></li>
+            <li><a href="por-que-vea.html">Insights</a></li>
           </ul>
         </div>
         <div class="footer-col">

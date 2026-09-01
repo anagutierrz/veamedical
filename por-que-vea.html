@@ -35,12 +35,19 @@
       <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-controls="tech-dropdown">Tecnología <span class="caret" aria-hidden="true">⌄</span></button>
+            <ul class="nav-dropdown" id="tech-dropdown">
+              <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+        <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
+        <li><a href="academy.html">VÉA Academy</a></li>
+        <li><a href="por-que-vea.html" aria-current="page">Insights</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="por-que-vea.html" aria-current="page">Por qué VÉA</a></li>
-        <li><a href="tecnologia.html">Tecnologías</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
@@ -52,12 +59,16 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Inicio</a>
+      <span class="mobile-menu-label">Tecnología</span>
+      <a href="tecnologia.html#intelligence" class="mobile-sub">VÉA Intelligence</a>
+      <a href="tecnologia.html#skin" class="mobile-sub">VÉA Skin</a>
+      <a href="tecnologia.html#pigment" class="mobile-sub">VÉA Pigment</a>
+      <span class="mobile-menu-divider"></span>
+      <a href="nosotros.html#metodo">Método VÉA 360°</a>
+      <a href="nosotros.html#lab">Clinical Innovation Lab</a>
+      <a href="academy.html">VÉA Academy</a>
+      <a href="por-que-vea.html" aria-current="page">Insights</a>
       <a href="nosotros.html">Nosotros</a>
-      <a href="por-que-vea.html" aria-current="page">Por qué VÉA</a>
-      <a href="tecnologia.html">Tecnologías</a>
-      <a href="academy.html">Academy</a>
-      <a href="contacto.html">Contacto</a>
       <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
   </div>
 
@@ -299,8 +310,9 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
-            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
             <li><a href="academy.html">VÉA Academy</a></li>
+            <li><a href="por-que-vea.html">Insights</a></li>
           </ul>
         </div>
         <div class="footer-col">

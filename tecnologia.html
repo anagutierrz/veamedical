@@ -36,12 +36,19 @@
       <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-controls="tech-dropdown" aria-current="page">Tecnología <span class="caret" aria-hidden="true">⌄</span></button>
+            <ul class="nav-dropdown" id="tech-dropdown">
+              <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+        <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
+        <li><a href="academy.html">VÉA Academy</a></li>
+        <li><a href="por-que-vea.html">Insights</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="por-que-vea.html">Por qué VÉA</a></li>
-        <li><a href="tecnologia.html" aria-current="page">Tecnologías</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
@@ -53,12 +60,16 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Inicio</a>
+      <span class="mobile-menu-label">Tecnología</span>
+      <a href="tecnologia.html#intelligence" class="mobile-sub">VÉA Intelligence</a>
+      <a href="tecnologia.html#skin" class="mobile-sub">VÉA Skin</a>
+      <a href="tecnologia.html#pigment" class="mobile-sub">VÉA Pigment</a>
+      <span class="mobile-menu-divider"></span>
+      <a href="nosotros.html#metodo">Método VÉA 360°</a>
+      <a href="nosotros.html#lab">Clinical Innovation Lab</a>
+      <a href="academy.html">VÉA Academy</a>
+      <a href="por-que-vea.html">Insights</a>
       <a href="nosotros.html">Nosotros</a>
-      <a href="por-que-vea.html">Por qué VÉA</a>
-      <a href="tecnologia.html" aria-current="page">Tecnologías</a>
-      <a href="academy.html">Academy</a>
-      <a href="contacto.html">Contacto</a>
       <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
   </div>
 
@@ -76,16 +87,16 @@
     <div class="container">
       <div class="product-grid cols-3">
         <a class="product-card" href="#intelligence" style="text-decoration:none;">
-          <figure><img src="tech-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"><figcaption>Diagnóstico con IA</figcaption></figure>
-          <div class="product-body"><h3 style="font-size:1.1rem;">VÉA Intelligence</h3></div>
+          <figure><img src="tech-intelligence.jpg" alt="VÉA Intelligence" loading="lazy"></figure>
+          <div class="product-body"><span class="num">01</span><h3 style="font-size:1.1rem;">VÉA Intelligence</h3><p style="font-size:.85rem;">Diagnóstico con IA</p></div>
         </a>
         <a class="product-card" href="#skin" style="text-decoration:none;">
-          <figure><img src="tech-skin.jpg" alt="VÉA Skin — SKIN BOOST" loading="lazy"><figcaption>Infusión inteligente</figcaption></figure>
-          <div class="product-body"><h3 style="font-size:1.1rem;">VÉA Skin</h3></div>
+          <figure><img src="tech-skin.jpg" alt="VÉA Skin — SKIN BOOST" loading="lazy"></figure>
+          <div class="product-body"><span class="num">02</span><h3 style="font-size:1.1rem;">VÉA Skin</h3><p style="font-size:.85rem;">Infusión inteligente</p></div>
         </a>
         <a class="product-card" href="#pigment" style="text-decoration:none;">
-          <figure><img src="tech-pigment.jpg" alt="VÉA Pigment — plataforma Nd:YAG" loading="lazy"><figcaption>Corrección de pigmentos</figcaption></figure>
-          <div class="product-body"><h3 style="font-size:1.1rem;">VÉA Pigment</h3></div>
+          <figure><img src="tech-pigment.jpg" alt="VÉA Pigment — plataforma Nd:YAG" loading="lazy"></figure>
+          <div class="product-body"><span class="num">03</span><h3 style="font-size:1.1rem;">VÉA Pigment</h3><p style="font-size:.85rem;">Corrección de pigmentos</p></div>
         </a>
       </div>
     </div>
@@ -166,7 +177,7 @@
       <span class="kicker">02 / 03 · SKIN BOOST™</span>
       <h2 id="skin-h">VÉA Skin™</h2>
       <p class="lede">No se trata de aplicar más activos. Se trata de saber cuáles, cómo y cuándo utilizarlos.</p>
-      <p style="max-width:52em;">SkinBoost está diseñado para favorecer la penetración y distribución de principios activos seleccionados según las necesidades de la piel, integrándose a protocolos personalizados: diagnóstico → selección del activo → infusión → protocolo → seguimiento.</p>
+      <p style="max-width:52em;">SkinBoost combina electroporación y microagujas huecas: las microagujas reducen la impedancia de la piel, mientras la electroporación genera canales hidrofílicos que mejoran la permeación transdérmica en minutos y se cierran automáticamente — favoreciendo la penetración de activos según protocolos personalizados: diagnóstico → selección del activo → infusión → protocolo → seguimiento.</p>
 
       <span class="subhead">Ideal para</span>
       <div class="tag-list">
@@ -184,9 +195,9 @@
             <div class="spec-frame"><img src="tech-skin.jpg" alt="VÉA Skin — SKIN BOOST, plataforma de infusión inteligente" loading="lazy"></div>
           </div>
           <div class="spec-stats">
-          <div><strong data-count-to="6">0</strong><span>Aplicaciones clínicas</span></div>
-          <div><strong data-count-to="5">0</strong><span>Pasos del protocolo</span></div>
-          <div><strong>Personalizado</strong><span>Modo de infusión</span></div>
+          <div><strong>500 μm</strong><span>Longitud de microaguja</span></div>
+          <div><strong data-count-to="5">0</strong><span>Niveles de electroporación</span></div>
+          <div><strong>Piel / cuero cabelludo</strong><span>Aplicador</span></div>
           </div>
         </div>
         <div class="spec-data">
@@ -195,11 +206,12 @@
             <button class="spec-tab" role="tab" aria-selected="false">Aplicaciones clínicas</button>
             <button class="spec-tab" role="tab" aria-selected="false">Protocolo VÉA</button>
           </div>
-          <div class="spec-panel" role="tabpanel" ><div class="spec-row"><span class="k">TECNOLOGÍA</span><span class="v">Plataforma de infusión inteligente</span></div>
-              <div class="spec-row"><span class="k">APLICACIÓN</span><span class="v">Infusión profesional de activos</span></div>
-              <div class="spec-row"><span class="k">MODO DE OPERACIÓN</span><span class="v">Sistema de infusión</span></div>
-              <div class="spec-row"><span class="k">PROTOCOLOS</span><span class="v">Personalizables</span></div>
-              <div class="spec-row"><span class="k">USO PROFESIONAL</span><span class="v">Según certificación correspondiente</span></div></div>
+          <div class="spec-panel" role="tabpanel" ><div class="spec-row"><span class="k">TECNOLOGÍA</span><span class="v">Electroporación + microagujas huecas</span></div>
+              <div class="spec-row"><span class="k">LONGITUD DE MICROAGUJA</span><span class="v">500 μm</span></div>
+              <div class="spec-row"><span class="k">ELECTROPORACIÓN</span><span class="v">5 niveles ajustables</span></div>
+              <div class="spec-row"><span class="k">APLICADOR</span><span class="v">Piel / cuero cabelludo (intercambiable)</span></div>
+              <div class="spec-row"><span class="k">ALIMENTACIÓN</span><span class="v">DC 12V 4A</span></div>
+              <div class="spec-row"><span class="k">DIMENSIONES DEL EQUIPO</span><span class="v">302 × 272 × 126 mm</span></div></div>
             <div class="spec-panel" role="tabpanel" hidden><div class="spec-chip-grid"><span class="spec-chip">Hydration</span><span class="spec-chip">Skin Quality</span><span class="spec-chip">Anti-aging</span><span class="spec-chip">Brightening</span><span class="spec-chip">Repair</span><span class="spec-chip">Personalized Infusion</span></div></div>
             <div class="spec-panel" role="tabpanel" hidden><div class="spec-row"><span class="k">1 · ANALIZAMOS</span><span class="v">Entendemos el estado y objetivo de la piel</span></div>
               <div class="spec-row"><span class="k">2 · SELECCIONAMOS</span><span class="v">Elegimos los activos apropiados</span></div>
@@ -209,7 +221,7 @@
         </div>
       </div>
 
-      <div style="max-width:52em; margin-top:2.4rem;">
+      <div style="max-width:70em; margin-top:2.4rem;">
         <blockquote class="quote-block">Protocolo clínico VÉA × Facial Express — tecnología evaluada dentro de protocolos reales de cuidado de la piel.</blockquote>
 
         <span class="subhead">Beneficios</span>
@@ -219,9 +231,17 @@
           <li>Integración con activos profesionales</li>
           <li>Versatilidad y escalabilidad del portafolio de tratamientos</li>
         </ul>
-        <p class="pending-note">Parámetros ajustables y compatibilidad completa de activos: ficha técnica en validación — se actualizará antes de publicar cifras finales.</p>
 
-        <div class="feature-actions">
+        <span class="subhead">Lo que incluye la implementación</span>
+        <div class="receive-grid cols-5">
+          <div class="receive-card compact"><h4>Capacitación comercial</h4></div>
+          <div class="receive-card compact"><h4>Capacitación clínica</h4></div>
+          <div class="receive-card compact"><h4>Servicio técnico</h4></div>
+          <div class="receive-card compact"><h4>Soporte de registro</h4></div>
+          <div class="receive-card compact"><h4>Material de marketing</h4></div>
+        </div>
+
+        <div class="feature-actions" style="margin-top:1.6rem;">
           <a class="btn btn-primary" href="contacto.html">Solicitar información →</a>
           <a class="btn btn-ghost" href="contacto.html">Agendar demostración</a>
         </div>
@@ -339,8 +359,9 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
-            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
             <li><a href="academy.html">VÉA Academy</a></li>
+            <li><a href="por-que-vea.html">Insights</a></li>
           </ul>
         </div>
         <div class="footer-col">

@@ -35,12 +35,19 @@
       <a class="logo" href="index.html">VÉA <span>MEDICAL</span></a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="nav-dropdown-trigger" aria-expanded="false" aria-controls="tech-dropdown">Tecnología <span class="caret" aria-hidden="true">⌄</span></button>
+            <ul class="nav-dropdown" id="tech-dropdown">
+              <li><a href="tecnologia.html#intelligence">VÉA Intelligence</a></li>
+            <li><a href="tecnologia.html#skin">VÉA Skin</a></li>
+            <li><a href="tecnologia.html#pigment">VÉA Pigment</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
+        <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
+        <li><a href="academy.html">VÉA Academy</a></li>
+        <li><a href="por-que-vea.html">Insights</a></li>
         <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
-        <li><a href="por-que-vea.html">Por qué VÉA</a></li>
-        <li><a href="tecnologia.html">Tecnologías</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
@@ -52,12 +59,16 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Inicio</a>
+      <span class="mobile-menu-label">Tecnología</span>
+      <a href="tecnologia.html#intelligence" class="mobile-sub">VÉA Intelligence</a>
+      <a href="tecnologia.html#skin" class="mobile-sub">VÉA Skin</a>
+      <a href="tecnologia.html#pigment" class="mobile-sub">VÉA Pigment</a>
+      <span class="mobile-menu-divider"></span>
+      <a href="nosotros.html#metodo">Método VÉA 360°</a>
+      <a href="nosotros.html#lab">Clinical Innovation Lab</a>
+      <a href="academy.html">VÉA Academy</a>
+      <a href="por-que-vea.html">Insights</a>
       <a href="nosotros.html" aria-current="page">Nosotros</a>
-      <a href="por-que-vea.html">Por qué VÉA</a>
-      <a href="tecnologia.html">Tecnologías</a>
-      <a href="academy.html">Academy</a>
-      <a href="contacto.html">Contacto</a>
       <a class="btn btn-primary" href="contacto.html">Agenda una Experiencia →</a>
   </div>
 
@@ -190,12 +201,27 @@
     </div>
   </section>
 
-  <div class="image-band">
-    <img src="academy-jhoana-alumna-1.jpg" alt="Formación práctica dentro de Facial Express, el Clinical Innovation Lab de VÉA Medical">
-    <div class="image-band-caption">
-      <p>Cada protocolo VÉA se desarrolla y perfecciona dentro de Facial Express, nuestro Clinical Innovation Lab.</p>
+  <section id="lab" aria-labelledby="lab-h">
+    <div class="image-band">
+      <img src="academy-jhoana-alumna-1.jpg" alt="Formación práctica dentro de Facial Express, el Clinical Innovation Lab de VÉA Medical">
+      <div class="image-band-caption">
+        <p>Cada protocolo VÉA se desarrolla y perfecciona dentro de Facial Express, nuestro Clinical Innovation Lab.</p>
+      </div>
     </div>
-  </div>
+    <div class="container" style="padding-top:3.5rem;">
+      <span class="kicker">Clinical Innovation Lab</span>
+      <h2 id="lab-h" style="max-width:18em;">Facial Express — donde nace cada protocolo VÉA.</h2>
+      <p class="lede" style="max-width:44em;">Antes de recomendar cualquier tecnología a un aliado, la implementamos, la probamos y la validamos dentro de Facial Express, nuestro propio entorno clínico.</p>
+      <p style="max-width:44em;">No enseñamos teoría. Compartimos experiencia clínica real. Cada protocolo que documentamos en VÉA Academy —desde el diagnóstico con IA hasta la corrección de pigmentos— primero se desarrolla y ajusta aquí, con pacientes reales.</p>
+      <ul class="feature-list" style="max-width:44em;">
+        <li>Validación clínica antes de recomendar cualquier tecnología</li>
+        <li>Desarrollo y ajuste de protocolos VÉA</li>
+        <li>Formación práctica de VÉA Academy</li>
+        <li>Casos clínicos reales documentados</li>
+      </ul>
+      <a class="btn btn-primary" href="tecnologia.html">Ver tecnologías validadas →</a>
+    </div>
+  </section>
 
   <section aria-labelledby="acad-h">
     <div class="container feature-row reverse">
@@ -244,8 +270,9 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="nosotros.html#metodo">Método VÉA 360°</a></li>
-            <li><a href="nosotros.html#ecosistema">Ecosistema VÉA</a></li>
+            <li><a href="nosotros.html#lab">Clinical Innovation Lab</a></li>
             <li><a href="academy.html">VÉA Academy</a></li>
+            <li><a href="por-que-vea.html">Insights</a></li>
           </ul>
         </div>
         <div class="footer-col">

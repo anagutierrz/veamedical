@@ -16,6 +16,27 @@ document.querySelectorAll('[data-year]').forEach(function (el) {
   el.textContent = new Date().getFullYear();
 });
 
+// ---------- Dropdown de Tecnología: clic/teclado además de hover ----------
+(function () {
+  var trigger = document.querySelector('.nav-dropdown-trigger');
+  var wrapper = trigger && trigger.closest('.has-dropdown');
+  if (!trigger || !wrapper) return;
+
+  function close() { trigger.setAttribute('aria-expanded', 'false'); wrapper.classList.remove('is-open'); }
+  function open() { trigger.setAttribute('aria-expanded', 'true'); wrapper.classList.add('is-open'); }
+
+  trigger.addEventListener('click', function () {
+    var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+    isOpen ? close() : open();
+  });
+  document.addEventListener('click', function (e) {
+    if (!wrapper.contains(e.target)) close();
+  });
+  wrapper.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { close(); trigger.focus(); }
+  });
+})();
+
 // ---------- Menú móvil ----------
 (function () {
   var burger = document.querySelector('.nav-burger');
