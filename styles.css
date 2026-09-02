@@ -423,11 +423,14 @@ section{ padding:8.5rem 0; }
   0%{ top:6%; opacity:0; } 8%{ opacity:1; } 92%{ opacity:1; } 100%{ top:94%; opacity:0; }
 }
 
-.spec-stats{ display:flex; gap:0; margin-top:1rem; border:1px solid var(--line); }
-.spec-stats div{ flex:1; padding:.9rem 1rem; border-left:1px solid var(--line); }
+.spec-stats{ display:flex; gap:0; margin-top:1rem; border:1px solid var(--line); background:var(--white); }
+.spec-stats div{ flex:1; min-width:0; padding:.85rem .9rem; border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; gap:.3rem; }
 .spec-stats div:first-child{ border-left:none; }
-.spec-stats strong{ display:block; font-family:var(--mono); font-size:1.3rem; color:var(--accent); }
-.spec-stats span{ font-size:.7rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:.04em; }
+.spec-stats strong{
+  display:block; font-family:var(--mono); font-weight:600; font-size:1.05rem; color:var(--accent);
+  line-height:1.2; word-break:break-word;
+}
+.spec-stats span{ font-size:.66rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:.03em; line-height:1.25; }
 
 .spec-data{ position:relative; }
 .spec-data .tab-row{
@@ -628,7 +631,7 @@ form.is-submitted .field-set{ display:none; }
   .footer-top{ grid-template-columns:1fr; }
   .cta-band{ flex-direction:column; align-items:flex-start; }
   .compare-col + .compare-col{ border-left:none; border-top:1px solid var(--line); }
-  .spec-stats{ flex-wrap:wrap; }
-  .spec-stats div{ flex:1 1 45%; border-top:1px solid var(--line); border-left:none; }
-  .spec-stats div:nth-child(-n+2){ border-top:none; }
+  .spec-stats div{ padding:.7rem .5rem; }
+  .spec-stats strong{ font-size:.92rem; }
+  .spec-stats span{ font-size:.6rem; }
 }
