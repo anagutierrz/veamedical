@@ -353,11 +353,11 @@ section{ padding:8.5rem 0; }
 .hero-grid > *, .method > *, .feature-row > *, .compare > *, .contact-grid > *, .calc > *{ min-width:0; }
 
 /* ---------- Product deep-dive: tags, wavelength cards, "qué recibe tu clínica" ---------- */
-.tag-list{ display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4rem 0; }
+.tag-list{ display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
 .tag-list span{
-  font-size:.8rem; padding:.5em 1em; border:1px solid var(--line); border-radius:100px; color:var(--gray-700);
+  font-size:.78rem; padding:.4em .9em; border:1px solid var(--line); border-radius:100px; color:var(--gray-700);
 }
-.subhead{ font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); display:block; margin:2.4rem 0 .9rem; }
+.subhead{ font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); display:block; margin:1.8rem 0 .7rem; }
 .subhead:first-child{ margin-top:0; }
 
 .wavelength-figure{ margin:1.6rem 0 2rem; }
@@ -394,7 +394,7 @@ section{ padding:8.5rem 0; }
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 :root{ --mono:'JetBrains Mono', 'SF Mono', Consolas, monospace; }
 
-.specsheet{ display:grid; grid-template-columns:.85fr 1.15fr; gap:2.6rem; align-items:start; margin-top:1.4rem; }
+.specsheet{ display:grid; grid-template-columns:.85fr 1.15fr; gap:2.6rem; align-items:start; margin-top:1rem; }
 .specsheet > *{ min-width:0; }
 
 .spec-visual{ position:relative; padding:14px; }
@@ -434,7 +434,7 @@ section{ padding:8.5rem 0; }
 
 .spec-data{ position:relative; }
 .spec-data .tab-row{
-  display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:1.4rem;
+  display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:1rem;
   overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
 }
 .spec-data .tab-row::-webkit-scrollbar{ display:none; }
@@ -456,11 +456,11 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 .spec-panel{ min-height:220px; }
 .spec-panel[hidden]{ display:none; }
 .spec-row{
-  display:flex; justify-content:space-between; gap:1rem; padding:.75rem 0; border-top:1px solid var(--line);
-  font-size:.9rem;
+  display:flex; justify-content:space-between; gap:1rem; padding:.6rem 0; border-top:1px solid var(--line);
+  font-size:.88rem;
 }
 .spec-row:first-child{ border-top:none; }
-.spec-row .k{ color:var(--gray-500); font-family:var(--mono); font-size:.78rem; }
+.spec-row .k{ color:var(--gray-500); font-family:var(--mono); font-size:.76rem; }
 .spec-row .v{ text-align:right; color:var(--black); font-weight:500; max-width:60%; }
 
 .spec-chip-grid{ display:flex; flex-wrap:wrap; gap:.55rem; }

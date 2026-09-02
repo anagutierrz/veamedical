@@ -4,6 +4,10 @@
   <url><loc>https://veamedical.com/nosotros.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://veamedical.com/por-que-vea.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://veamedical.com/tecnologia.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veamedical.com/tecnologia-intelligence.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veamedical.com/tecnologia-skin.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veamedical.com/tecnologia-pigment.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://veamedical.com/clinical-innovation-lab.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://veamedical.com/academy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://veamedical.com/contacto.html</loc><changefreq>yearly</changefreq><priority>0.9</priority></url>
 </urlset>
