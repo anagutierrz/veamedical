@@ -3,7 +3,7 @@
    Editorial premium · serif display + Inter body · silencio visual
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
   --white:#FFFFFF;
@@ -18,7 +18,7 @@
   --accent-2:#7C4AE8;
   --line:#E4E4E4;
 
-  --serif:'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --serif:'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --nav-h:76px;
@@ -52,10 +52,10 @@ input,select,textarea{ font-family:inherit; font-size:16px; }
 
 .container{ width:var(--container); margin-inline:auto; }
 
-h1,h2,h3,h4{ font-family:var(--serif); font-weight:400; line-height:1.08; margin:0; letter-spacing:-0.01em; }
-h1{ font-size:clamp(2.6rem, 6vw, 5rem); }
-h2{ font-size:clamp(1.9rem, 4vw, 3.1rem); }
-h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); }
+h1,h2,h3,h4{ font-family:var(--serif); font-weight:600; line-height:1.05; margin:0; letter-spacing:-0.03em; }
+h1{ font-size:clamp(2.6rem, 6vw, 5rem); font-weight:600; }
+h2{ font-size:clamp(1.9rem, 4vw, 3.1rem); font-weight:600; }
+h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); font-weight:600; }
 
 .kicker{
   font-family:var(--sans);
@@ -175,7 +175,7 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); }
   transition:opacity .25s var(--ease), transform .25s var(--ease);
 }
 .mobile-menu.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
-.mobile-menu a{ font-family:var(--serif); font-size:1.5rem; text-align:center; }
+.mobile-menu a{ font-family:var(--serif); font-weight:600; font-size:1.5rem; text-align:center; letter-spacing:-0.02em; }
 .mobile-menu-label{
   font-family:var(--sans); font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
   color:var(--gray-500); margin-top:.4rem;
@@ -272,7 +272,7 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); }
   position:absolute; left:0; right:0; bottom:0; padding:2rem 6vw;
   color:var(--white); display:flex; justify-content:center;
 }
-.image-band-caption p{ font-family:var(--serif); font-size:1.3rem; max-width:34em; text-align:center; }
+.image-band-caption p{ font-family:var(--serif); font-weight:500; font-size:1.3rem; max-width:34em; text-align:center; letter-spacing:-0.01em; }
 
 @media (prefers-reduced-motion: reduce){
   .hero-stack .h1, .hero-stack .h2, .hero-stack .h3, .kicker-live::before{ animation:none; }
@@ -366,12 +366,12 @@ section{ padding:8.5rem 0; }
 
 .wavelength-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin:1.6rem 0 2rem; }
 .wavelength-card{ border:1px solid var(--line); padding:1.4rem; }
-.wavelength-card .nm{ font-family:var(--serif); font-size:1.7rem; color:var(--accent); }
+.wavelength-card .nm{ font-family:var(--serif); font-weight:700; font-size:1.7rem; color:var(--accent); }
 .wavelength-card p{ font-size:.85rem; color:var(--gray-700); margin:.5rem 0 0; }
 
 .quote-block{
   border-left:2px solid var(--black); padding-left:1.4rem; margin:2rem 0;
-  font-family:var(--serif); font-size:1.15rem; font-style:italic; color:var(--gray-700);
+  font-family:var(--serif); font-weight:500; font-size:1.15rem; font-style:italic; color:var(--gray-700);
 }
 
 .receive-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin:1.6rem 0; }
@@ -386,7 +386,7 @@ section{ padding:8.5rem 0; }
 .patient-steps{ display:flex; flex-wrap:wrap; gap:1rem; margin:1.6rem 0; }
 .patient-steps div{ flex:1 1 140px; border-top:2px solid var(--black); padding-top:.7rem; }
 .patient-steps div span{ display:block; font-size:.72rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:.05em; }
-.patient-steps div strong{ font-family:var(--serif); font-size:1.15rem; }
+.patient-steps div strong{ font-family:var(--serif); font-weight:700; font-size:1.15rem; }
 
 .pending-note{ font-size:.78rem; color:var(--gray-500); font-style:italic; margin-top:.4rem; }
 
@@ -483,7 +483,7 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 .feature-media{ aspect-ratio:4/3; overflow:hidden; background:var(--gray-100); }
 .feature-media img{ width:100%; height:100%; object-fit:cover; }
 .feature-stats{ display:flex; flex-wrap:wrap; gap:1.6rem 2.2rem; margin:1.8rem 0; }
-.feature-stats div strong{ font-family:var(--serif); font-size:2rem; display:block; }
+.feature-stats div strong{ font-family:var(--serif); font-weight:700; font-size:2rem; display:block; letter-spacing:-0.02em; }
 .feature-stats div span{ font-size:.78rem; color:var(--gray-500); }
 .feature-list{ display:flex; flex-direction:column; gap:.75rem; margin:1.6rem 0 2rem; }
 .feature-list li{ display:flex; gap:.7rem; font-size:.94rem; color:var(--gray-700); }
@@ -522,7 +522,7 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 .calc-results{ display:flex; flex-direction:column; gap:1.1rem; }
 .calc-result{ background:var(--white); border:1px solid var(--line); padding:1.3rem 1.5rem; }
 .calc-result span{ font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--gray-500); }
-.calc-result strong{ display:block; font-family:var(--serif); font-size:2.1rem; margin-top:.2rem; }
+.calc-result strong{ display:block; font-family:var(--serif); font-weight:700; font-size:2.1rem; margin-top:.2rem; letter-spacing:-0.02em; }
 .calc-disclaimer{ font-size:.78rem; color:var(--gray-500); margin-top:.5rem; }
 
 /* ---------- Curriculum modules ---------- */
@@ -586,7 +586,7 @@ form.is-submitted .field-set{ display:none; }
 
 .badge-row{ display:flex; gap:1.6rem; flex-wrap:wrap; margin-top:1.6rem; }
 .badge-row div{ font-size:.82rem; color:var(--gray-700); }
-.badge-row strong{ display:block; font-family:var(--serif); font-size:1.3rem; }
+.badge-row strong{ display:block; font-family:var(--serif); font-weight:700; font-size:1.3rem; }
 
 /* ============================================================
    RESPONSIVE
