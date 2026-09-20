@@ -267,12 +267,15 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); font-weight:600; }
 /* ---------- Banda de imagen a todo lo ancho (separador editorial) ---------- */
 .image-band{ position:relative; height:46vh; min-height:320px; max-height:520px; overflow:hidden; background:var(--black); }
 .image-band img{ width:100%; height:100%; object-fit:cover; }
-.image-band::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 55%); }
+.image-band::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.35) 35%, rgba(0,0,0,0) 65%); }
 .image-band-caption{
   position:absolute; left:0; right:0; bottom:0; padding:2rem 6vw;
   color:var(--white); display:flex; justify-content:center;
 }
-.image-band-caption p{ font-family:var(--serif); font-weight:500; font-size:1.3rem; max-width:34em; text-align:center; letter-spacing:-0.01em; }
+.image-band-caption p{
+  font-family:var(--serif); font-weight:500; font-size:1.3rem; max-width:34em; text-align:center; letter-spacing:-0.01em;
+  background:rgba(0,0,0,.55); padding:.7em 1.3em; border-radius:100px; backdrop-filter:blur(6px);
+}
 
 @media (prefers-reduced-motion: reduce){
   .hero-stack .h1, .hero-stack .h2, .hero-stack .h3, .kicker-live::before{ animation:none; }
@@ -498,6 +501,29 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 /* ---------- Pillars grid (ecosistema) ---------- */
 .pillars{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
 .pillar{ border:1px solid var(--line); padding:1.9rem; display:flex; flex-direction:column; gap:.9rem; }
+.pillar-icon{
+  width:44px; height:44px; border-radius:50%; border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center; color:var(--accent);
+}
+.pillar-icon svg{ width:18px; height:18px; stroke:currentColor; fill:none; }
+
+/* ---------- Ícono de rentabilidad — calculadora ROI ---------- */
+.calc-icon{
+  width:52px; height:52px; border-radius:50%; border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center; color:var(--accent);
+  margin:0 auto 1rem;
+}
+.calc-icon svg{ width:22px; height:22px; stroke:currentColor; fill:none; }
+
+/* ---------- Íconos sociales — footer ---------- */
+.footer-social{ display:flex; gap:.6rem; margin-top:1.4rem; }
+.footer-social a{
+  width:36px; height:36px; border-radius:50%; border:1px solid #333;
+  display:flex; align-items:center; justify-content:center; color:var(--gray-300);
+  transition:border-color .2s, color .2s;
+}
+.footer-social a:hover{ border-color:var(--white); color:var(--white); }
+.footer-social svg{ width:16px; height:16px; stroke:currentColor; fill:none; }
 .pillar .n{ font-size:.72rem; color:var(--gray-500); letter-spacing:.08em; }
 .pillar h3{ font-size:1.25rem; }
 .pillar .role{ font-size:.78rem; color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
