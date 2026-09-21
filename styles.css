@@ -368,6 +368,13 @@ section{ padding:8.5rem 0; }
 .wavelength-figure figcaption{ font-size:.82rem; color:var(--gray-500); margin-top:.7rem; }
 
 .wavelength-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin:1.6rem 0 2rem; }
+
+/* ---------- Galería de fotos (3 columnas) ---------- */
+.photo-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2rem; }
+.photo-gallery figure{ margin:0; aspect-ratio:4/5; overflow:hidden; border-radius:4px; }
+.photo-gallery img{ width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease); }
+.photo-gallery a:hover img{ transform:scale(1.04); }
+@media (max-width:760px){ .photo-gallery{ grid-template-columns:1fr; } }
 .wavelength-card{ border:1px solid var(--line); padding:1.4rem; }
 .wavelength-card .nm{ font-family:var(--serif); font-weight:700; font-size:1.7rem; color:var(--accent); }
 .wavelength-card p{ font-size:.85rem; color:var(--gray-700); margin:.5rem 0 0; }
