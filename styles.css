@@ -241,7 +241,7 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); font-weight:600; }
 
 .hero-visual{ position:relative; }
 .hero-visual-frame{
-  aspect-ratio:4/5; background:var(--gray-50); border:1px solid var(--line);
+  background:var(--gray-50); border:1px solid var(--line);
   position:relative; overflow:hidden;
 }
 .hero-visual-label{
@@ -250,7 +250,7 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); font-weight:600; }
   display:flex; justify-content:space-between; z-index:2;
   background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,0));
 }
-.hero-portfolio-img{ width:100%; height:100%; object-fit:cover; object-position:center 30%; }
+.hero-portfolio-img{ display:block; width:100%; height:auto; }
 .hero-stack{ position:absolute; inset:0; }
 .hero-stack img{
   position:absolute; object-fit:cover; border-radius:var(--radius);
@@ -293,7 +293,7 @@ h3{ font-size:clamp(1.25rem, 2.2vw, 1.7rem); font-weight:600; }
 
 /* ---------- Banda de imagen a todo lo ancho (separador editorial) ---------- */
 .image-band{ position:relative; height:46vh; min-height:320px; max-height:520px; overflow:hidden; background:var(--black); }
-.image-band img{ width:100%; height:100%; object-fit:cover; }
+.image-band img{ width:100%; height:100%; object-fit:contain; }
 .image-band::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.35) 35%, rgba(0,0,0,0) 65%); }
 .image-band-caption{
   position:absolute; left:0; right:0; bottom:0; padding:2rem 6vw;
@@ -422,9 +422,8 @@ section{ padding:8.5rem 0; }
 
 /* ---------- Galería de fotos (3 columnas) ---------- */
 .photo-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2rem; }
-.photo-gallery figure{ margin:0; aspect-ratio:4/5; overflow:hidden; border-radius:4px; }
-.photo-gallery img{ width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease); }
-.photo-gallery a:hover img{ transform:scale(1.04); }
+.photo-gallery figure{ margin:0; overflow:hidden; border-radius:4px; }
+.photo-gallery img{ width:100%; height:auto; object-fit:contain; transition:transform .4s var(--ease); }
 @media (max-width:760px){ .photo-gallery{ grid-template-columns:1fr; } }
 .wavelength-card{ border:1px solid var(--line); padding:1.4rem; }
 .wavelength-card .nm{ font-family:var(--serif); font-weight:700; font-size:1.7rem; color:var(--accent); }
@@ -465,13 +464,14 @@ section{ padding:8.5rem 0; }
 .spec-frame img{ width:100%; height:100%; object-fit:cover; opacity:.92; }
 .spec-frame.product-device{ aspect-ratio:1122 / 1402; background:var(--gray-50); }
 .spec-frame.product-device img{ object-fit:contain; opacity:1; }
-.product-video{ width:min(100%,300px); margin-top:1.6rem; }
+.product-video{ width:100%; max-width:300px; margin-inline:auto; }
 .academy-video{ width:min(100%,320px); margin:2rem auto 0; }
 .product-video video,.academy-video video{
-  display:block; width:100%; aspect-ratio:9 / 16; object-fit:contain;
-  background:var(--black); border-radius:16px;
+  display:block; width:100%; height:auto; aspect-ratio:9 / 16; object-fit:contain;
+  background:var(--black); border-radius:18px;
   box-shadow:0 18px 42px rgba(17,17,17,.16);
 }
+.product-showcase{ grid-template-columns:minmax(0,1.1fr) minmax(0,.85fr) minmax(240px,.52fr); gap:clamp(1.5rem,3vw,4rem); align-items:center; }
 /* corner brackets — motivo "visor de precisión" */
 .spec-visual .bracket{ position:absolute; width:22px; height:22px; border:2px solid var(--accent); z-index:2; }
 .spec-visual .bracket.tl{ top:0; left:0; border-right:0; border-bottom:0; }
@@ -553,8 +553,8 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 .feature-row{ display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:center; }
 .feature-row.reverse{ direction:rtl; }
 .feature-row.reverse > *{ direction:ltr; }
-.feature-media{ aspect-ratio:4/3; overflow:hidden; background:var(--gray-100); }
-.feature-media img{ width:100%; height:100%; object-fit:cover; }
+.feature-media{ overflow:hidden; background:var(--gray-100); }
+.feature-media img{ display:block; width:100%; height:auto; object-fit:contain; }
 .academy-class-photo{ aspect-ratio:1; }
 .academy-class-gallery{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem; margin-top:3rem; }
 .academy-class-gallery figure{ margin:0; overflow:hidden; border-radius:12px; }
@@ -638,8 +638,8 @@ section:not(.section-tint) .spec-data::after{ background:linear-gradient(90deg, 
 .contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:3.5rem; }
 .contact-info .info-row{ display:flex; gap:1rem; padding:1rem 0; border-top:1px solid var(--line); }
 .contact-info .info-row:first-of-type{ border-top:1px solid var(--line); }
-.contact-photo{ margin-top:2rem; aspect-ratio:4/3; overflow:hidden; }
-.contact-photo img{ width:100%; height:100%; object-fit:cover; }
+.contact-photo{ margin-top:2rem; overflow:hidden; }
+.contact-photo img{ display:block; width:100%; height:auto; object-fit:contain; }
 .contact-photo figcaption{ font-size:.85rem; color:var(--gray-500); margin-top:.7rem; font-style:italic; }
 
 .form-card{ background:var(--gray-50); border:1px solid var(--line); padding:2.6rem; }
@@ -695,6 +695,8 @@ form.is-submitted .field-set{ display:none; }
    ============================================================ */
 @media (max-width:1080px){
   .hero-grid, .method, .feature-row, .compare, .contact-grid, .calc{ grid-template-columns:1fr; }
+  .product-showcase{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; }
+  .product-showcase .product-video{ grid-column:2; }
   .feature-row.reverse{ direction:ltr; }
   .hero-visual{ order:-1; max-width:420px; margin-inline:auto; }
   .product-grid{ grid-template-columns:1fr; }
@@ -715,6 +717,8 @@ form.is-submitted .field-set{ display:none; }
 }
 
 @media (max-width:760px){
+  .product-showcase{ grid-template-columns:1fr; }
+  .product-showcase .product-video{ grid-column:auto; max-width:min(100%,320px); }
   .nav-links{ display:none; }
   .nav-burger{ display:flex; }
   /* fix: en navbar angosto el botón CTA completo y el burger no caben juntos —
