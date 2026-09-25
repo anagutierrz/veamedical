@@ -463,6 +463,15 @@ section{ padding:8.5rem 0; }
 .spec-visual .corner-tl, .spec-visual .corner-br{ content:""; }
 .spec-frame{ position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--black); }
 .spec-frame img{ width:100%; height:100%; object-fit:cover; opacity:.92; }
+.spec-frame.product-device{ aspect-ratio:1122 / 1402; background:var(--gray-50); }
+.spec-frame.product-device img{ object-fit:contain; opacity:1; }
+.product-video{ width:min(100%,300px); margin-top:1.6rem; }
+.academy-video{ width:min(100%,320px); margin:2rem auto 0; }
+.product-video video,.academy-video video{
+  display:block; width:100%; aspect-ratio:9 / 16; object-fit:contain;
+  background:var(--black); border-radius:16px;
+  box-shadow:0 18px 42px rgba(17,17,17,.16);
+}
 /* corner brackets — motivo "visor de precisión" */
 .spec-visual .bracket{ position:absolute; width:22px; height:22px; border:2px solid var(--accent); z-index:2; }
 .spec-visual .bracket.tl{ top:0; left:0; border-right:0; border-bottom:0; }
