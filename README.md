@@ -1,11 +1,11 @@
 # VÉA Medical
 
-Sitio web estático de VÉA Medical. Incluye las páginas HTML, estilos, JavaScript, imágenes y videos MP4.
+Sitio web estático de VÉA Medical, listo para publicarse desde GitHub.
 
-## Subir a GitHub
+## Subir al repositorio
 
-1. Crea un repositorio y descomprime este ZIP.
-2. Sube **los archivos y la carpeta `videos/`**, no el ZIP, a la raíz del repositorio. `index.html` debe quedar en la raíz.
-3. Los enlaces entre páginas y los recursos usan rutas relativas.
+1. Descomprime `VEA-Medical-GitHub.zip`.
+2. Sube **todos los archivos descomprimidos directamente a la raíz** del repositorio. `index.html`, los HTML, `styles.css`, las imágenes y los cuatro videos `.mp4` deben quedar al mismo nivel. No subas el ZIP ni crees una carpeta adicional.
+3. Si usas GitHub Pages, configura la publicación desde la rama elegida y la carpeta `/ (root)`.
 
-No requiere instalación de paquetes ni un proceso de compilación.
+No requiere instalar paquetes ni compilar. Las páginas usan rutas relativas entre archivos de la raíz.
